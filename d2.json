@@ -27,22 +27,26 @@
     "options": [
       {
         "text": "Execute multi-pass software overwrites across all addressable disk sectors and retain verification hashes.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Flash-Architecture Trap — Software overwrites cannot reliably reach remapped, wear-leveled spare NAND flash cells on SSDs."
       },
       {
         "text": "Apply high-coercivity electromagnetic degaussing to every module prior to documented courier pickup.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Wrong-Media Trap — Degaussing works on magnetic disks and tapes, not solid-state NAND flash memory."
       },
       {
         "text": "Invoke native cryptographic erasure to destroy internal media encryption keys and verify purge completion.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": true,
+        "tag": "Correct — NIST SP 800-88 Cryptographic Erase purges active and over-provisioned blocks on SEDs by destroying internal keys while keeping hardware reusable."
       },
       {
         "text": "Witness physical shredding of each drive on-site and negotiate lease-buyout penalties with Finance.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Constraint Violation — Physical destruction eliminates remanence, but violates the lease-return hardware reuse requirement and forfeits $180,000."
       }
     ],
-    "answerKey": "<conceptual_placeholder>",
+    "answerKey": "auto-graded",
     "conceptMechanism": "Cryptographic erasure purges self-encrypting flash drives by destroying internal encryption keys, rendering wear-leveled spare blocks unrecoverable while keeping hardware reusable. Degaussing does not affect solid-state media, logical overwrites miss remapped cells, and shredding breaches the lease-return constraint."
   },
   {
@@ -72,22 +76,26 @@
     "options": [
       {
         "text": "Allow scheduled automated disposal to proceed because retention policy predates the regulatory inquiry.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Spoliation Trap — A legal hold legally supersedes routine retention schedules; allowing automated deletion triggers severe spoliation sanctions."
       },
       {
         "text": "Suspend automated deletion for scoped subsidiary records immediately and preserve them under documented custody.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": true,
+        "tag": "Correct — Preserving scoped records under unbroken chain of custody takes immediate priority; storage capacity is handled operationally afterward."
       },
       {
         "text": "Anonymize personal identifiers inside scoped archives tonight to satisfy both privacy minimization and capacity.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Evidence-Alteration Trap — Modifying or stripping identifiers from records under a litigation hold destroys evidentiary integrity."
       },
       {
         "text": "Export scoped archives to an administrator's encrypted workstation before allowing central purge completion.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Chain-of-Custody Trap — Ad-hoc copying onto a personal/admin workstation breaks forensic defensibility and metadata integrity."
       }
     ],
-    "answerKey": "<conceptual_placeholder>",
+    "answerKey": "auto-graded",
     "conceptMechanism": "Formal legal holds override routine retention and privacy disposal schedules; deleting or altering scoped records creates spoliation liability. Custodians must halt disposal for affected assets under intact chain of custody until Counsel lifts the hold."
   },
   {
@@ -118,22 +126,26 @@
     "options": [
       {
         "text": "Default every unstructured repository to Confidential until engineering finishes retraining the classification model.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Over-Classification Trap — Mass over-classification paralyzes legitimate operations and wastes controls on non-sensitive files."
       },
       {
         "text": "Switch DLP to monitor mode while Data Owners refine taxonomy rules and validate sensitive repositories.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": true,
+        "tag": "Correct — Restores business flow immediately while engaging accountable Data Owners to tune taxonomy rules and validate high-risk M&A repositories before blocking."
       },
       {
         "text": "Disable automated classification permanently and mandate manual sensitivity tagging by individual document authors.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Scale Trap — Pure manual tagging across 40 TB of legacy files fails to scale and suffers from chronic human inconsistency."
       },
       {
         "text": "Exempt supplier finance folders from DLP inspection permanently while maintaining automated blocking elsewhere.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Blind-Spot Trap — Permanently exempting finance folders creates an exfiltration highway and still leaves 18% of M&A term sheets misclassified."
       }
     ],
-    "answerKey": "<conceptual_placeholder>",
+    "answerKey": "auto-graded",
     "conceptMechanism": "Data Owners—not automated engines—remain accountable for accurate classification and proportionate controls. Running DLP in monitor mode while owners refine taxonomies and validate high-risk repositories protects sensitive data without disrupting business workflows."
   },
   {
@@ -164,22 +176,26 @@
     "options": [
       {
         "text": "Retain the existing unclassified label because individual source tables contain no regulated direct identifiers.",
-        "isCorrect": "<conceptual_placeholder>"
-      },
-      {
-        "text": "Engage Data Owners to reclassify the aggregated repository upward and enforce proportionate access controls.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Aggregation Blindness — Combined data can reach higher sensitivity than its individual components through aggregation and inference."
       },
       {
         "text": "Upgrade storage-layer encryption on the data lake without altering analyst query permissions.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Technical-Fix Trap — Stronger disk encryption does not restrict overly broad internal query access to newly inferred sensitive profiles."
       },
       {
         "text": "Update customer privacy notices to acknowledge analytical profiling while maintaining open internal access.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Paper-Notice Trap — Updating legal notices without elevating classification and access controls leaves sensitive health/financial profiles exposed."
+      },
+      {
+        "text": "Engage Data Owners to reclassify the aggregated repository upward and enforce proportionate access controls.",
+        "isCorrect": true,
+        "tag": "Correct — Aggregation elevates composite sensitivity, requiring Data Owners to reclassify the repository upward and apply stricter access and privacy safeguards."
       }
     ],
-    "answerKey": "<conceptual_placeholder>",
+    "answerKey": "auto-graded",
     "conceptMechanism": "Data aggregation and inference elevate the sensitivity of combined datasets above any individual input table. Data Owners must reassess classification upward and apply stricter access and privacy controls whenever consolidation produces high-risk intelligence."
   },
   {
@@ -208,23 +224,27 @@
     ],
     "options": [
       {
-        "text": "Infrastructure custodians may downgrade classification labels whenever storage budgets exceed approved quarterly forecasts.",
-        "isCorrect": "<conceptual_placeholder>"
+        "text": "Only the accountable Data Owner may authorize classification changes after assessing business and regulatory risk.",
+        "isCorrect": true,
+        "tag": "Correct — The VP of Claims (Data Owner) owns classification and risk decisions; infrastructure custodians implement technical controls without altering sensitivity labels."
       },
       {
-        "text": "Only the accountable Data Owner may authorize classification changes after assessing business and regulatory risk.",
-        "isCorrect": "<conceptual_placeholder>"
+        "text": "Infrastructure custodians may downgrade classification labels whenever storage budgets exceed approved quarterly forecasts.",
+        "isCorrect": false,
+        "tag": "Role-Boundary Violation — Data Custodians execute storage operations and have zero authority to downgrade classification for budget relief."
       },
       {
         "text": "Internal audit must approve all storage-tier migrations before modifying encryption parameters on cold archives.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Audit-Independence Trap — Auditors review compliance independently and do not approve operational storage migrations or classifications."
       },
       {
         "text": "Database administrators may reclassify archives automatically once records exceed five years of operational age.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Age-Assumption Trap — Declassification requires explicit Data Owner authorization aligned to retention and statutory obligations, never automatic DBA downgrades."
       }
     ],
-    "answerKey": "<conceptual_placeholder>",
+    "answerKey": "auto-graded",
     "conceptMechanism": "Data Owners hold exclusive accountability for assigning and modifying data classification based on business value and regulatory exposure. Data Custodians implement technical safeguards prescribed by the owner and cannot unilaterally downgrade protection."
   },
   {
@@ -255,22 +275,26 @@
     "options": [
       {
         "text": "Apply keyed pseudonymization and store the re-identification lookup table inside an internal corporate vault.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Reversibility Trap — Pseudonymization remains reversible via the key/table and still leaves quasi-identifiers (ZIP + birth year + rare diagnosis) vulnerable to linkage."
       },
       {
         "text": "Apply validated anonymization using generalization, suppression, or differential privacy against quasi-identifier linkage risk.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": true,
+        "tag": "Correct — Irreversible anonymization specifically neutralizes indirect quasi-identifier linkage attacks so individuals cannot be re-identified externally."
       },
       {
         "text": "Transmit the unmodified clinical dataset over mutually authenticated TLS channels under a signed NDA.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Transit-Only Trap — mTLS protects packets in motion, but still hands external researchers fully identifiable regulated patient records."
       },
       {
         "text": "Mask patient surnames inside the consortium's reporting dashboard while sharing underlying relational tables intact.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "UI-Only Masking Trap — Presentation-layer masking leaves raw identifiable rows exposed underneath in the shared dataset."
       }
     ],
-    "answerKey": "<conceptual_placeholder>",
+    "answerKey": "auto-graded",
     "conceptMechanism": "Pseudonymization remains reversible and still counts as regulated personal data, while simple masking leaves indirect quasi-identifiers vulnerable to linkage attacks. Validated anonymization—such as k-anonymity generalization or differential privacy—removes identifiability irreversibly."
   },
   {
@@ -300,23 +324,27 @@
     ],
     "options": [
       {
-        "text": "Deploy format-preserving tokenization backed by a segmented vault so downstream systems process meaningless surrogates.",
-        "isCorrect": "<conceptual_placeholder>"
-      },
-      {
         "text": "Encrypt card numbers with AES-256 while distributing shared decryption keys to each downstream microservice.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Scope-Expansion Trap — Placing decryption keys and ciphertext inside all 35 microservices keeps every one of them squarely inside PCI DSS audit scope."
       },
       {
         "text": "Encode primary account numbers with Base64 across microservice logs and reporting export tables.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Encoding-Not-Security Trap — Base64 is trivially reversible encoding and provides zero confidentiality or compliance scope reduction."
+      },
+      {
+        "text": "Deploy format-preserving tokenization backed by a segmented vault so downstream systems process meaningless surrogates.",
+        "isCorrect": true,
+        "tag": "Correct — Tokenization isolates real PANs inside a single hardened vault so the 35 downstream services hold mathematically unrelated tokens and drop out of PCI scope."
       },
       {
         "text": "Restrict network ingress to all thirty-five microservices while retaining raw card numbers in memory.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Incomplete Isolation Trap — Tightening ingress still leaves live primary account numbers traversing all 35 services, preserving full audit scope."
       }
     ],
-    "answerKey": "<conceptual_placeholder>",
+    "answerKey": "auto-graded",
     "conceptMechanism": "Tokenization replaces sensitive payment numbers with mathematically unrelated surrogate tokens stored outside an isolated vault, shrinking regulatory compliance scope while letting downstream applications maintain referential consistency."
   },
   {
@@ -346,22 +374,26 @@
     "options": [
       {
         "text": "Apply formal scoping and tailoring, deploy compensating isolation controls, and record risk-owner approval.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": true,
+        "tag": "Correct — Scoping and tailoring formally adapts infeasible baseline settings using documented compensating controls and accountable risk-owner sign-off."
       },
       {
         "text": "Enforce every default baseline setting uniformly across plant controllers to preserve strict audit parity.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Operational-Disruption Trap — Blindly enforcing incompatible controls that crash production PLCs harms business continuity and potentially plant safety."
       },
       {
         "text": "Exclude the entire manufacturing division from enterprise baseline governance until controllers are replaced.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "All-or-Nothing Trap — Exempting the entire division leaves dozens of compatible plant systems unhardened unnecessarily."
       },
       {
         "text": "Remove the three incompatible controls silently from internal compliance checklists before external assessment.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Ethics & Audit Trap — Silently deleting baseline items without risk-owner approval or compensating controls conceals risk and fails audit integrity."
       }
     ],
-    "answerKey": "<conceptual_placeholder>",
+    "answerKey": "auto-graded",
     "conceptMechanism": "Scoping identifies applicable baseline controls while tailoring adapts infeasible items through documented compensating safeguards and formal risk-owner approval. This preserves defensible security posture without breaking mission-essential operational technology."
   },
   {
@@ -391,23 +423,27 @@
     ],
     "options": [
       {
-        "text": "Enterprise Information Rights Management (DRM) binding persistent access, expiration, and print policies to files.",
-        "isCorrect": "<conceptual_placeholder>"
-      },
-      {
         "text": "Hardware-backed full-disk encryption enforced across all internal corporate banking laptops.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Wrong-State Trap — Full-disk encryption protects powered-off internal laptops, not documents already downloaded by external buyers."
       },
       {
         "text": "Perimeter data loss prevention sensors blocking outbound email attachments containing deal-code keywords.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Perimeter-Limit Trap — Corporate DLP only inspects bank-owned channels and cannot control what an external buyer prints or forwards from their own system."
       },
       {
         "text": "Immutable write-once cloud storage locks preventing modification of archived pitch presentations.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Integrity-vs-Usage Trap — WORM storage protects archive integrity against deletion, not downstream copying or forwarding."
+      },
+      {
+        "text": "Enterprise Information Rights Management (DRM) binding persistent access, expiration, and print policies to files.",
+        "isCorrect": true,
+        "tag": "Correct — Enterprise DRM/IRM embeds persistent rights enforcement directly with the file even after authorized download onto external endpoints."
       }
     ],
-    "answerKey": "<conceptual_placeholder>",
+    "answerKey": "auto-graded",
     "conceptMechanism": "Enterprise DRM / Information Rights Management travels with the document itself to enforce persistent usage restrictions—such as blocking printing, copying, or post-expiration viewing—even after legitimate download and decryption."
   },
   {
@@ -438,22 +474,26 @@
     "options": [
       {
         "text": "Delete all unapproved cloud buckets immediately to eliminate unauthorized data exposure across divisions.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Availability-Destruction Trap — Blindly deleting buckets breaks live customer invoicing workflows and risks destroying records under legal retention."
       },
       {
         "text": "Discover and inventory repositories, assign accountable Data Owners, and classify their information assets.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": true,
+        "tag": "Correct — Discovery, inventorying, ownership assignment, and classification always precede enforcement or decommissioning in asset security."
       },
       {
         "text": "Re-encrypt every discovered bucket under a single central KMS key before notifying business leaders.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Premature-Technical Trap — Changing encryption keys without mapping active integrations breaks invoicing apps and skips owner accountability."
       },
       {
         "text": "Issue formal policy-violation warnings to department heads before identifying what business data exists.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Punitive-First Trap — Issuing warnings before discovering scope and data sensitivity drives shadow IT deeper underground."
       }
     ],
-    "answerKey": "<conceptual_placeholder>",
+    "answerKey": "auto-graded",
     "conceptMechanism": "Asset security begins with discovery, inventorying, ownership assignment, and classification before enforcing controls or decommissioning resources. Blind deletion or re-encryption risks disrupting live customer workflows or destroying legally protected records."
   },
   {
@@ -483,22 +523,26 @@
     "options": [
       {
         "text": "Ship intact tapes via bonded courier to a certified off-site vendor for batch degaussing.",
-        "isCorrect": "<conceptual_placeholder>"
-      },
-      {
-        "text": "Perform verified on-site degaussing and witnessed physical destruction with signed certificates of destruction.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Hidden-Constraint Trap — Facility regulations explicitly forbid unsanitized sensitive media from leaving the physical perimeter."
       },
       {
         "text": "Overwrite tape headers logically using backup management software before transferring cartridges to recycling.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Remanence Trap — Overwriting only headers leaves the bulk of export-controlled magnetic data recoverable on the tape."
+      },
+      {
+        "text": "Perform verified on-site degaussing and witnessed physical destruction with signed certificates of destruction.",
+        "isCorrect": true,
+        "tag": "Correct — High-coercivity degaussing plus witnessed on-site destruction eliminates magnetic remanence before media exits custody and creates an audit trail."
       },
       {
         "text": "Store retired tapes indefinitely inside a locked server-room cabinet to avoid external transport.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Hoarding Trap — Indefinite retention increases physical theft exposure and violates data-lifecycle disposal mandates."
       }
     ],
-    "answerKey": "<conceptual_placeholder>",
+    "answerKey": "auto-graded",
     "conceptMechanism": "High-classification magnetic media governed by strict perimeter custody requires verified on-site purging (high-coercivity degaussing) and witnessed physical destruction documented via chain-of-custody certificates. Off-site transport of unsanitized media or simple header overwrites violate security constraints."
   },
   {
@@ -528,22 +572,26 @@
     "options": [
       {
         "text": "Confidential computing using hardware-enforced Trusted Execution Environments to isolate and encrypt active memory.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": true,
+        "tag": "Correct — Confidential computing isolates active computation inside hardware enclaves (TEEs), protecting data in use even from privileged host or hypervisor access."
       },
       {
         "text": "Transparent Database Encryption encrypting underlying relational tables with customer-managed KMS keys.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Wrong-State Trap — TDE protects data at rest on disk, not plaintext model parameters residing in active CPU memory."
       },
       {
         "text": "Hardware Security Modules accelerating asymmetric TLS handshakes across cloud ingress load balancers.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Wrong-State Trap — Load-balancer HSMs secure TLS keys for data in transit, not runtime memory on multi-tenant compute nodes."
       },
       {
         "text": "Immutable object-lock storage policies preventing unauthorized modification of nightly model checkpoints.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Wrong-State Trap — Object locks protect backup integrity at rest rather than runtime confidentiality in memory."
       }
     ],
-    "answerKey": "<conceptual_placeholder>",
+    "answerKey": "auto-graded",
     "conceptMechanism": "Protecting data across all three states requires dedicated controls for data in use. Confidential computing leverages hardware-backed Trusted Execution Environments (TEEs) to isolate active memory and verify code integrity even against privileged host administrators."
   },
   {
@@ -573,22 +621,26 @@
     "options": [
       {
         "text": "Data portability requiring streamlined export of customer records to competing service providers.",
-        "isCorrect": "<conceptual_placeholder>"
-      },
-      {
-        "text": "Data minimization restricting collection and retention strictly to attributes necessary for stated purposes.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Wrong Privacy Principle — Portability governs a user's right to export their data, not limiting excessive upfront collection."
       },
       {
         "text": "Non-repudiation preventing users from disputing prior mobile application activity logs.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Wrong Security Property — Non-repudiation governs proof of origin, unrelated to collecting superfluous personal fields."
       },
       {
         "text": "Integrity assurance validating that sensor telemetry cannot be altered during synchronization.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Wrong Security Property — Integrity verifies accuracy of telemetry, not whether collecting government IDs is proportionate."
+      },
+      {
+        "text": "Data minimization restricting collection and retention strictly to attributes necessary for stated purposes.",
+        "isCorrect": true,
+        "tag": "Correct — Data minimization (collection limitation) prohibits harvesting excessive personal data unrelated to the stated lawful purpose."
       }
     ],
-    "answerKey": "<conceptual_placeholder>",
+    "answerKey": "auto-graded",
     "conceptMechanism": "Data minimization (collection limitation) mandates gathering and retaining only personal data strictly necessary for a documented, lawful purpose. Reducing unnecessary data shrinks both compliance overhead and breach blast radius."
   },
   {
@@ -619,22 +671,26 @@
     "options": [
       {
         "text": "A Cloud Access Security Broker integrating API-based SaaS visibility, DLP, and classification policies.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": true,
+        "tag": "Correct — A CASB inspects SaaS APIs and remote sessions directly to discover shadow IT, enforce DLP, and block unauthorized external file sharing."
       },
       {
         "text": "Expanded stateful firewall egress rules deployed at headquarters internet perimeter gateways.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Blind-Spot Trap — The stem notes HQ firewalls see less than 20% of remote traffic and cannot parse SaaS sharing APIs."
       },
       {
         "text": "Quarterly employee self-attestation surveys listing personal cloud storage applications used for work.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Weak-Administrative Trap — Self-reported surveys miss shadow IT and provide zero real-time sharing or DLP enforcement."
       },
       {
         "text": "Full-disk encryption enforced strictly on corporate-issued headquarters desktop workstations.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Off-Target Trap — Desktop disk encryption does nothing to govern remote unmanaged laptops syncing spreadsheets to cloud SaaS."
       }
     ],
-    "answerKey": "<conceptual_placeholder>",
+    "answerKey": "auto-graded",
     "conceptMechanism": "A Cloud Access Security Broker (CASB) extends classification, DLP, and shadow-IT discovery directly into sanctioned and unsanctioned cloud SaaS applications via API and proxy enforcement, covering remote traffic invisible to corporate perimeter firewalls."
   },
   {
@@ -665,22 +721,26 @@
     "options": [
       {
         "text": "Encrypt datasets with TLS 1.3 during transfer so extraterritorial privacy residency mandates no longer apply.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Technical-Exemption Myth — Transport encryption protects confidentiality in motion but never overrides sovereign data-residency or transfer statutes."
       },
       {
         "text": "Complete a Data Protection Impact Assessment with Legal and validate lawful transfer mechanisms or residency.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": true,
+        "tag": "Correct — Performing a DPIA with Legal and validating lawful transfer safeguards (or regional residency) satisfies statutory due diligence prior to moving data."
       },
       {
         "text": "Stage anonymized and raw trial copies in North America first before notifying regional supervisory authorities.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Chronology Violation — Moving raw regulated data across borders before legal validation already commits the statutory violation."
       },
       {
         "text": "Delegate sovereign transfer approval directly to the lead cloud data-lake architect to meet timelines.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Authority Trap — Cloud architects design technical pipelines; Data Controllers and Legal Counsel govern cross-border statutory compliance."
       }
     ],
-    "answerKey": "<conceptual_placeholder>",
+    "answerKey": "auto-graded",
     "conceptMechanism": "Cross-border data governance requires conducting a Data Protection Impact Assessment (DPIA) with Legal and verifying lawful transfer mechanisms or regional residency before moving regulated data. Encryption alone does not bypass statutory data sovereignty rules."
   },
   {
@@ -711,22 +771,26 @@
     "options": [
       {
         "text": "Require external QA contractors to sign updated confidentiality addenda before accessing cloned tables.",
-        "isCorrect": "<conceptual_placeholder>"
-      },
-      {
-        "text": "Prohibit live production data in non-production tiers and mandate synthetic data or irreversible masking.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Paper-Control Trap — NDAs deter misconduct legally but do not prevent accidental leaks or compromise of live regulated data sitting in unhardened QA."
       },
       {
         "text": "Move cloned QA billing databases onto an isolated internal subnet while preserving live customer records.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Root-Cause Miss — Contractors still hold broad query access to real customer billing data inside a non-production environment."
+      },
+      {
+        "text": "Prohibit live production data in non-production tiers and mandate synthetic data or irreversible masking.",
+        "isCorrect": true,
+        "tag": "Correct — Eliminating real sensitive data from lower-assurance dev/QA tiers removes the exposure at its root while still enabling realistic bug reproduction."
       },
       {
         "text": "Compress cloned database exports with password-protected archives prior to loading them into QA.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Transit-Only Trap — Password-protecting the export file does nothing once the live customer tables are unpacked inside QA."
       }
     ],
-    "answerKey": "<conceptual_placeholder>",
+    "answerKey": "auto-graded",
     "conceptMechanism": "Non-production environments rarely maintain production-grade access controls and should never hold live sensitive records. Enforcing policy-backed synthetic data generation or irreversible data masking prevents sensitive data sprawl across development and QA tiers."
   },
   {
@@ -757,22 +821,26 @@
     "options": [
       {
         "text": "Revoke enterprise SSO bookmarks and rely on the vendor's standard website privacy commitment.",
-        "isCorrect": "<conceptual_placeholder>"
-      },
-      {
-        "text": "Validate full data portability, revoke access, and obtain signed sanitization attestation covering backups and subprocessors.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Unverified-Exit Trap — Removing SSO links leaves live tenant data, geo-replicated snapshots, and fourth-party archives completely unverified."
       },
       {
         "text": "Terminate automated billing payments immediately so the vendor suspends tenant storage partitions.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Suspension-Not-Sanitization Trap — Account suspension freezes access without guaranteeing verifiable sanitization across backups and subprocessors."
       },
       {
         "text": "Run an unannounced external vulnerability scan against the outgoing tenant portal after migration.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Unauthorized-Scan Trap — Scanning a vendor's platform without authorization violates legal terms and cannot verify backend backup erasure."
+      },
+      {
+        "text": "Validate full data portability, revoke access, and obtain signed sanitization attestation covering backups and subprocessors.",
+        "isCorrect": true,
+        "tag": "Correct — Properly closes the cloud data lifecycle by verifying extraction, revoking access, and securing written sanitization proof across replicas and fourth parties."
       }
     ],
-    "answerKey": "<conceptual_placeholder>",
+    "answerKey": "auto-graded",
     "conceptMechanism": "Cloud offboarding closes the end-of-life stage of the data lifecycle by verifying complete data extraction, revoking access, and obtaining formal written sanitization attestation covering active storage, backup replicas, and subprocessors."
   },
   {
@@ -802,22 +870,26 @@
     "options": [
       {
         "text": "Data Controller because it physically hosts the databases and administers encryption key lifecycles.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Infrastructure Myth — Operating servers and technical keys makes an organization a custodian/processor, not the Controller setting lawful purpose."
       },
       {
         "text": "Data Processor acting strictly under documented instructions from the client Data Controller.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": true,
+        "tag": "Correct — Because the banking client determines why and how payroll data is processed, the outsourced payroll vendor is the Data Processor."
       },
       {
         "text": "Data Subject holding statutory consent rights over processed corporate payroll records.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Role Confusion — Data Subjects are the individual employees whose personal salary and tax data are processed."
       },
       {
         "text": "Supervisory Authority empowered to issue cross-border data adequacy certifications.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Role Confusion — Supervisory Authorities are government regulators enforcing privacy law, not commercial SaaS vendors."
       }
     ],
-    "answerKey": "<conceptual_placeholder>",
+    "answerKey": "auto-graded",
     "conceptMechanism": "A Data Controller determines the lawful purposes and means of processing personal data, whereas a Data Processor executes processing strictly on the controller's behalf. Physical hosting or key administration does not transfer Controller status."
   },
   {
@@ -846,23 +918,27 @@
     ],
     "options": [
       {
-        "text": "Upgrade the backup encryption algorithm while keeping keys stored alongside archive buckets for rapid recovery.",
-        "isCorrect": "<conceptual_placeholder>"
+        "text": "Isolate encryption keys in a separate hardened KMS/HSM account with distinct IAM roles and dual custody.",
+        "isCorrect": true,
+        "tag": "Correct — Separating key custody from ciphertext storage ensures a compromise of the backup account or storage admin cannot decrypt archived PHI."
       },
       {
-        "text": "Isolate encryption keys in a separate hardened KMS/HSM account with distinct IAM roles and dual custody.",
-        "isCorrect": "<conceptual_placeholder>"
+        "text": "Upgrade the backup encryption algorithm while keeping keys stored alongside archive buckets for rapid recovery.",
+        "isCorrect": false,
+        "tag": "Algorithm-vs-Key Trap — Stronger ciphers offer zero protection if an attacker compromising the storage account instantly inherits the decryption keys."
       },
       {
         "text": "Shorten backup retention from seven years to ninety days to limit potential historical exposure.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Constraint Violation — The stem specifies a mandatory seven-year statutory retention requirement that cannot be arbitrarily shortened."
       },
       {
         "text": "Compress encrypted backup archives into multi-part files before uploading them to the secondary region.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Non-Security Control — File compression optimizes storage volume without separating key access from ciphertext."
       }
     ],
-    "answerKey": "<conceptual_placeholder>",
+    "answerKey": "auto-graded",
     "conceptMechanism": "Cryptographic protection of stored assets fails if keys share the same administrative trust boundary as ciphertext. Separating keys into an isolated KMS/HSM account under distinct IAM governance prevents a single storage compromise from exposing archived data."
   },
   {
@@ -893,22 +969,26 @@
     "options": [
       {
         "text": "Deploy inline network DLP appliances in blocking mode across all corporate egress gateways.",
-        "isCorrect": "<conceptual_placeholder>"
-      },
-      {
-        "text": "Inventory information assets, establish data classification tiers, and assign accountable Data Owners.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Premature-Tooling Trap — DLP cannot accurately filter or block data before assets are inventoried and classified."
       },
       {
         "text": "Purchase enterprise Hardware Security Modules to encrypt every file share at maximum classification.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Over-Protection Trap — Applying maximum-tier controls indiscriminately wastes capital without classification and business-value prioritization."
+      },
+      {
+        "text": "Inventory information assets, establish data classification tiers, and assign accountable Data Owners.",
+        "isCorrect": true,
+        "tag": "Correct — Asset discovery, classification taxonomy, and Data Owner assignment always come first so security investments match true risk."
       },
       {
         "text": "Mandate quarterly full-interruption disaster recovery tests across all manufacturing storage servers.",
-        "isCorrect": "<conceptual_placeholder>"
+        "isCorrect": false,
+        "tag": "Off-Sequence Trap — Full-interruption DR testing does not establish asset ownership or data sensitivity criteria for tool procurement."
       }
     ],
-    "answerKey": "<conceptual_placeholder>",
+    "answerKey": "auto-graded",
     "conceptMechanism": "Effective asset security begins by identifying assets, establishing a clear classification scheme, and assigning accountable Data Owners. Without knowing what data exists and its business sensitivity, security spending is misallocated and controls cannot be proportionately enforced."
   }
 ]

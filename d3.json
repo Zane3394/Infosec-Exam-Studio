@@ -1,0 +1,997 @@
+[
+  {
+    "id": "cat-d3-01",
+    "bank": "study",
+    "domainNum": 3,
+    "secondaryDomains": [
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "Physical security architects are finalizing pre-occupancy sign-off for a Tier-4 clearinghouse data center housing $40 million in high-sensitivity Hardware Security Modules and staffed around the clock by on-site engineers.",
+    "clue": "Loss-prevention leadership demands fail-secure electromagnetic locks on all server-hall personnel exits so a deliberate utility cut cannot allow intruders to steal HSM hardware",
+    "question": "Which egress lock specification must the security architect enforce on occupied personnel exits?",
+    "legaleseStem": "<span class='fluff-zone'>When reconciling high-value cryptographic asset theft prevention against municipal life-safety codes in an occupied server hall,</span> which egress behavior must architects <span class='qual-highlight'>NOT</span> compromise?",
+    "archaicStem": "<span class='fluff-zone'>Notwithstanding high-value cryptographic assets housed within an occupied enclosure,</span> which personnel-egress disposition would be <span class='qual-highlight'>LEAST</span> defensible to forbear during fire alarms?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST DEFENSIBLE",
+          "TO FORBEAR"
+        ],
+        "result": "MANDATORY TO IMPLEMENT"
+      }
+    ],
+    "options": [
+      {
+        "text": "Configure occupied egress doors to fail-secure mechanically while issuing emergency manual override keys to shift supervisors.",
+        "isCorrect": false,
+        "tag": "Life-Safety Violation — Relying on a supervisor with a physical key traps occupants if the supervisor is incapacitated or separated during a fire."
+      },
+      {
+        "text": "Configure occupied egress doors to fail-safe automatically upon utility power loss or fire-alarm activation.",
+        "isCorrect": true,
+        "tag": "Correct — Human life safety always outranks asset confidentiality or theft prevention; use guards, CCTV, and mantrap sensors as compensating theft controls."
+      },
+      {
+        "text": "Wire electromagnetic exit locks to dedicated uninterruptible backup generators to keep doors sealed during power outages.",
+        "isCorrect": false,
+        "tag": "Asset-Over-Life Trap — Keeping exits locked during electrical or fire emergencies directly violates fire codes and endangers human life."
+      },
+      {
+        "text": "Mandate dual-factor badge-and-biometric verification on exit readers to maintain strict occupancy logs during evacuations.",
+        "isCorrect": false,
+        "tag": "Friction-in-Emergency Trap — Requiring biometric exit authentication bottlenecks evacuation during life-threatening emergencies."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Human life safety supersedes all asset protection and confidentiality goals in security architecture. Occupied personnel egress doors must fail-safe upon power failure or fire activation, relying on compensating detective and guard controls for theft deterrence."
+  },
+  {
+    "id": "cat-d3-02",
+    "bank": "study",
+    "domainNum": 3,
+    "secondaryDomains": [
+      2,
+      5
+    ],
+    "difficulty": 4,
+    "lengthTier": "double",
+    "trapType": "Double Negatives",
+    "fluff": "A defense integrator is architecting a multi-level security enclave co-hosting Top Secret intelligence briefings alongside Unclassified logistics schedules on shared compute infrastructure.",
+    "clue": "Accreditors mandate a formal mathematical property preventing a compromised Top Secret application process from copying classified text downward into an Unclassified file",
+    "question": "Which formal security property <span class='qual-highlight'>DIRECTLY</span> prevents this downward confidentiality leakage?",
+    "legaleseStem": "<span class='fluff-zone'>Within a formal mandatory confidentiality lattice governing disparate sensitivity tiers,</span> which axiom is <span class='qual-highlight'>PRIMARILY</span> responsible for blocking downward information writes?",
+    "archaicStem": "<span class='fluff-zone'>Insofar as a subverted high-clearance subject must be barred from inscribing secrets into lower-tier files,</span> which axiom does <span class='qual-highlight'>NOT</span> fail to forbid downward writes?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "FAIL TO FORBID"
+        ],
+        "result": "DIRECTLY FORBIDS"
+      }
+    ],
+    "options": [
+      {
+        "text": "The Bell-LaPadula Simple Security Property prohibiting lower-clearance subjects from reading higher-classification objects.",
+        "isCorrect": false,
+        "tag": "Direction Trap — Simple Security enforces 'No Read Up,' which stops low-clearance users from reading secrets, not compromised high-clearance processes from writing down."
+      },
+      {
+        "text": "The Biba Star Integrity Property prohibiting lower-integrity subjects from modifying higher-integrity objects.",
+        "isCorrect": false,
+        "tag": "Model Swap Trap — Biba governs data integrity ('No Write Up'), whereas the scenario explicitly requires preventing confidentiality leakage downward."
+      },
+      {
+        "text": "The Bell-LaPadula Star Property prohibiting higher-clearance subjects from writing to lower-classification objects.",
+        "isCorrect": true,
+        "tag": "Correct — The Bell-LaPadula Star (*) Property enforces 'No Write Down,' stopping a compromised Top Secret process from leaking secrets into Unclassified files."
+      },
+      {
+        "text": "The Clark-Wilson integrity framework enforcing certified transformation procedures across commercial data items.",
+        "isCorrect": false,
+        "tag": "Commercial Integrity Trap — Clark-Wilson governs commercial transactional integrity and separation of duties rather than multi-level confidentiality lattices."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Bell-LaPadula is a formal mandatory confidentiality model combining Simple Security ('No Read Up') with the Star (*) Property ('No Write Down'). Blocking downward writes prevents Trojanized high-clearance processes from exfiltrating classified data into lower tiers."
+  },
+  {
+    "id": "cat-d3-03",
+    "bank": "study",
+    "domainNum": 3,
+    "secondaryDomains": [
+      4,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "An electric utility wants to stream real-time turbine vibration telemetry from legacy industrial control (SCADA) controllers to a cloud predictive-maintenance platform.",
+    "clue": "Plant engineers confirm the legacy controllers cannot support endpoint EDR agents, require uninterrupted real-time availability, and cannot tolerate unscheduled operating-system reboots",
+    "question": "Which architectural control <span class='qual-highlight'>BEST</span> safeguards operational technology safety while enabling cloud analytics?",
+    "legaleseStem": "<span class='fluff-zone'>When exporting telemetry from unpatchable legacy industrial control systems into enterprise cloud analytics platforms,</span> which architectural barrier is <span class='qual-highlight'>MOST</span> resilient?",
+    "archaicStem": "<span class='fluff-zone'>Whereas legacy industrial controllers brook neither invasive agents nor bidirectional corporate exposure,</span> which architectural safeguard is <span class='qual-highlight'>PRIMARY</span> for preserving plant safety?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "PLANT SAFETY"
+        ],
+        "result": "UNIDIRECTIONAL ISOLATION"
+      }
+    ],
+    "options": [
+      {
+        "text": "Deploy a hardware unidirectional security gateway or hardened industrial DMZ enforcing one-way telemetry export.",
+        "isCorrect": true,
+        "tag": "Correct — A hardware data diode or Purdue-aligned industrial DMZ streams telemetry outward while physically preventing IT or cloud threats from reaching OT control loops."
+      },
+      {
+        "text": "Install lightweight host-based intrusion prevention agents onto legacy controllers with staggered weekly reboots.",
+        "isCorrect": false,
+        "tag": "Hidden-Constraint Trap — The stem explicitly states the legacy controllers cannot run endpoint agents or accept OS reboots."
+      },
+      {
+        "text": "Establish a bidirectional site-to-site IPsec VPN tunnel linking SCADA controllers directly to cloud storage.",
+        "isCorrect": false,
+        "tag": "Direct-Exposure Trap — Encrypting a direct bidirectional tunnel still creates a network attack path from cloud/IT back into safety-critical OT controllers."
+      },
+      {
+        "text": "Require plant operators to transfer diagnostic logs manually each shift using encrypted USB flash drives.",
+        "isCorrect": false,
+        "tag": "Constraint & Threat Trap — Manual USB sneakernet breaks the real-time streaming goal and introduces removable-media malware into the OT enclave."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Operational technology environments prioritize human safety and uninterrupted availability over endpoint patching. Hardware unidirectional gateways (data diodes) and Purdue-aligned industrial DMZs isolate legacy controllers while safely delivering outbound telemetry."
+  },
+  {
+    "id": "cat-d3-04",
+    "bank": "study",
+    "domainNum": 3,
+    "secondaryDomains": [
+      2,
+      8
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "An enterprise integrates an internal LLM assistant with corporate SharePoint, HR policy wikis, and customer support tickets so employees can run natural-language queries across repositories.",
+    "clue": "Red-team assessors show that hidden prompt instructions inside an external customer support ticket trick the assistant into retrieving and displaying restricted executive compensation files",
+    "question": "Which architectural control <span class='qual-highlight'>MOST</span> reliably enforces authorization boundaries against indirect prompt injection?",
+    "legaleseStem": "<span class='fluff-zone'>Where untrusted external text manipulates an enterprise language model into surfacing unauthorized internal files,</span> which architectural boundary is <span class='qual-highlight'>MOST</span> dependable?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as probabilistic language models cannot deterministically uphold authorization boundaries internally,</span> which architectural control shall designers deem <span class='qual-highlight'>LEAST</span> dispensable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DISPENSABLE"
+        ],
+        "result": "MOST ESSENTIAL"
+      }
+    ],
+    "options": [
+      {
+        "text": "Append strict refusal rules to the model's system prompt prohibiting disclosure of confidential records.",
+        "isCorrect": false,
+        "tag": "Probabilistic-Boundary Trap — System prompts are advisory instructions, not security boundaries, and can be overridden by adversarial prompt injection."
+      },
+      {
+        "text": "Deploy a secondary language model classifier to score outgoing responses for sensitive compensation keywords.",
+        "isCorrect": false,
+        "tag": "Bypassable Filter Trap — Output filters are probabilistic and miss paraphrased or encoded exfiltration if the model already retrieved unauthorized files."
+      },
+      {
+        "text": "Restrict external customer ticket ingestion to nightly batch jobs reviewed manually by support supervisors.",
+        "isCorrect": false,
+        "tag": "Operational-Bottleneck Trap — Manual ticket review does not scale and still fails to fix over-privileged service-account retrieval inside the RAG pipeline."
+      },
+      {
+        "text": "Enforce deterministic user-level access checks at the retrieval layer outside the language model.",
+        "isCorrect": true,
+        "tag": "Correct — Inheriting the calling user's least-privilege ACLs at the retrieval/index layer ensures the LLM can never fetch records the user is unauthorized to view."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Because generative AI models are probabilistic, security boundaries must be enforced deterministically outside the model. Applying per-user least-privilege authorization at the retrieval and tool-execution layers prevents indirect prompt injection from crossing privilege boundaries."
+  },
+  {
+    "id": "cat-d3-05",
+    "bank": "study",
+    "domainNum": 3,
+    "secondaryDomains": [
+      1
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Process Chronology",
+    "fluff": "A national healthcare archive retains regulated genomic datasets that must remain confidential for thirty years, and the Board requests a roadmap addressing 'harvest now, decrypt later' quantum threats.",
+    "clue": "Enterprise environments currently rely on hundreds of uncataloged asymmetric certificates, embedded vendor TLS libraries, and legacy hardware gateways",
+    "question": "Which architectural governance step should the security program execute <span class='qual-highlight'>FIRST</span>?",
+    "legaleseStem": "<span class='fluff-zone'>When initiating a multi-year enterprise cryptographic transition for long-retention assets threatened by future cryptanalysis,</span> which preparatory step is <span class='qual-highlight'>FIRST</span> required?",
+    "archaicStem": "<span class='fluff-zone'>Ere legacy asymmetric ciphers be displaced across undocumented healthcare archives,</span> which inaugural readiness task must governance <span class='qual-highlight'>NOT</span> postpone?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "POSTPONE"
+        ],
+        "result": "EXECUTE FIRST"
+      }
+    ],
+    "options": [
+      {
+        "text": "Compile a cryptographic inventory of long-retention systems and establish crypto-agility architecture standards.",
+        "isCorrect": true,
+        "tag": "Correct — You cannot migrate what you have not mapped; building a Cryptographic Bill of Materials (CBOM) and prioritizing high-retention asymmetric exposure comes first."
+      },
+      {
+        "text": "Replace all existing symmetric AES-256 disk encryption keys with proprietary double-length block ciphers.",
+        "isCorrect": false,
+        "tag": "Wrong-Target & Obscurity Trap — AES-256 already resists Grover's quantum speedup adequately, and proprietary ciphers violate Kerckhoffs's Principle."
+      },
+      {
+        "text": "Mandate immediate deployment of experimental unstandardized post-quantum algorithms across all public portals.",
+        "isCorrect": false,
+        "tag": "Premature-Rollout Trap — Deploying unstandardized ciphers without an inventory risks interoperability outages and weak unproven implementations."
+      },
+      {
+        "text": "Extend current RSA-2048 certificate validity periods to ten years to stabilize key-management operations.",
+        "isCorrect": false,
+        "tag": "Anti-Agility Trap — Longer certificate lifetimes harden legacy dependencies and make cryptographic migration slower and riskier."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Post-quantum readiness begins by discovering where vulnerable public-key algorithms protect long-lived sensitive data (creating a cryptographic inventory) and designing cryptographic agility so standardized post-quantum algorithms can be phased in safely."
+  },
+  {
+    "id": "cat-d3-06",
+    "bank": "study",
+    "domainNum": 3,
+    "secondaryDomains": [
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "Facilities engineers are upgrading fire suppression inside an occupied regional bank data center containing high-density payment servers and staffed continuously by operations technicians.",
+    "clue": "The insurer demands rapid Class C electrical fire suppression that minimizes collateral water damage while strictly complying with human-occupancy life-safety regulations",
+    "question": "Which fire-suppression architecture <span class='qual-highlight'>BEST</span> satisfies both life-safety and equipment-protection constraints?",
+    "legaleseStem": "<span class='fluff-zone'>When approving automated Class C fire-suppression engineering for a continuously occupied enterprise server room,</span> which architectural control <span class='qual-highlight'>BEST</span> balances human safety and hardware preservation?",
+    "archaicStem": "<span class='fluff-zone'>Whereas oxygen-depleting gases imperil occupants and pressurized deluge ruins energized racks,</span> which suppression design is <span class='qual-highlight'>LEAST</span> contrary to both mandates?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "CONTRARY TO"
+        ],
+        "result": "MOST ALIGNED WITH"
+      }
+    ],
+    "options": [
+      {
+        "text": "Install a high-concentration carbon dioxide flooding system triggered immediately upon initial smoke detection.",
+        "isCorrect": false,
+        "tag": "Lethal-Hazard Trap — CO2 suppresses fire by displacing oxygen, posing a fatal asphyxiation hazard in continuously occupied server rooms."
+      },
+      {
+        "text": "Deploy a human-safe clean-agent gaseous or pre-action dry-pipe system with pre-discharge evacuation alarms.",
+        "isCorrect": true,
+        "tag": "Correct — Human-safe clean agents (e.g., FM-200/Novec-class) or pre-action dry-pipe systems protect live electronics while preserving breathable air and occupant evacuation time."
+      },
+      {
+        "text": "Install continuously pressurized wet-pipe sprinklers over every server aisle to maximize thermal cooling speed.",
+        "isCorrect": false,
+        "tag": "Collateral-Damage Trap — Wet-pipe systems carry continuous water above energized racks, creating severe accidental leak and equipment-destruction risk."
+      },
+      {
+        "text": "Remove automated ceiling suppression entirely and station handheld Class A water extinguishers near exits.",
+        "isCorrect": false,
+        "tag": "Wrong-Class & Safety Trap — Water conducts electricity on energized Class C equipment and lacks automated protection if fire spreads rapidly."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Occupied data centers require Class C-compatible suppression that prioritizes human life while minimizing hardware damage. Human-safe clean agents or pre-action dry-pipe systems with pre-discharge alarms outperform lethal CO2 flooding and leak-prone wet-pipe sprinklers."
+  },
+  {
+    "id": "cat-d3-07",
+    "bank": "study",
+    "domainNum": 3,
+    "secondaryDomains": [
+      2,
+      8
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A commercial clearinghouse is designing a core ledger platform where preventing unauthorized or malformed updates to customer settlement balances is the primary security objective.",
+    "clue": "Architects require that users can modify ledger records solely through certified application logic enforcing dual-control validation and verifiable state transitions",
+    "question": "Which formal security model <span class='qual-highlight'>BEST</span> maps to these commercial integrity requirements?",
+    "legaleseStem": "<span class='fluff-zone'>In architecting a commercial financial ledger prioritizing well-formed state transitions and separation of duties,</span> which formal security model is <span class='qual-highlight'>MOST</span> directly aligned?",
+    "archaicStem": "<span class='fluff-zone'>Whereas military lattice models poorly reflect commercial accounting workflows,</span> which formal integrity model shall architects deem <span class='qual-highlight'>LEAST</span> deficient?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DEFICIENT"
+        ],
+        "result": "BEST SUITED"
+      }
+    ],
+    "options": [
+      {
+        "text": "The Bell-LaPadula lattice model enforcing 'No Read Up' and 'No Write Down' clearance rules.",
+        "isCorrect": false,
+        "tag": "Confidentiality Trap — Bell-LaPadula governs multi-level confidentiality rather than commercial transactional integrity."
+      },
+      {
+        "text": "The Biba integrity model restricting subjects strictly by static hierarchical integrity classification labels.",
+        "isCorrect": false,
+        "tag": "Wrong-Context Trap — Biba uses rigid static lattice labels and lacks well-formed Transformation Procedures and commercial separation of duties."
+      },
+      {
+        "text": "The Clark-Wilson model enforcing Constrained Data Items, certified Transformation Procedures, and separation of duties.",
+        "isCorrect": true,
+        "tag": "Correct — Clark-Wilson was built specifically for commercial integrity, requiring subjects to access CDIs exclusively through audited Transformation Procedures."
+      },
+      {
+        "text": "The Brewer-Nash model dynamically adjusting subject permissions based on competing client conflict classes.",
+        "isCorrect": false,
+        "tag": "Conflict-of-Interest Trap — Brewer-Nash (Chinese Wall) prevents competitive consulting conflicts rather than malformed accounting updates."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "The Clark-Wilson integrity model protects commercial data by restricting subjects to modifying Constrained Data Items (CDIs) strictly through certified Transformation Procedures (TPs), verified by Integrity Verification Procedures (IVPs) and separation of duties."
+  },
+  {
+    "id": "cat-d3-08",
+    "bank": "study",
+    "domainNum": 3,
+    "secondaryDomains": [
+      2,
+      5
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "An M&A advisory firm hosts deal rooms for competing energy corporations on a shared enterprise collaboration platform.",
+    "clue": "Regulatory compliance mandates that the moment an analyst opens any document belonging to OilCo A, the system must automatically block that analyst from viewing files belonging to rival OilCo B",
+    "question": "Which formal security model <span class='qual-highlight'>MOST</span> directly enforces this dynamic isolation rule?",
+    "legaleseStem": "<span class='fluff-zone'>To enforce dynamic conflict-of-interest isolation across competing corporate clients on a shared platform,</span> which formal security model is <span class='qual-highlight'>MOST</span> specifically designed?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as static access lists fail to bar cross-competitor disclosure dynamically after initial exposure,</span> which formal security model is <span class='qual-highlight'>PRIMARY</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "CONFLICT OF INTEREST"
+        ],
+        "result": "BREWER-NASH (CHINESE WALL)"
+      }
+    ],
+    "options": [
+      {
+        "text": "The Take-Grant protection model analyzing how discretionary access rights propagate across graphs.",
+        "isCorrect": false,
+        "tag": "Wrong Model — Take-Grant models theoretical rights propagation in discretionary systems rather than dynamic client conflict barriers."
+      },
+      {
+        "text": "The Harrison-Ruzzo-Ullman model evaluating whether an access matrix can reach an unauthorized state.",
+        "isCorrect": false,
+        "tag": "Wrong Model — HRU evaluates formal safety of access-matrix state transitions rather than commercial conflict-of-interest classes."
+      },
+      {
+        "text": "The Lipner hybrid model combining Bell-LaPadula and Biba lattices for software lifecycle environments.",
+        "isCorrect": false,
+        "tag": "Wrong Model — Lipner blends confidentiality and integrity lattices for commercial development, not dynamic competitor isolation."
+      },
+      {
+        "text": "The Brewer-Nash (Chinese Wall) model dynamically restricting access based on prior conflict-class history.",
+        "isCorrect": true,
+        "tag": "Correct — Brewer-Nash dynamically updates allowed datasets based on what a user has already accessed, preventing conflicts of interest across competitors."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "The Brewer-Nash (Chinese Wall) model dynamically restricts a subject's future permissions based on prior object access within defined conflict-of-interest classes, preventing insiders from leveraging one client's confidential data for a direct competitor."
+  },
+  {
+    "id": "cat-d3-09",
+    "bank": "study",
+    "domainNum": 3,
+    "secondaryDomains": [
+      2,
+      4
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A global financial enterprise is deploying an internal Public Key Infrastructure to issue TLS certificates, code-signing certificates, and smart-card credentials across forty thousand endpoints.",
+    "clue": "Security leadership warns that compromise of the Root Certificate Authority private key would force an emergency enterprise-wide trust-store replacement across every host",
+    "question": "Which PKI architectural design <span class='qual-highlight'>BEST</span> protects the enterprise root of trust while supporting high-volume issuance?",
+    "legaleseStem": "<span class='fluff-zone'>Within a large-scale enterprise PKI requiring both high-volume daily certificate issuance and maximum root-key protection,</span> which deployment architecture is <span class='qual-highlight'>MOST</span> resilient?",
+    "archaicStem": "<span class='fluff-zone'>Whereas compromising a Root Certificate Authority invalidates the entire enterprise trust chain,</span> which operational Root CA architecture is <span class='qual-highlight'>LEAST</span> vulnerable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "VULNERABLE"
+        ],
+        "result": "MOST SECURE"
+      }
+    ],
+    "options": [
+      {
+        "text": "Keep the Root CA offline in a dual-custody HSM while delegating daily issuance to online subordinate CAs.",
+        "isCorrect": true,
+        "tag": "Correct — Air-gapping the Root CA inside a FIPS-validated HSM minimizes remote attack surface, and compromised subordinate CAs can be revoked cleanly without rebuilding root trust."
+      },
+      {
+        "text": "Host the Root CA online behind a hardened web application firewall to accelerate automated certificate issuance.",
+        "isCorrect": false,
+        "tag": "Exposure Trap — Keeping the Root CA network-reachable exposes the highest-value cryptographic asset in the enterprise to remote exploitation."
+      },
+      {
+        "text": "Issue all endpoint and server certificates directly from the Root CA to simplify certificate chain validation.",
+        "isCorrect": false,
+        "tag": "Flat-Hierarchy Trap — Eliminating subordinate issuing CAs forces the Root CA online continuously and removes containment boundaries."
+      },
+      {
+        "text": "Replicate the Root CA private key across three regional cloud key vaults to guarantee uninterrupted signing uptime.",
+        "isCorrect": false,
+        "tag": "Key-Sprawl Trap — Expanding active copies of a Root CA private key into cloud vaults enlarges the blast radius instead of isolating root custody."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Tiered PKI architecture keeps the Root CA strictly offline inside a physically protected HSM with split-knowledge custody, while online subordinate issuing CAs handle day-to-day certificate issuance and can be revoked independently if compromised."
+  },
+  {
+    "id": "cat-d3-10",
+    "bank": "study",
+    "domainNum": 3,
+    "secondaryDomains": [
+      1,
+      7
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "An enterprise is migrating legacy ERP virtual machines into a public cloud Infrastructure-as-a-Service (IaaS) environment to exit two leased corporate data centers.",
+    "clue": "During launch readiness, the IT director removes guest OS patching and virtual firewall rule reviews from the internal operations budget, assuming the cloud provider now handles them",
+    "question": "Which statement <span class='qual-highlight'>MOST</span> accurately clarifies security accountability under the IaaS Shared Responsibility Model?",
+    "legaleseStem": "<span class='fluff-zone'>When governing enterprise security obligations during migration to public Infrastructure-as-a-Service environments,</span> which responsibility boundary must management <span class='qual-highlight'>NOT</span> misattribute?",
+    "archaicStem": "<span class='fluff-zone'>Whereas cloud infrastructure providers safeguard physical facilities and hypervisors,</span> which IaaS duty must customer leadership <span class='qual-highlight'>NOT</span> presume delegated?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "PRESUME DELEGATED"
+        ],
+        "result": "CUSTOMER RETAINS OWNERSHIP"
+      }
+    ],
+    "options": [
+      {
+        "text": "The cloud provider manages guest OS patching and security groups while the customer governs data classification.",
+        "isCorrect": false,
+        "tag": "PaaS/SaaS Confusion — In IaaS, the provider stops at the hypervisor/host layer; guest OS patching and virtual network rules remain the customer's responsibility."
+      },
+      {
+        "text": "The cloud provider secures physical facilities and hypervisors while the customer governs guest OS, IAM, and data.",
+        "isCorrect": true,
+        "tag": "Correct — Accurately separates 'security of the cloud' (provider) from 'security in the cloud' (customer guest OS, network config, IAM, applications, and data)."
+      },
+      {
+        "text": "The customer retains responsibility for physical data-center guards and hypervisor firmware alongside virtual machine hardening.",
+        "isCorrect": false,
+        "tag": "Boundary Inversion — Public cloud customers cannot physically access provider facilities or patch multi-tenant hypervisors."
+      },
+      {
+        "text": "Migrating regulated workloads into certified IaaS regions transfers statutory breach-notification accountability to the provider.",
+        "isCorrect": false,
+        "tag": "Accountability Myth — Regulatory and data accountability always remains with the customer Data Owner regardless of cloud service model."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Under the IaaS Shared Responsibility Model, the cloud provider secures physical data centers, hardware, and virtualization layers, while the customer remains accountable for guest OS patching, virtual network rules, IAM, applications, and data protection."
+  },
+  {
+    "id": "cat-d3-11",
+    "bank": "study",
+    "domainNum": 3,
+    "secondaryDomains": [
+      8,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "An engineering division is replatforming thirty monolithic virtual machines into Kubernetes-orchestrated microservices running across shared Linux worker nodes.",
+    "clue": "Platform architects argue that container isolation matches Type-1 hypervisor isolation, so running containers as root with broad base OS packages poses negligible host risk",
+    "question": "Which architectural risk <span class='qual-highlight'>MOST</span> directly refutes equating container isolation with virtual-machine isolation?",
+    "legaleseStem": "<span class='fluff-zone'>When assessing architectural isolation boundaries between shared-node containers and Type-1 hypervisor virtual machines,</span> which systemic exposure is <span class='qual-highlight'>PRIMARY</span>?",
+    "archaicStem": "<span class='fluff-zone'>Whereas Type-1 hypervisors present distinct guest operating system kernels per workload,</span> which architectural exposure inherent to containers must architects <span class='qual-highlight'>NOT</span> disregard?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "DISREGARD"
+        ],
+        "result": "MUST MITIGATE"
+      }
+    ],
+    "options": [
+      {
+        "text": "Containers cannot enforce network segmentation policies between pods running inside the same cloud virtual network.",
+        "isCorrect": false,
+        "tag": "Factual Error — Kubernetes NetworkPolicies and service meshes explicitly enforce granular pod-to-pod network segmentation."
+      },
+      {
+        "text": "Containers share the host OS kernel, making minimal signed images, non-root runtime, and kernel hardening critical.",
+        "isCorrect": true,
+        "tag": "Correct — Because all pods on a worker node share one host OS kernel, a root privilege escalation or kernel exploit enables container escape across co-located workloads."
+      },
+      {
+        "text": "Containers prohibit centralized SIEM audit log forwarding because ephemeral workloads discard runtime memory upon shutdown.",
+        "isCorrect": false,
+        "tag": "Factual Error — Container orchestrators routinely stream stdout/stderr and kernel audit telemetry centrally via logging daemonsets."
+      },
+      {
+        "text": "Containers prevent cryptographic image signing because container layers are assembled dynamically inside production clusters.",
+        "isCorrect": false,
+        "tag": "Factual Error — Container images are built as immutable layers in CI/CD and can be cryptographically signed and verified at admission."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Unlike full virtual machines running separate guest kernels atop a hypervisor, containers share the underlying host OS kernel. Preventing container escape requires hardened host kernels, minimal signed base images, non-root execution, and strict runtime isolation."
+  },
+  {
+    "id": "cat-d3-12",
+    "bank": "study",
+    "domainNum": 3,
+    "secondaryDomains": [
+      1
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Process Chronology",
+    "fluff": "A national defense agency is procuring next-generation cross-domain security gateways under ISO/IEC 15408 (Common Criteria) and wants multiple competing vendors to bid against an identical baseline.",
+    "clue": "Procurement officers need the formal implementation-independent document defining the buyer community's security requirements before evaluating individual vendor products",
+    "question": "Which Common Criteria artifact specifies the buyer's standardized security requirements for a product category?",
+    "legaleseStem": "<span class='fluff-zone'>Within formal Common Criteria acquisition governance for evaluated security products,</span> which specification articulates implementation-independent buyer requirements for a product class?",
+    "archaicStem": "<span class='fluff-zone'>Ere procurement officers adjudicate vendor assurance declarations under Common Criteria,</span> which specification defines the customer's baseline security requirements for a product class?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "BUYER'S",
+          "PRODUCT CLASS"
+        ],
+        "result": "PROTECTION PROFILE (PP)"
+      }
+    ],
+    "options": [
+      {
+        "text": "A Security Target authored by an individual vendor describing one specific product's claimed controls.",
+        "isCorrect": false,
+        "tag": "Artifact Swap Trap — A Security Target (ST) describes what a specific vendor's product implements, not the buyer community's vendor-neutral requirements."
+      },
+      {
+        "text": "An Evaluation Assurance Level rating indicating the depth of independent laboratory testing rigor applied.",
+        "isCorrect": false,
+        "tag": "Depth-vs-Requirements Trap — EAL (1–7) measures how thoroughly a product was tested, not which functional requirements a product category must meet."
+      },
+      {
+        "text": "A Protection Profile defining implementation-independent security requirements for an entire category of products.",
+        "isCorrect": true,
+        "tag": "Correct — A Protection Profile (PP) specifies reusable, vendor-neutral security requirements so multiple products can be evaluated consistently."
+      },
+      {
+        "text": "A Target of Evaluation identifying the exact hardware and firmware version submitted for laboratory testing.",
+        "isCorrect": false,
+        "tag": "Subject-vs-Spec Trap — The TOE is the actual product or system being evaluated, not the requirements specification."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "In Common Criteria (ISO/IEC 15408), a Protection Profile (PP) defines vendor-neutral requirements for a product class, a Security Target (ST) documents a specific vendor's implementation claims for its Target of Evaluation (TOE), and the EAL measures evaluation depth."
+  },
+  {
+    "id": "cat-d3-13",
+    "bank": "study",
+    "domainNum": 3,
+    "secondaryDomains": [
+      1,
+      5
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Constraint Violation",
+    "fluff": "A security engineering group deploys an elaborate authentication workflow requiring branch analysts to complete six separate portal logins, manual token codes, and session re-authentications every fifteen minutes.",
+    "clue": "Physical walk-throughs reveal that analysts routinely write shared credentials on monitor sticky notes and leave unlocked browsers open to avoid repeated workflow lockouts",
+    "question": "Which foundational secure design principle did the engineering team <span class='qual-highlight'>MOST</span> directly neglect?",
+    "legaleseStem": "<span class='fluff-zone'>When overly cumbersome security controls provoke widespread workforce circumvention that degrades actual protection,</span> which foundational secure-design principle has been <span class='qual-highlight'>MOST</span> directly violated?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as excessive operational friction compels personnel to subvert mandated safeguards,</span> which CBK secure-design principle did architects <span class='qual-highlight'>FAIL</span> to uphold?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "FAIL",
+          "TO UPHOLD"
+        ],
+        "result": "PSYCHOLOGICAL ACCEPTABILITY"
+      }
+    ],
+    "options": [
+      {
+        "text": "Complete mediation ensuring every resource access request passes through a central authorization reference check.",
+        "isCorrect": false,
+        "tag": "Wrong Principle — Complete mediation enforces universal access checking, not user-friendly control adoption."
+      },
+      {
+        "text": "Least common mechanism minimizing shared system resources across mutually untrusting application tenants.",
+        "isCorrect": false,
+        "tag": "Wrong Principle — Least common mechanism reduces covert channels and shared-resource bleed, not usability friction."
+      },
+      {
+        "text": "Separation of privilege requiring multiple independent conditions to unlock high-risk administrative functions.",
+        "isCorrect": false,
+        "tag": "Wrong Principle — The engineers arguably over-applied multi-condition checks while ignoring human usability."
+      },
+      {
+        "text": "Psychological acceptability ensuring controls remain intuitive enough that staff adopt rather than bypass them.",
+        "isCorrect": true,
+        "tag": "Correct — Saltzer and Schroeder's psychological acceptability principle ensures security controls align with human mental models so secure behavior is the path of least resistance."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Psychological acceptability recognizes that overly complex or intrusive controls drive employees toward insecure workarounds that weaken real security. Effective architects pair strong assurance (like SSO + FIDO2) with smooth usability."
+  },
+  {
+    "id": "cat-d3-14",
+    "bank": "study",
+    "domainNum": 3,
+    "secondaryDomains": [
+      5,
+      8
+    ],
+    "difficulty": 4,
+    "lengthTier": "double",
+    "trapType": "Double Negatives",
+    "fluff": "A high-assurance operating system architecture board is reviewing the Trusted Computing Base (TCB) design for a sovereign defense platform.",
+    "clue": "Accreditors warn that if application processes can bypass the security kernel or modify its decision logic, all higher-layer access controls become meaningless",
+    "question": "Which triad of properties must the Reference Monitor <span class='qual-highlight'>NOT</span> fail to uphold?",
+    "legaleseStem": "<span class='fluff-zone'>Within formal system-assurance architecture evaluating an operating system's security kernel,</span> which three properties are <span class='qual-highlight'>LEAST</span> expendable for a trustworthy Reference Monitor?",
+    "archaicStem": "<span class='fluff-zone'>Insofar as a bypassable or unverifiable enforcement kernel voids all higher-layer access guarantees,</span> which Reference Monitor triad is <span class='qual-highlight'>LEAST</span> dispensable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DISPENSABLE"
+        ],
+        "result": "MANDATORY TRIAD"
+      }
+    ],
+    "options": [
+      {
+        "text": "Always invoked on every access, isolated from tampering, and small enough for formal verification.",
+        "isCorrect": true,
+        "tag": "Correct — The canonical Reference Monitor triad: complete mediation (always invoked), tamperproof (isolated), and verifiable (small enough to analyze thoroughly)."
+      },
+      {
+        "text": "Encrypted at rest, backed up nightly across regions, and integrated with external federated identity providers.",
+        "isCorrect": false,
+        "tag": "Operational-Hygiene Trap — Backups and federation support availability and SSO, not the formal assurance properties of a security kernel."
+      },
+      {
+        "text": "Open-source licensed, dynamically extensible by user plugins, and optimized for high-throughput network routing.",
+        "isCorrect": false,
+        "tag": "Complexity Trap — Dynamic third-party plugins expand attack surface and destroy formal verifiability and tamper resistance."
+      },
+      {
+        "text": "Stateless across sessions, cached inside user-space memory, and configurable by local application developers.",
+        "isCorrect": false,
+        "tag": "Isolation Violation — Placing reference-monitor logic in user-space memory lets untrusted applications tamper with or bypass enforcement."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "A trustworthy Reference Monitor (implemented by the security kernel inside the TCB) must satisfy three strict properties: complete mediation (always invoked), tamperproof isolation, and simplicity sufficient for rigorous testing and verification."
+  },
+  {
+    "id": "cat-d3-15",
+    "bank": "study",
+    "domainNum": 3,
+    "secondaryDomains": [
+      1,
+      4
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A senior embedded-systems engineer proposes shipping a custom proprietary stream cipher inside a new line of connected industrial sensors, arguing that keeping the algorithm secret will stop reverse-engineering attackers.",
+    "clue": "The security architect recommends replacing the custom algorithm with standardized AES-GCM backed by hardware-protected keys",
+    "question": "Which foundational cryptographic principle <span class='qual-highlight'>MOST</span> directly supports rejecting the proprietary cipher?",
+    "legaleseStem": "<span class='fluff-zone'>When advising engineering leadership against deploying unvetted proprietary cryptographic algorithms,</span> which established cryptographic principle <span class='qual-highlight'>DIRECTLY</span> mandates peer-reviewed public standards?",
+    "archaicStem": "<span class='fluff-zone'>Whereas secret unreviewed ciphers routinely harbor latent structural flaws obscured from defenders,</span> which foundational cryptographic doctrine does <span class='qual-highlight'>NOT</span> fail to place security solely in the key?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "FAIL TO PLACE"
+        ],
+        "result": "DIRECTLY MANDATES (KERCKHOFFS'S PRINCIPLE)"
+      }
+    ],
+    "options": [
+      {
+        "text": "Shannon's diffusion rule requiring every ciphertext bit to depend on multiple plaintext input characters.",
+        "isCorrect": false,
+        "tag": "Mechanism vs. Governance — Diffusion is a desirable mathematical cipher property, not the principle governing open peer review versus algorithm secrecy."
+      },
+      {
+        "text": "Kerckhoffs's Principle stating cryptographic security must depend solely on key secrecy rather than algorithm secrecy.",
+        "isCorrect": true,
+        "tag": "Correct — Kerckhoffs's Principle rejects security through obscurity; strong cryptosystems withstand public scrutiny when keys remain secret."
+      },
+      {
+        "text": "The work-factor principle measuring the computational time needed to brute-force a given symmetric key length.",
+        "isCorrect": false,
+        "tag": "Wrong Principle — Work factor assesses attack cost against a known algorithm, whereas secret unvetted ciphers often have shortcuts that collapse work factor."
+      },
+      {
+        "text": "The avalanche effect ensuring small plaintext changes produce unpredictable changes across cryptographic hash digests.",
+        "isCorrect": false,
+        "tag": "Wrong Principle — Avalanche effect describes output sensitivity of hashes/ciphers rather than relying on key secrecy over algorithm obscurity."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Kerckhoffs's Principle states that a cryptosystem should remain secure even if every detail of the algorithm is public, relying exclusively on the secrecy of the key. Vetted public standards like AES-GCM avoid hidden design defects common in proprietary ciphers."
+  },
+  {
+    "id": "cat-d3-16",
+    "bank": "study",
+    "domainNum": 3,
+    "secondaryDomains": [
+      2,
+      5
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Constraint Violation",
+    "fluff": "A supply-chain consortium exchanges high-value electronic purchase commitments between independent corporate buyers and suppliers over a shared portal.",
+    "clue": "General Counsel requires a cryptographic mechanism proving both message integrity and origin so a supplier cannot credibly deny submitting a binding order in court",
+    "question": "Which cryptographic mechanism <span class='qual-highlight'>DIRECTLY</span> provides legally defensible non-repudiation?",
+    "legaleseStem": "<span class='fluff-zone'>To establish legally defensible proof of origin and integrity across independent contracting enterprises,</span> which cryptographic control <span class='qual-highlight'>DIRECTLY</span> prevents credible denial of submission?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as shared symmetric secrets cannot distinguish which party authored a disputed commercial contract,</span> which cryptographic safeguard is <span class='qual-highlight'>PRIMARY</span> for non-repudiation?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "NON-REPUDIATION"
+        ],
+        "result": "ASYMMETRIC DIGITAL SIGNATURE"
+      }
+    ],
+    "options": [
+      {
+        "text": "A keyed HMAC-SHA256 authentication code generated using a symmetric secret shared between buyer and supplier.",
+        "isCorrect": false,
+        "tag": "Shared-Key Trap — HMAC provides integrity and authentication, but because both parties hold the same shared key, either could forge a message and repudiate it."
+      },
+      {
+        "text": "Authenticated AES-256-GCM encryption applied to purchase payloads using a pre-shared session key.",
+        "isCorrect": false,
+        "tag": "Symmetric Trap — AES-GCM ensures confidentiality and integrity, but shared symmetric keys cannot establish non-repudiation between two independent parties."
+      },
+      {
+        "text": "An asymmetric digital signature created with the sender's uniquely held private key backed by PKI.",
+        "isCorrect": true,
+        "tag": "Correct — Signing a message digest with a private key controlled solely by the sender—and bound via a trusted CA certificate—provides integrity, origin authentication, and non-repudiation."
+      },
+      {
+        "text": "An unkeyed SHA-384 cryptographic hash appended to the order record and transmitted over TLS 1.3.",
+        "isCorrect": false,
+        "tag": "No-Origin-Binding Trap — Unkeyed hashes detect accidental corruption and TLS secures transit, but neither binds a stored contract permanently to a unique signer."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Non-repudiation requires asymmetric cryptography—specifically a digital signature computed with the sender's solely controlled private key and validated through a trusted PKI certificate. Shared symmetric mechanisms (like HMAC or AES-GCM) cannot prove which key holder created a disputed message."
+  },
+  {
+    "id": "cat-d3-17",
+    "bank": "study",
+    "domainNum": 3,
+    "secondaryDomains": [
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "A regional hospital group is commissioning a primary Tier-3 clinical data center located in a coastal corridor experiencing frequent brief utility brownouts, summer storms, and wide seasonal humidity swings.",
+    "clue": "Facilities teams must prevent both immediate server crashes during generator spin-up and hardware failures from electrostatic discharge or condensation",
+    "question": "Which combined facility engineering design <span class='qual-highlight'>MOST</span> reliably addresses both power and environmental risks?",
+    "legaleseStem": "<span class='fluff-zone'>In validating clinical data-center electrical continuity and environmental controls prior to operational handover,</span> which facility specification is <span class='qual-highlight'>NOT</span> deficient?",
+    "archaicStem": "<span class='fluff-zone'>Whereas unconditioned humidity invites electrostatic discharge or condensation and utility sag halts clinical care,</span> which facility architecture shall governance deem <span class='qual-highlight'>LEAST</span> incomplete?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "INCOMPLETE"
+        ],
+        "result": "MOST COMPLETE"
+      }
+    ],
+    "options": [
+      {
+        "text": "Deploy diesel backup generators with manual transfer switches and maximize cold-aisle airflow without humidity control.",
+        "isCorrect": false,
+        "tag": "Dual-Gap Trap — Generators take seconds to spin up (causing server crashes without UPS), and uncontrolled humidity triggers static discharge or condensation."
+      },
+      {
+        "text": "Maintain controlled HVAC humidity (40–60%) alongside redundant UPS batteries bridging seamlessly to automatic backup generators.",
+        "isCorrect": true,
+        "tag": "Correct — Controlled relative humidity prevents both ESD (too dry) and corrosion/condensation (too wet), while UPS bridges momentary brownouts until generators assume load."
+      },
+      {
+        "text": "Install enterprise surge protectors on every server rack paired with dehumidifiers holding relative humidity under 15%.",
+        "isCorrect": false,
+        "tag": "ESD-Hazard Trap — Surge protectors cannot ride through brownouts or outages, and relative humidity below 20% dramatically increases destructive electrostatic discharge."
+      },
+      {
+        "text": "Provision dual utility power feeds from the same municipal substation paired with positive-pressure cooling fans.",
+        "isCorrect": false,
+        "tag": "Single-Point-of-Failure Trap — Dual feeds from the exact same substation fail simultaneously during a regional substation outage."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Resilient data-center architecture pairs conditioned temperature and relative humidity (typically 40–60% to avoid both static electricity and condensation) with redundant UPS systems that bridge power seamlessly until automatic transfer switches engage tested backup generators."
+  },
+  {
+    "id": "cat-d3-18",
+    "bank": "study",
+    "domainNum": 3,
+    "secondaryDomains": [
+      4,
+      5
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A multinational corporation is retiring its legacy perimeter-VPN design because 70% of employees work remotely and core applications reside across three public clouds.",
+    "clue": "During a Board briefing, an executive asks whether adopting Zero Trust means eliminating internal network segmentation and relying strictly on strong cloud passwords",
+    "question": "Which architectural description <span class='qual-highlight'>MOST</span> accurately defines a Zero Trust security architecture?",
+    "legaleseStem": "<span class='fluff-zone'>In guiding executive governance from implicit perimeter trust toward Zero Trust Architecture,</span> which architectural axiom is <span class='qual-highlight'>MOST</span> foundational?",
+    "archaicStem": "<span class='fluff-zone'>Whereas implicit trust conferred solely by corporate network location fails amid distributed cloud workloads,</span> which Zero Trust tenet shall leadership deem <span class='qual-highlight'>LEAST</span> dispensable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DISPENSABLE"
+        ],
+        "result": "MOST FUNDAMENTAL"
+      }
+    ],
+    "options": [
+      {
+        "text": "Eliminate internal network micro-segmentation because strong endpoint authentication replaces network boundary controls.",
+        "isCorrect": false,
+        "tag": "Defense-in-Depth Trap — Zero Trust relies heavily on micro-segmentation and least-privilege network enforcement; it never abandons network isolation."
+      },
+      {
+        "text": "Grant implicit session trust to headquarters wired Ethernet ports while restricting remote cloud sessions.",
+        "isCorrect": false,
+        "tag": "Perimeter-Mindset Trap — Implicit trust based on physical office location directly violates the core 'never trust, always verify' Zero Trust axiom."
+      },
+      {
+        "text": "Remove implicit network-location trust and continuously verify identity, device posture, and least-privilege access per request.",
+        "isCorrect": true,
+        "tag": "Correct — Zero Trust assumes breach and enforces continuous explicit verification of identity, device health, and scoped authorization across micro-segmented resources."
+      },
+      {
+        "text": "Migrate all distributed SaaS workloads back into on-premises corporate data centers behind dual perimeter firewalls.",
+        "isCorrect": false,
+        "tag": "Castle-and-Moat Trap — Repatriating cloud apps back behind a static perimeter contradicts cloud business agility and does not stop internal lateral movement."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Zero Trust Architecture (NIST SP 800-207) removes implicit trust derived from network location, assuming breach and continuously enforcing explicit identity authentication, device posture checks, and least-privilege access across micro-segmented workloads."
+  },
+  {
+    "id": "cat-d3-19",
+    "bank": "study",
+    "domainNum": 3,
+    "secondaryDomains": [
+      2,
+      8
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A hardware payment terminal manufacturer learns that security researchers extracted private signing keys from a competitor's smart-card module without cracking the underlying AES or ECC mathematics.",
+    "clue": "The researchers measured tiny variations in power consumption and processing execution time during cryptographic signing operations to reconstruct key bits",
+    "question": "Which architectural countermeasure <span class='qual-highlight'>MOST</span> directly mitigates side-channel key extraction on cryptographic hardware?",
+    "legaleseStem": "<span class='fluff-zone'>When defending embedded cryptographic modules against physical power-analysis and timing side-channel attacks,</span> which engineering safeguard is <span class='qual-highlight'>PRIMARY</span>?",
+    "archaicStem": "<span class='fluff-zone'>Whereas mathematically sound ciphers still leak secret bits through measurable timing and electrical variance,</span> which hardware-engineering countermeasure is <span class='qual-highlight'>LEAST</span> expendable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "EXPENDABLE"
+        ],
+        "result": "MOST ESSENTIAL"
+      }
+    ],
+    "options": [
+      {
+        "text": "Double the asymmetric key length while leaving variable-branch signing routines running on unshielded microcontrollers.",
+        "isCorrect": false,
+        "tag": "Brute-Force Trap — Longer keys raise brute-force cost, but side-channel power and timing analysis still leaks key bits incrementally regardless of key size."
+      },
+      {
+        "text": "Obfuscate the device firmware binary and restrict technical datasheets under non-disclosure agreements.",
+        "isCorrect": false,
+        "tag": "Obscurity Trap — Hiding documentation does not stop an attacker with physical terminal access from measuring power draw or execution latency."
+      },
+      {
+        "text": "Rotate terminal TLS transport certificates weekly across the backend payment processing API gateway.",
+        "isCorrect": false,
+        "tag": "Wrong-Layer Trap — Rotating backend TLS certificates does not protect embedded signing keys stored inside physical payment terminals."
+      },
+      {
+        "text": "Enforce constant-time cryptographic implementations, electrical noise masking, and tamper-responsive FIPS-validated hardware modules.",
+        "isCorrect": true,
+        "tag": "Correct — Constant-time execution defeats timing analysis, power masking/shielding counters DPA, and FIPS 140-3 Level 3/4 tamper response zeroizes keys upon probing."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Side-channel attacks exploit physical implementation leaks—such as execution timing, power draw, or electromagnetic emissions—rather than mathematical flaws. Mitigating them requires constant-time algorithms, masking/shielding, and tamper-responsive FIPS-validated cryptographic modules."
+  },
+  {
+    "id": "cat-d3-20",
+    "bank": "study",
+    "domainNum": 3,
+    "secondaryDomains": [
+      1,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Double Negatives",
+    "fluff": "A corporate campus housing an R&D lab and restricted core data center has experienced repeated tailgating at exterior entrances and unauthorized visitors slipping behind employees carrying equipment into the server room.",
+    "clue": "Executive leadership wants a layered physical security redesign that naturally deters external intrusion across the grounds while physically enforcing one-person-at-a-time entry into the data center",
+    "question": "Which physical security architecture pairing is <span class='qual-highlight'>LEAST</span> susceptible to tailgating and perimeter intrusion?",
+    "legaleseStem": "<span class='fluff-zone'>To combine exterior site deterrence with high-assurance interior entry enforcement against physical piggybacking,</span> which architectural control pair is <span class='qual-highlight'>MOST</span> effective?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as administrative badge reminders fail to thwart exterior concealment or interior piggybacking,</span> which physical control pairing is <span class='qual-highlight'>LEAST</span> likely to fail?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST LIKELY",
+          "TO FAIL"
+        ],
+        "result": "MOST EFFECTIVE"
+      }
+    ],
+    "options": [
+      {
+        "text": "Apply Crime Prevention Through Environmental Design externally paired with an interlocking mantrap vestibule at the data center.",
+        "isCorrect": true,
+        "tag": "Correct — CPTED maximizes natural sightlines, lighting, and territorial boundaries outside, while an interlocking mantrap physically enforces single-person authentication inside."
+      },
+      {
+        "text": "Install dense decorative privacy hedges around campus walkways paired with mandatory visitor awareness posters.",
+        "isCorrect": false,
+        "tag": "CPTED Violation — Dense hedges create concealment cover for intruders, and posters are weak administrative controls against tailgating."
+      },
+      {
+        "text": "Deploy exterior motion-activated cameras paired with unlocked badge-optional doors during peak delivery hours.",
+        "isCorrect": false,
+        "tag": "Detective-Only Trap — Cameras detect intrusion after the fact, and disabling door locks during deliveries creates an obvious physical bypass."
+      },
+      {
+        "text": "Post written disciplinary warnings at lobby turnstiles while relying on receptionists to recognize all staff visually.",
+        "isCorrect": false,
+        "tag": "Human-Error Trap — Visual recognition fails at enterprise scale and warnings do not physically prevent tailgating into restricted server rooms."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Layered physical architecture combines Crime Prevention Through Environmental Design (CPTED—lighting, open sightlines, controlled access pathways) at the outer perimeter with an interlocking access-control vestibule (mantrap) at high-security interiors to physically block tailgating."
+  }
+]

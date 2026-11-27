@@ -1,0 +1,999 @@
+[
+  {
+    "id": "cat-d4-01",
+    "bank": "study",
+    "domainNum": 4,
+    "secondaryDomains": [
+      3,
+      1
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Double Negatives",
+    "fluff": "An international payment network transmits high-value settlement APIs across public transit links protected by TLS, and threat analysts confirm passive state-aligned collectors are archiving encrypted traffic streams.",
+    "clue": "Security architects warn that if an edge server's long-term private key is compromised eighteen months from now, attackers must remain mathematically unable to decrypt previously captured traffic",
+    "question": "Which transport configuration is <span class='qual-highlight'>LEAST</span> expendable for preventing retroactive session decryption?",
+    "legaleseStem": "<span class='fluff-zone'>Given persistent external traffic capture aimed at future decryption upon static key compromise,</span> which transport property is <span class='qual-highlight'>LEAST</span> expendable for historical confidentiality?",
+    "archaicStem": "<span class='fluff-zone'>Whereas malefactors presently sequester enciphered transit streams awaiting future private-key theft,</span> which safeguard is <span class='qual-highlight'>LEAST</span> dispensable to preclude retroactive decipherment?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DISPENSABLE"
+        ],
+        "result": "MOST ESSENTIAL (PFS)"
+      }
+    ],
+    "options": [
+      {
+        "text": "Re-issue edge API certificates using 4096-bit static RSA keys from an accredited root authority.",
+        "isCorrect": false,
+        "tag": "Static-Key Trap — Longer static RSA keys slow brute force, but if the private key is later stolen, all recorded RSA key-exchange sessions are instantly decrypted."
+      },
+      {
+        "text": "Mandate TLS 1.3 utilizing ephemeral Diffie-Hellman key exchange across all external settlement endpoints.",
+        "isCorrect": true,
+        "tag": "Correct — TLS 1.3 mandates Perfect Forward Secrecy (ECDHE), generating unique transient session keys so future private-key theft cannot unlock recorded sessions."
+      },
+      {
+        "text": "Enforce HTTP Strict Transport Security with preload directives across every public payment domain.",
+        "isCorrect": false,
+        "tag": "Downgrade-Only Trap — HSTS prevents SSL-stripping downgrades to plaintext HTTP, but does nothing against retroactive decryption if static keys leak."
+      },
+      {
+        "text": "Enable Online Certificate Status Protocol stapling on perimeter load balancers for rapid revocation checks.",
+        "isCorrect": false,
+        "tag": "Revocation-Only Trap — OCSP stapling speeds up real-time certificate validity checks, not confidentiality of previously recorded traffic."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Perfect Forward Secrecy (enforced natively in TLS 1.3 via ephemeral Diffie-Hellman) derives unique per-session keys independent of the server's static private key, preventing retroactive decryption even after future key compromise."
+  },
+  {
+    "id": "cat-d4-02",
+    "bank": "study",
+    "domainNum": 4,
+    "secondaryDomains": [
+      3,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "A global digital asset custodian investigates a twenty-minute outage during which international customer API requests were silently rerouted through an unauthorized foreign autonomous system.",
+    "clue": "Forensic review confirms border firewalls, authoritative DNS records, and TLS server certificates remained completely untouched while upstream transit carriers accepted forged IP prefix announcements",
+    "question": "Which control-plane safeguard <span class='qual-highlight'>MOST</span> directly prevents unauthorized autonomous systems from originating the custodian's IP prefixes?",
+    "legaleseStem": "<span class='fluff-zone'>Where upstream internet transit networks propagate forged autonomous-system routing announcements despite intact local firewalls,</span> which control-plane safeguard is <span class='qual-highlight'>PRIMARY</span>?",
+    "archaicStem": "<span class='fluff-zone'>Notwithstanding intact border filters and untampered server certificates, upstream networks honored spurious prefix announcements;</span> which safeguard does <span class='qual-highlight'>NOT</span> fail to block forged origination?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "FAIL TO BLOCK"
+        ],
+        "result": "DIRECTLY PREVENTS"
+      }
+    ],
+    "options": [
+      {
+        "text": "Deploy DNSSEC with automated zone-signing key rotation across all external authoritative name servers.",
+        "isCorrect": false,
+        "tag": "Wrong-Protocol Trap — DNSSEC authenticates DNS name-to-IP resolution, not Layer-3 BGP inter-domain IP prefix routing."
+      },
+      {
+        "text": "Tighten stateful ingress access control lists on the custodian's on-premises perimeter edge routers.",
+        "isCorrect": false,
+        "tag": "Local-Perimeter Trap — BGP prefix hijacking redirects traffic upstream across the internet before packets ever reach local border routers."
+      },
+      {
+        "text": "Publish cryptographically signed Route Origin Authorizations via RPKI with upstream Route Origin Validation.",
+        "isCorrect": true,
+        "tag": "Correct — RPKI ROAs cryptographically bind IP prefixes to authorized Autonomous System Numbers so upstream routers drop illegitimate BGP origin announcements."
+      },
+      {
+        "text": "Monitor public Certificate Transparency logs continuously for unauthorized TLS certificate issuance events.",
+        "isCorrect": false,
+        "tag": "Detective-Wrong-Layer Trap — CT logs alert on rogue TLS certificates, but do not stop unauthorized networks from hijacking BGP routes."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Inter-domain BGP hijacking occurs upstream of corporate perimeter firewalls and requires cryptographic routing governance. Publishing RPKI Route Origin Authorizations (ROAs) enables upstream transit networks running Route Origin Validation to reject forged prefix announcements."
+  },
+  {
+    "id": "cat-d4-03",
+    "bank": "study",
+    "domainNum": 4,
+    "secondaryDomains": [
+      1,
+      3
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "A regional electric utility operates a revenue-critical legacy billing mainframe communicating over cleartext Telnet and FTP across an internal data-center subnet.",
+    "clue": "Enterprise cryptographic standards ban cleartext transit, yet vendor migration dependencies prevent replacing the mainframe for eighteen months without halting customer billing",
+    "question": "Which managerial risk-treatment approach <span class='qual-highlight'>BEST</span> governs this legacy protocol exposure?",
+    "legaleseStem": "<span class='fluff-zone'>When an unreplaceable mission-critical platform violates enterprise encryption standards under fixed replacement timelines,</span> which governance response is <span class='qual-highlight'>NOT</span> deficient?",
+    "archaicStem": "<span class='fluff-zone'>Notwithstanding mandatory prohibitions against cleartext transit, operational continuity defers replacement for eighteen months;</span> which governance path is <span class='qual-highlight'>LEAST</span> contrary to risk management?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "CONTRARY TO"
+        ],
+        "result": "MOST ALIGNED WITH"
+      }
+    ],
+    "options": [
+      {
+        "text": "Power down the billing mainframe immediately to achieve full compliance with enterprise cryptographic standards.",
+        "isCorrect": false,
+        "tag": "Business-Disruption Trap — Security enables business continuity; shutting down a revenue-critical billing system unilaterally violates operational constraints."
+      },
+      {
+        "text": "Amend the enterprise cryptographic standard permanently to exempt internal mainframe communications from encryption.",
+        "isCorrect": false,
+        "tag": "Standard-Weakening Trap — Permanently watering down enterprise standards hides legacy debt instead of governing a temporary, compensating-control exception."
+      },
+      {
+        "text": "Defer formal exception tracking informally because mainframe decommissioning is already funded within two years.",
+        "isCorrect": false,
+        "tag": "Shadow-Acceptance Trap — Unrecorded informal waivers bypass Risk Owner sign-off, leave cleartext traffic unprotected for 18 months, and fail audits."
+      },
+      {
+        "text": "Obtain a time-bound risk-owner exception backed by VLAN isolation, encrypted tunneling, and heightened monitoring.",
+        "isCorrect": true,
+        "tag": "Correct — Combines formal Risk Owner approval and expiration tracking with layered compensating controls (isolated subnet + IPsec/SSH wrapper + monitoring)."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "When business constraints prevent immediate standard compliance on legacy infrastructure, formal time-bound risk exceptions approved by the Risk Owner paired with layered compensating controls (segmentation, encrypted tunneling, and monitoring) balance continuity and risk."
+  },
+  {
+    "id": "cat-d4-04",
+    "bank": "study",
+    "domainNum": 4,
+    "secondaryDomains": [
+      5,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A multinational manufacturer permits third-party HVAC and elevator technicians remote VPN connectivity to diagnose building automation controllers across twelve production plants.",
+    "clue": "An internal review reveals technicians share standing vendor credentials over flat Layer-3 VPN routes that can reach corporate ERP and finance VLANs",
+    "question": "Which architectural redesign <span class='qual-highlight'>BEST</span> remediates this third-party remote-access exposure?",
+    "legaleseStem": "<span class='fluff-zone'>To eliminate over-privileged shared contractor VPN pathways spanning unrelated corporate finance segments,</span> which remote-access architecture is <span class='qual-highlight'>MOST</span> effective?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as standing shared vendor tunnels over flat subnets invite supply-chain lateral movement,</span> which redesign shall governance deem <span class='qual-highlight'>LEAST</span> expendable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "EXPENDABLE"
+        ],
+        "result": "MOST ESSENTIAL"
+      }
+    ],
+    "options": [
+      {
+        "text": "Enforce individual MFA identities, just-in-time ZTNA or jump-host access, strict host segmentation, and logging.",
+        "isCorrect": true,
+        "tag": "Correct — Eliminates shared accounts, standing access, and flat lateral reach simultaneously while enforcing accountability and audited maintenance sessions."
+      },
+      {
+        "text": "Rotate shared contractor VPN passphrases monthly and collect signed vendor acceptable-use acknowledgments annually.",
+        "isCorrect": false,
+        "tag": "Shared-Account Trap — Rotating a shared password still destroys individual accountability and leaves flat Layer-3 routing into finance VLANs wide open."
+      },
+      {
+        "text": "Restrict the existing shared contractor VPN gateway to accept remote logins strictly during business hours.",
+        "isCorrect": false,
+        "tag": "Partial-Control Trap — Time restrictions narrow the window slightly, but do not stop compromised vendor accounts from pivoting into ERP during daytime hours."
+      },
+      {
+        "text": "Deploy passive network intrusion sensors on the finance VLAN to alert on contractor port scans.",
+        "isCorrect": false,
+        "tag": "Detective-Only Trap — Alerting after a contractor pivots into finance fails the Prevention > Detection principle when segmentation can block the route outright."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Third-party remote access requires individual accountability (no shared accounts), MFA, time-bound least-privilege access via ZTNA or hardened jump hosts, strict host-level segmentation, and session auditing to block supply-chain lateral movement."
+  },
+  {
+    "id": "cat-d4-05",
+    "bank": "study",
+    "domainNum": 4,
+    "secondaryDomains": [
+      1,
+      6
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "A global security operations director proposes deploying full outbound TLS 1.3 decryption across all corporate laptops to detect adversary command-and-control callbacks hidden in HTTPS streams.",
+    "clue": "European works councils and Legal Counsel note that staff occasionally access personal healthcare and banking websites during breaks on corporate devices under strict regional privacy laws",
+    "question": "Which governance step <span class='qual-highlight'>BEST</span> reconciles encrypted-traffic threat visibility with employee privacy statutes?",
+    "legaleseStem": "<span class='fluff-zone'>When planning encrypted-egress inspection across multinational endpoints subject to strict personal privacy laws,</span> which governance approach is <span class='qual-highlight'>MOST</span> defensible?",
+    "archaicStem": "<span class='fluff-zone'>Whereas indiscriminate decryption imperils employee privacy statutes while blind egress conceals adversary callbacks,</span> which governance posture is <span class='qual-highlight'>MOST</span> prudent?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "MOST",
+          "PRUDENT"
+        ],
+        "result": "POLICY-BACKED WITH PRIVACY BYPASSES"
+      }
+    ],
+    "options": [
+      {
+        "text": "Enable silent full-traffic decryption immediately to prevent alerting potential insider threats to inspection.",
+        "isCorrect": false,
+        "tag": "Legal-Violation Trap — Secretly decrypting employee healthcare and banking traffic violates European works-council and privacy statutes."
+      },
+      {
+        "text": "Align Legal and AUP notice while applying TLS inspection with explicit personal-category bypass lists.",
+        "isCorrect": true,
+        "tag": "Correct — Combines legal approval, transparent AUP notice, selective bypass for regulated personal categories (healthcare/banking), and endpoint telemetry."
+      },
+      {
+        "text": "Abandon all encrypted-traffic threat visibility permanently to eliminate any potential privacy compliance exposure.",
+        "isCorrect": false,
+        "tag": "Risk-Avoidance Overreaction — Abandoning visibility entirely leaves command-and-control and exfiltration blind spots when lawful scoped inspection is feasible."
+      },
+      {
+        "text": "Downgrade outbound corporate browser sessions to TLS 1.2 so passive sensors can inspect handshakes.",
+        "isCorrect": false,
+        "tag": "Security-Downgrade Trap — Weakening protocol security to TLS 1.2 still leaves encrypted payloads unreadable to passive sensors while degrading transit security."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Outbound TLS inspection requires explicit legal and works-council alignment, transparent Acceptable Use Policy notice, and selective bypass lists for sensitive personal domains (such as healthcare and banking) to maintain lawful threat visibility."
+  },
+  {
+    "id": "cat-d4-06",
+    "bank": "study",
+    "domainNum": 4,
+    "secondaryDomains": [
+      3,
+      5
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A global logistics firm operates fifty branch offices where employees now access 85% of enterprise applications in public SaaS clouds rather than on-premises data centers.",
+    "clue": "Backhauling all branch internet traffic through a single legacy headquarters firewall stack creates severe video-call latency and leaves direct mobile users inconsistently protected",
+    "question": "Which converged network-and-security architecture <span class='qual-highlight'>BEST</span> resolves both performance and policy consistency?",
+    "legaleseStem": "<span class='fluff-zone'>When replacing centralized hub-and-spoke VPN backhauling for a cloud-first distributed workforce,</span> which converged architectural model <span class='qual-highlight'>BEST</span> enforces uniform edge security?",
+    "archaicStem": "<span class='fluff-zone'>Whereas backhauling distributed cloud traffic through a solitary legacy hub degrades availability and policy parity,</span> which converged cloud-edge architecture is <span class='qual-highlight'>LEAST</span> deficient?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DEFICIENT"
+        ],
+        "result": "MOST EFFECTIVE (SASE)"
+      }
+    ],
+    "options": [
+      {
+        "text": "Permit direct uninspected local internet breakouts at every branch office to eliminate headquarters latency.",
+        "isCorrect": false,
+        "tag": "Control-Removal Trap — Removing security inspection fixes latency by sacrificing visibility, DLP, and threat blocking across all fifty branches."
+      },
+      {
+        "text": "Expand MPLS leased-line capacity back to headquarters while keeping centralized legacy perimeter firewall stacks.",
+        "isCorrect": false,
+        "tag": "Legacy-Scaling Trap — Bigger MPLS pipes cost heavily, still add geographic hairpin latency to cloud SaaS, and fail to unify remote mobile users."
+      },
+      {
+        "text": "Adopt Secure Access Service Edge converging SD-WAN with cloud-delivered ZTNA, SWG, CASB, and FWaaS.",
+        "isCorrect": true,
+        "tag": "Correct — SASE delivers low-latency edge routing paired with unified identity-centric cloud security policies for both branch offices and roaming users."
+      },
+      {
+        "text": "Configure manual point-to-point IPsec VPN tunnels between every employee laptop and each SaaS vendor.",
+        "isCorrect": false,
+        "tag": "Unscalable Trap — Manual per-endpoint IPsec meshes to dozens of SaaS providers are operationally unmanageable and unsupported by most SaaS platforms."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Secure Access Service Edge (SASE) converges SD-WAN with cloud-native security enforcement (ZTNA, SWG, CASB, FWaaS) at distributed points of presence, delivering consistent identity-based security without legacy headquarters backhaul bottlenecks."
+  },
+  {
+    "id": "cat-d4-07",
+    "bank": "study",
+    "domainNum": 4,
+    "secondaryDomains": [
+      3,
+      7
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "After a phishing-initiated ransomware attack spreads from one compromised accounting workstation to sixty internal application servers within forty minutes, the Board requests an architectural post-mortem.",
+    "clue": "Logs confirm the enterprise's dual-redundant perimeter next-generation firewalls operated properly, yet internal server VLANs allowed unrestricted East-West SMB and RDP reachability",
+    "question": "Which architectural network upgrade <span class='qual-highlight'>MOST</span> directly contains East-West lateral propagation?",
+    "legaleseStem": "<span class='fluff-zone'>To restrict post-compromise lateral movement across internal workloads following an initial endpoint breach,</span> which network architectural strategy is <span class='qual-highlight'>MOST</span> effective?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as perimeter firewalls inspect solely North-South boundary crossings while flat internal subnets invite lateral spread,</span> which containment discipline is <span class='qual-highlight'>PRIMARY</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "EAST-WEST CONTAINMENT"
+        ],
+        "result": "MICRO-SEGMENTATION"
+      }
+    ],
+    "options": [
+      {
+        "text": "Replace external perimeter firewalls with higher-throughput appliances while retaining existing internal subnet routing.",
+        "isCorrect": false,
+        "tag": "North-South Trap — Upgrading the outer perimeter does nothing once an adversary gains an internal foothold via phishing."
+      },
+      {
+        "text": "Increase external internet penetration-testing frequency from annually to quarterly across public web portals.",
+        "isCorrect": false,
+        "tag": "Wrong-Vector Trap — External perimeter testing does not prevent internal lateral movement across flat corporate subnets."
+      },
+      {
+        "text": "Deploy passive full-packet capture archives on core switches to replay future ransomware propagation.",
+        "isCorrect": false,
+        "tag": "Detective-Only Trap — Forensics aids investigation after encryption occurs, whereas preventive segmentation stops lateral spread."
+      },
+      {
+        "text": "Implement internal network segmentation and workload micro-segmentation enforcing least-privilege East-West traffic policies.",
+        "isCorrect": true,
+        "tag": "Correct — Granular internal segmentation and host/workload micro-segmentation block unnecessary SMB/RDP paths, shrinking blast radius dramatically."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Perimeter firewalls control North-South ingress and egress, whereas internal segmentation and workload micro-segmentation govern East-West lateral paths—limiting blast radius even after an initial endpoint compromise."
+  },
+  {
+    "id": "cat-d4-08",
+    "bank": "study",
+    "domainNum": 4,
+    "secondaryDomains": [
+      2,
+      3
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Constraint Violation",
+    "fluff": "An international engineering firm configures site-to-site IPsec VPNs connecting remote branch offices across untrusted regional internet service providers.",
+    "clue": "Security architecture standards require encrypting both application payloads and original internal private IP headers so transit ISPs cannot map internal network topology",
+    "question": "Which IPsec protocol and mode combination <span class='qual-highlight'>BEST</span> meets both payload and header confidentiality requirements?",
+    "legaleseStem": "<span class='fluff-zone'>When specifying IPsec cryptographic transit policies across untrusted public networks requiring full packet and internal-header confidentiality,</span> which configuration is <span class='qual-highlight'>MOST</span> appropriate?",
+    "archaicStem": "<span class='fluff-zone'>Whereas Authentication Header affords integrity without encryption and transport mode leaves original routing headers exposed,</span> which IPsec disposition is <span class='qual-highlight'>LEAST</span> contrary to full confidentiality?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "CONTRARY TO"
+        ],
+        "result": "MOST ALIGNED (ESP TUNNEL MODE)"
+      }
+    ],
+    "options": [
+      {
+        "text": "Encapsulating Security Payload operating in Tunnel Mode encrypting and encapsulating the entire original packet.",
+        "isCorrect": true,
+        "tag": "Correct — ESP provides payload confidentiality (and integrity), while Tunnel Mode encrypts the original internal IP header inside a new gateway-to-gateway header."
+      },
+      {
+        "text": "Authentication Header operating in Tunnel Mode authenticating every packet field without payload encryption.",
+        "isCorrect": false,
+        "tag": "No-Confidentiality Trap — AH provides integrity and origin authentication only; it never encrypts payloads or hides internal headers."
+      },
+      {
+        "text": "Encapsulating Security Payload operating in Transport Mode encrypting payloads while preserving original IP headers.",
+        "isCorrect": false,
+        "tag": "Header-Exposure Trap — Transport Mode leaves the original IP header unencrypted, violating the topology-concealment constraint."
+      },
+      {
+        "text": "Generic Routing Encapsulation tunneling configured across ISP links without cryptographic payload protection.",
+        "isCorrect": false,
+        "tag": "Cleartext-Tunnel Trap — Standard GRE encapsulates traffic for routing but provides zero encryption or authentication on its own."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "IPsec Encapsulating Security Payload (ESP) delivers encryption and integrity, and Tunnel Mode encapsulates and encrypts the entire original IP packet—hiding both sensitive payloads and internal IP addressing across untrusted networks."
+  },
+  {
+    "id": "cat-d4-09",
+    "bank": "study",
+    "domainNum": 4,
+    "secondaryDomains": [
+      1,
+      3
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A global financial firm transitions its multi-region data centers from traditional distributed switches to Software-Defined Networking (SDN) to automate dynamic tenant provisioning.",
+    "clue": "By decoupling the control plane from data-forwarding hardware, routing policies across thousands of virtual workloads are now orchestrated programmatically from a central logical tier",
+    "question": "Which SDN architectural component represents the <span class='qual-highlight'>HIGHEST</span> concentrated risk requiring priority hardening?",
+    "legaleseStem": "<span class='fluff-zone'>When shifting enterprise switching from distributed device control planes to centralized Software-Defined Networking,</span> which architectural tier poses the <span class='qual-highlight'>GREATEST</span> concentrated compromise impact?",
+    "archaicStem": "<span class='fluff-zone'>Insofar as decoupling the control plane concentrates enterprise routing authority into one logical tier,</span> which SDN asset shall governance prioritize <span class='qual-highlight'>MOST</span> stringently?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "MOST",
+          "STRINGENTLY"
+        ],
+        "result": "CENTRALIZED SDN CONTROLLER & APIs"
+      }
+    ],
+    "options": [
+      {
+        "text": "Physical copper patch cables connecting redundant top-of-rack access switches inside locked server cages.",
+        "isCorrect": false,
+        "tag": "Localized-Impact Trap — Tampering with one patch cable affects a single host or rack inside an already locked cage, not the global routing fabric."
+      },
+      {
+        "text": "The centralized SDN controller and its northbound and southbound management APIs governing global flows.",
+        "isCorrect": true,
+        "tag": "Correct — Compromising the centralized SDN controller or its APIs lets an attacker silently redirect, mirror, or drop traffic across the entire multi-region fabric."
+      },
+      {
+        "text": "Edge DHCP lease pools assigning temporary private IP addresses to branch-office conference printers.",
+        "isCorrect": false,
+        "tag": "Low-Impact Trap — Branch printer addressing poses negligible systemic risk compared to the central SDN control plane."
+      },
+      {
+        "text": "Static SNMP read-only temperature polling sensors monitoring top-of-rack chassis cooling fan speeds.",
+        "isCorrect": false,
+        "tag": "Minor-Telemetry Trap — Environmental monitoring telemetry lacks the routing-control blast radius of the central SDN controller."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Software-Defined Networking concentrates routing and policy authority inside the SDN controller. Isolating the controller onto an out-of-band network, enforcing MFA/PAM, mutual TLS on southbound/northbound APIs, and strict change control prevents fabric-wide takeover."
+  },
+  {
+    "id": "cat-d4-10",
+    "bank": "study",
+    "domainNum": 4,
+    "secondaryDomains": [
+      5
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A corporate headquarters secures its internal wireless LAN with WPA2-Personal using a single shared 24-character passphrase distributed to 1,200 employees.",
+    "clue": "Security operations discovers that terminated staff can still connect from the parking lot and passive observers capturing the four-way handshake can attack offline traffic",
+    "question": "Which wireless security architecture upgrade <span class='qual-highlight'>BEST</span> enforces individual accountability and rapid revocation?",
+    "legaleseStem": "<span class='fluff-zone'>To eliminate shared wireless credentials and enable immediate per-user revocation across corporate facilities,</span> which wireless authentication architecture is <span class='qual-highlight'>MOST</span> appropriate?",
+    "archaicStem": "<span class='fluff-zone'>Whereas pre-shared wireless passphrases preclude individual attribution and complicate offboarding,</span> which enterprise wireless standard is <span class='qual-highlight'>PRIMARY</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "ENTERPRISE WIRELESS"
+        ],
+        "result": "WPA3-ENTERPRISE / 802.1X"
+      }
+    ],
+    "options": [
+      {
+        "text": "Disable wireless SSID broadcasting while rotating the shared WPA2-Personal passphrase every ninety days.",
+        "isCorrect": false,
+        "tag": "Obscurity Trap — Hidden SSIDs appear trivially in probe frames, and rotating a shared key quarterly still leaves a 90-day window and zero individual attribution."
+      },
+      {
+        "text": "Maintain static MAC address allowlists on every access point alongside reduced radio transmit power.",
+        "isCorrect": false,
+        "tag": "Spoofable Trap — MAC addresses are trivially sniffed and spoofed, and tuning radio power never eliminates shared-credential revocation failures."
+      },
+      {
+        "text": "Migrate to WPA3-Enterprise utilizing IEEE 802.1X/EAP-TLS with centralized RADIUS and individual certificates.",
+        "isCorrect": true,
+        "tag": "Correct — WPA3-Enterprise with 802.1X/EAP-TLS provides per-user/device cryptographic accountability, instant central revocation, and strong forward secrecy."
+      },
+      {
+        "text": "Deploy a web captive portal requiring users to accept acceptable-use terms before entering the passphrase.",
+        "isCorrect": false,
+        "tag": "Guest-Control Trap — Captive portals are designed for untrusted guest Wi-Fi, not enterprise cryptographic authentication or per-user revocation."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Enterprise wireless governance requires WPA3-Enterprise with IEEE 802.1X/EAP-TLS backed by centralized RADIUS/PKI so every connection ties to a unique revocable identity rather than a shared passphrase."
+  },
+  {
+    "id": "cat-d4-11",
+    "bank": "study",
+    "domainNum": 4,
+    "secondaryDomains": [
+      7
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Constraint Violation",
+    "fluff": "A national retail bank suffers recurring 80 Gbps volumetric Distributed Denial-of-Service floods that completely saturate its dual 10 Gbps on-premises internet circuits during peak trading hours.",
+    "clue": "Network logs confirm the bank's perimeter next-generation firewalls are healthy, but legitimate customer packets are already dropped by upstream ISP routers before reaching the bank",
+    "question": "Which architectural resilience control <span class='qual-highlight'>BEST</span> mitigates upstream bandwidth saturation?",
+    "legaleseStem": "<span class='fluff-zone'>When volumetric denial-of-service floods exhaust corporate ingress circuits upstream of local firewalls,</span> which availability control is <span class='qual-highlight'>MOST</span> effective?",
+    "archaicStem": "<span class='fluff-zone'>Whereas local border appliances cannot stem volumetric floods once upstream transit circuits saturate,</span> which availability safeguard is <span class='qual-highlight'>PRIMARY</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "UPSTREAM SATURATION"
+        ],
+        "result": "UPSTREAM ISP/CLOUD SCRUBBING & ANYCAST CDN"
+      }
+    ],
+    "options": [
+      {
+        "text": "Upgrade internal data-center core switches from 10 Gbps to 100 Gbps across application server racks.",
+        "isCorrect": false,
+        "tag": "Wrong-Bottleneck Trap — Faster internal LAN switches cannot help when external ISP ingress pipes are already saturated upstream."
+      },
+      {
+        "text": "Enable stricter SYN-cookie rate limits exclusively on the bank's on-premises perimeter firewalls.",
+        "isCorrect": false,
+        "tag": "Local-Limit Trap — Local firewall tuning helps with state-exhaustion attacks, not 80 Gbps volumetric floods saturating 10 Gbps circuits upstream."
+      },
+      {
+        "text": "Configure BGP blackhole routing permanently on all customer banking IP ranges during peak trading hours.",
+        "isCorrect": false,
+        "tag": "Self-Inflicted Outage Trap — Permanently blackholing customer banking IPs drops legitimate traffic alongside attack traffic, violating availability."
+      },
+      {
+        "text": "Contract upstream ISP or cloud DDoS scrubbing centers paired with globally distributed Anycast CDNs.",
+        "isCorrect": true,
+        "tag": "Correct — Upstream scrubbing centers and Anycast CDNs absorb and filter massive volumetric floods across global capacity before clean traffic enters corporate circuits."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Volumetric DDoS floods exceed local circuit capacity upstream of on-premises firewalls. Absorbing them requires upstream ISP/cloud scrubbing services and Anycast Content Delivery Networks that filter attack traffic before it traverses enterprise links."
+  },
+  {
+    "id": "cat-d4-12",
+    "bank": "study",
+    "domainNum": 4,
+    "secondaryDomains": [
+      5,
+      3
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A regional hospital discovers that visiting vendors and patients' relatives can plug personal laptops into unoccupied exam-room Ethernet wall jacks and receive internal DHCP addresses.",
+    "clue": "Clinical IT leadership requires an automated network-edge control that verifies device identity and endpoint patch posture before granting production VLAN connectivity",
+    "question": "Which network access governance control <span class='qual-highlight'>BEST</span> addresses unauthorized physical switch-port connections?",
+    "legaleseStem": "<span class='fluff-zone'>To prevent unmanaged endpoints from obtaining internal network access via exposed physical jacks,</span> which access-control architecture is <span class='qual-highlight'>MOST</span> directly suited?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as exposed physical ports allow rogue devices to bypass perimeter firewalls effortlessly,</span> which network-edge safeguard is <span class='qual-highlight'>PRIMARY</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "PORT AUTH & POSTURE"
+        ],
+        "result": "NETWORK ACCESS CONTROL (NAC / 802.1X)"
+      }
+    ],
+    "options": [
+      {
+        "text": "Deploy Network Access Control with IEEE 802.1X port authentication and posture-based quarantine VLANs.",
+        "isCorrect": true,
+        "tag": "Correct — NAC with 802.1X authenticates endpoints, checks security health posture, and drops unknown or non-compliant devices into an isolated guest/remediation VLAN."
+      },
+      {
+        "text": "Shorten internal DHCP address lease times to two hours across all clinical hospital floor switches.",
+        "isCorrect": false,
+        "tag": "No-Prevention Trap — Shorter DHCP leases do not stop unauthorized devices from obtaining valid internal network access."
+      },
+      {
+        "text": "Enable full-disk encryption across all hospital-owned clinician laptops and mobile nursing carts.",
+        "isCorrect": false,
+        "tag": "Wrong-Threat Trap — Disk encryption protects stolen hospital laptops, not rogue personal laptops plugged into live wall jacks."
+      },
+      {
+        "text": "Schedule weekly physical inspections of exam-room wall jacks by hospital facilities maintenance teams.",
+        "isCorrect": false,
+        "tag": "Periodic-Manual Trap — Weekly visual sweeps miss transient rogue connections and do not enforce automated posture verification."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Network Access Control (NAC) using IEEE 802.1X enforces identity authentication and endpoint posture checks at the switch port before granting production VLAN access, automatically routing unknown or non-compliant devices to quarantine."
+  },
+  {
+    "id": "cat-d4-13",
+    "bank": "study",
+    "domainNum": 4,
+    "secondaryDomains": [
+      3
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A healthcare provider operates a public-facing patient appointment web portal on the same flat internal server subnet that hosts electronic health record (EHR) databases.",
+    "clue": "Penetration testers demonstrate that a single web-tier vulnerability allows direct internal TCP connections straight into the clinical database engine",
+    "question": "Which foundational network architecture redesign <span class='qual-highlight'>BEST</span> isolates public services from internal clinical repositories?",
+    "legaleseStem": "<span class='fluff-zone'>To contain external web-tier compromises from reaching internal clinical databases across a shared network,</span> which perimeter architecture is <span class='qual-highlight'>PRIMARY</span>?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as co-locating internet-exposed portals upon internal trust segments invites direct compromise,</span> which network architecture is <span class='qual-highlight'>LEAST</span> dispensable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DISPENSABLE"
+        ],
+        "result": "MOST ESSENTIAL (SCREENED SUBNET / DMZ)"
+      }
+    ],
+    "options": [
+      {
+        "text": "Assign non-routable RFC 1918 private IP addresses to the portal servers on the existing database VLAN.",
+        "isCorrect": false,
+        "tag": "Same-Segment Trap — Using private IPs on the same flat VLAN provides zero Layer-2/Layer-3 isolation once the web server is compromised."
+      },
+      {
+        "text": "Place public portals inside a screened subnet (DMZ) separated from internal databases by stateful firewalls.",
+        "isCorrect": true,
+        "tag": "Correct — A screened subnet (DMZ) creates a controlled buffer zone with strict dual-layer firewall rules blocking direct untrusted reach into internal clinical tiers."
+      },
+      {
+        "text": "Deploy host-based antivirus signatures on the web server while maintaining direct Layer-3 database routes.",
+        "isCorrect": false,
+        "tag": "Single-Control Trap — Antivirus alone misses zero-day web app exploits and fails defense-in-depth architectural isolation."
+      },
+      {
+        "text": "Disable external DNS resolution on the clinical database servers without modifying internal subnet routing.",
+        "isCorrect": false,
+        "tag": "Wrong-Control Trap — Blocking outbound DNS does not stop a compromised web server from connecting directly to the database's internal IP."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "A screened subnet (DMZ) isolates internet-facing services from internal trust zones so that even if a public web server is compromised, strict firewall policies restrict and mediate any traffic toward sensitive internal databases."
+  },
+  {
+    "id": "cat-d4-14",
+    "bank": "study",
+    "domainNum": 4,
+    "secondaryDomains": [
+      8,
+      3
+    ],
+    "difficulty": 4,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "An e-commerce retailer hosts customer storefronts and mobile REST APIs behind a hardened Layer-4 stateful firewall restricting inbound traffic strictly to TCP port 443.",
+    "clue": "Despite tight port filtering, adversaries exploit broken object-level authorization and SQL injection payloads embedded inside syntactically valid HTTPS API requests",
+    "question": "Which perimeter network safeguard <span class='qual-highlight'>BEST</span> complements secure coding by inspecting Layer-7 API traffic?",
+    "legaleseStem": "<span class='fluff-zone'>To inspect and block malicious application-layer payloads traversing permitted port-443 HTTPS connections,</span> which perimeter security control is <span class='qual-highlight'>MOST</span> purpose-built?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as Layer-4 stateful firewalls permit valid port-443 sessions regardless of malicious HTTP payloads,</span> which Layer-7 control is <span class='qual-highlight'>PRIMARY</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "LAYER-7 INSPECTION"
+        ],
+        "result": "WAF & API GATEWAY"
+      }
+    ],
+    "options": [
+      {
+        "text": "Replace the Layer-4 stateful firewall with stateless packet-filtering router access lists on port 443.",
+        "isCorrect": false,
+        "tag": "Downgrade Trap — Stateless ACLs inspect even less context than stateful firewalls and are completely blind to Layer-7 HTTP/API payloads."
+      },
+      {
+        "text": "Enforce strict ingress geo-blocking rules on port 443 while leaving application payloads uninspected.",
+        "isCorrect": false,
+        "tag": "Bypassable Trap — Attackers trivially pivot through domestic cloud proxies or VPNs and still exploit API flaws over permitted port 443."
+      },
+      {
+        "text": "Deploy a Web Application Firewall and API Gateway enforcing schema validation and Layer-7 inspection.",
+        "isCorrect": true,
+        "tag": "Correct — A WAF and API Gateway terminate/inspect Layer-7 HTTP/JSON schemas and block injection or malformed API calls alongside root-cause secure coding."
+      },
+      {
+        "text": "Implement static ARP binding tables across external load balancers to prevent local frame spoofing.",
+        "isCorrect": false,
+        "tag": "Wrong-OSI-Layer Trap — Static ARP mitigates Layer-2 spoofing on local segments, not Layer-7 web/API exploitation."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Stateful Layer-4 firewalls evaluate IP addresses, TCP/UDP ports, and connection state rather than HTTP/API payload semantics. A Web Application Firewall (WAF) and API Gateway add Layer-7 schema validation and attack filtering as defense in depth."
+  },
+  {
+    "id": "cat-d4-15",
+    "bank": "study",
+    "domainNum": 4,
+    "secondaryDomains": [
+      1,
+      2
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "A consulting firm allows 900 field advisors to read corporate email and client decks on personal smartphones under a Bring Your Own Device (BYOD) program.",
+    "clue": "Employment counsel warns that executing full factory wipes on employee-owned smartphones upon offboarding destroys personal photos and creates legal liability",
+    "question": "Which mobile communication governance control <span class='qual-highlight'>BEST</span> protects corporate data without violating personal device privacy?",
+    "legaleseStem": "<span class='fluff-zone'>When governing corporate data on employee-owned mobile devices under strict personal-privacy liability constraints,</span> which mobile security model is <span class='qual-highlight'>MOST</span> balanced?",
+    "archaicStem": "<span class='fluff-zone'>Whereas full-device remote erasure upon personal hardware invites legal liability,</span> which BYOD architecture shall leadership consider <span class='qual-highlight'>LEAST</span> intrusive yet protective?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST INTRUSIVE",
+          "YET PROTECTIVE"
+        ],
+        "result": "MAM / CONTAINERIZATION WITH SELECTIVE WIPE"
+      }
+    ],
+    "options": [
+      {
+        "text": "Enforce full-device MDM enrollment with automatic factory reset after five failed screen-lock entries.",
+        "isCorrect": false,
+        "tag": "Constraint Violation — Full-device factory wipes destroy personal data on employee-owned phones, triggering the exact legal liability Counsel warned against."
+      },
+      {
+        "text": "Enforce Mobile Application Management containerization separating corporate apps and enabling selective corporate-only wipe.",
+        "isCorrect": true,
+        "tag": "Correct — MAM containerization encrypts corporate email/docs separately from personal apps, allowing clean selective revocation upon offboarding."
+      },
+      {
+        "text": "Prohibit technical mobile controls on personal phones and rely strictly on signed acceptable-use policies.",
+        "isCorrect": false,
+        "tag": "Unprotected-Data Trap — Administrative policies alone leave client decks cached indefinitely on departed employees' personal phones."
+      },
+      {
+        "text": "Allow unrestricted attachment downloads to personal cloud backups while enabling VPN encryption during transit.",
+        "isCorrect": false,
+        "tag": "Data-Leakage Trap — Securing transit via VPN does nothing once sensitive files copy into unmanaged personal cloud backups."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "BYOD governance relies on Mobile Application Management (MAM) and containerization to logically isolate encrypted corporate apps from personal data, enabling selective corporate-only wipe upon termination while respecting employee privacy."
+  },
+  {
+    "id": "cat-d4-16",
+    "bank": "study",
+    "domainNum": 4,
+    "secondaryDomains": [
+      3,
+      7
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A financial advisory firm runs VoIP desk phones and video conferencing over the exact same unsegmented Ethernet subnets used for general corporate workstations and large file transfers.",
+    "clue": "Assessors demonstrate that compromised workstations can capture unencrypted executive calls while heavy backup traffic causes severe call jitter and dropped audio",
+    "question": "Which converged-network architecture <span class='qual-highlight'>BEST</span> protects both call confidentiality and voice availability?",
+    "legaleseStem": "<span class='fluff-zone'>In securing converged voice and data networks against packet eavesdropping and bandwidth contention,</span> which combined architectural control is <span class='qual-highlight'>MOST</span> effective?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as sharing unencrypted voice packets upon congested data subnets imperils both confidentiality and availability,</span> which control pairing is <span class='qual-highlight'>PRIMARY</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "CONVERGED VOICE"
+        ],
+        "result": "VOICE VLAN + QoS + TLS/SRTP"
+      }
+    ],
+    "options": [
+      {
+        "text": "Place VoIP on a dedicated Voice VLAN with QoS prioritization and enforce TLS signaling plus SRTP media.",
+        "isCorrect": true,
+        "tag": "Correct — Voice VLANs isolate phones from user workstations, QoS protects real-time audio availability during traffic spikes, and TLS/SRTP encrypt signaling and voice media."
+      },
+      {
+        "text": "Move VoIP handsets onto the unauthenticated guest wireless network to isolate calls from workstation backups.",
+        "isCorrect": false,
+        "tag": "Higher-Exposure Trap — Guest Wi-Fi is untrusted and unprioritized, worsening both eavesdropping exposure and real-time voice jitter."
+      },
+      {
+        "text": "Increase uplink port speed on core switches while leaving SIP signaling and RTP voice streams unencrypted.",
+        "isCorrect": false,
+        "tag": "Confidentiality Miss — Faster links may ease congestion temporarily, but unencrypted SIP/RTP remains fully vulnerable to call interception."
+      },
+      {
+        "text": "Disable firewall stateful inspection on telephony gateways to eliminate VoIP packet processing latency.",
+        "isCorrect": false,
+        "tag": "Control-Bypass Trap — Removing perimeter inspection exposes telephony servers to toll fraud, signaling hijacks, and denial-of-service floods."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Converged voice infrastructure requires logical segmentation (dedicated Voice VLANs), Quality of Service (QoS) prioritization for low-latency availability, and cryptographic protection for both call setup (TLS/SIPS) and media streams (SRTP)."
+  },
+  {
+    "id": "cat-d4-17",
+    "bank": "study",
+    "domainNum": 4,
+    "secondaryDomains": [
+      3,
+      5
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Double Negatives",
+    "fluff": "A securities trading enterprise operates core switches, firewalls, SAN storage arrays, and hypervisor clusters across three global data centers.",
+    "clue": "An architecture audit reveals that SSH, IPMI, and HTTPS administrative consoles for these core devices remain directly reachable from general employee desktop subnets",
+    "question": "Which network governance isolation design is <span class='qual-highlight'>LEAST</span> optional for protecting infrastructure control planes?",
+    "legaleseStem": "<span class='fluff-zone'>To prevent compromised employee workstations from reaching administrative control planes of core network and virtualization infrastructure,</span> which architectural design is <span class='qual-highlight'>PRIMARY</span>?",
+    "archaicStem": "<span class='fluff-zone'>Whereas exposing infrastructure management consoles upon production user subnets magnifies lateral privilege escalation,</span> which isolation architecture shall governance deem <span class='qual-highlight'>LEAST</span> optional?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "OPTIONAL"
+        ],
+        "result": "MANDATORY (OUT-OF-BAND MANAGEMENT)"
+      }
+    ],
+    "options": [
+      {
+        "text": "Relocate administrative SSH and HTTPS consoles to non-standard high TCP ports on the corporate user VLAN.",
+        "isCorrect": false,
+        "tag": "Obscurity Trap — Changing TCP port numbers takes an attacker seconds to discover via port scan and leaves the control plane exposed to user subnets."
+      },
+      {
+        "text": "Enforce twenty-character local device passwords while permitting console connections strictly during daytime office hours.",
+        "isCorrect": false,
+        "tag": "Exposed-Surface Trap — Complex passwords and time windows do not stop zero-day management-interface exploits from compromised workstations during business hours."
+      },
+      {
+        "text": "Enable SNMPv2c community strings with read-only monitoring across corporate subnets to detect rogue logins.",
+        "isCorrect": false,
+        "tag": "Insecure-Protocol & Detective Trap — SNMPv2c sends community strings in cleartext and passive monitoring does not block workstation reachability."
+      },
+      {
+        "text": "Segregate all administrative interfaces onto a dedicated Out-of-Band management network gated by MFA jump hosts.",
+        "isCorrect": true,
+        "tag": "Correct — Isolating management planes onto an Out-of-Band (OOB) network accessible only through hardened, MFA-protected jump hosts eliminates lateral exposure from user VLANs."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Core infrastructure management interfaces (SSH, HTTPS, IPMI, hypervisor APIs) must be isolated onto a dedicated Out-of-Band (OOB) management network reachable solely through hardened privileged access workstations/jump hosts with MFA."
+  },
+  {
+    "id": "cat-d4-18",
+    "bank": "study",
+    "domainNum": 4,
+    "secondaryDomains": [
+      1,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Process Chronology",
+    "fluff": "External attackers are sending spoofed invoice emails using a multinational manufacturer's primary corporate domain to trick global suppliers into diverting wire payments.",
+    "clue": "The company uses twelve legitimate third-party marketing, billing, and HR email platforms whose sending sources have never been fully inventoried",
+    "question": "Which email-authentication deployment sequence <span class='qual-highlight'>BEST</span> prevents domain spoofing without breaking legitimate business mail?",
+    "legaleseStem": "<span class='fluff-zone'>When enforcing cryptographic domain-spoofing defenses across an enterprise with uninventoried third-party mail senders,</span> which rollout sequence is <span class='qual-highlight'>MOST</span> reliable?",
+    "archaicStem": "<span class='fluff-zone'>Ere strict rejection directives inadvertently block legitimate third-party billing mailers,</span> which phased email-authentication rollout shall governance deem <span class='qual-highlight'>LEAST</span> disruptive?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DISRUPTIVE"
+        ],
+        "result": "PHASED SPF/DKIM + DMARC p=none -> p=reject"
+      }
+    ],
+    "options": [
+      {
+        "text": "Publish DMARC immediately at p=reject before mapping third-party senders to block spoofing overnight.",
+        "isCorrect": false,
+        "tag": "Premature-Enforcement Trap — Jumping straight to p=reject before inventorying and authenticating the twelve third-party platforms will drop legitimate invoices and HR emails."
+      },
+      {
+        "text": "Publish SPF and DKIM across verified senders, deploy DMARC at p=none to monitor reports, then progress to p=reject.",
+        "isCorrect": true,
+        "tag": "Correct — Starting DMARC in monitoring mode (p=none) surfaces all legitimate third-party senders via RUA reports so SPF/DKIM align cleanly before stepping up to p=quarantine and p=reject."
+      },
+      {
+        "text": "Publish a standalone SPF record set to soft-fail (~all) permanently while omitting DKIM and DMARC.",
+        "isCorrect": false,
+        "tag": "Incomplete-Control Trap — Soft-fail SPF without DKIM and DMARC enforcement allows spoofed mail through and fails when legitimate mail is forwarded."
+      },
+      {
+        "text": "Mandate S/MIME client certificates exclusively for internal employee emails without publishing external DNS records.",
+        "isCorrect": false,
+        "tag": "Wrong-Scope Trap — Internal S/MIME does not instruct external supplier mail servers to reject forged emails impersonating the company's domain."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Preventing external domain spoofing requires SPF (authorized sending IPs), DKIM (cryptographic message signatures), and DMARC enforcement—rolled out safely from p=none (visibility/inventory) to p=quarantine and p=reject so legitimate third-party mail is never disrupted."
+  },
+  {
+    "id": "cat-d4-19",
+    "bank": "study",
+    "domainNum": 4,
+    "secondaryDomains": [
+      2,
+      3
+    ],
+    "difficulty": 4,
+    "lengthTier": "double",
+    "trapType": "Double Negatives",
+    "fluff": "A global fintech detects coordinated DNS cache-poisoning attempts redirecting external customers trying to reach its online trading portal toward a credential-harvesting site.",
+    "clue": "Leadership needs a protocol-level safeguard that cryptographically proves authoritative DNS responses have not been forged or altered across public recursive resolvers",
+    "question": "Which DNS governance control does <span class='qual-highlight'>NOT</span> fail to verify authoritative record authenticity?",
+    "legaleseStem": "<span class='fluff-zone'>To guarantee cryptographic origin authentication and integrity of authoritative domain name responses across public resolvers,</span> which protocol safeguard is <span class='qual-highlight'>PRIMARY</span>?",
+    "archaicStem": "<span class='fluff-zone'>Whereas forged name-resolution responses redirect customers toward fraudulent infrastructure prior to application login,</span> which DNS extension does <span class='qual-highlight'>NOT</span> fail to verify record authenticity?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "FAIL TO VERIFY"
+        ],
+        "result": "DIRECTLY VERIFIES (DNSSEC)"
+      }
+    ],
+    "options": [
+      {
+        "text": "Reduce authoritative DNS Time-to-Live intervals to thirty seconds across all customer-facing A records.",
+        "isCorrect": false,
+        "tag": "Caching-Only Trap — Shorter TTLs shrink how long a poisoned entry lingers, but do not cryptographically authenticate records or stop poisoning."
+      },
+      {
+        "text": "Enable DNS over HTTPS exclusively between internal corporate employee browsers and local resolvers.",
+        "isCorrect": false,
+        "tag": "Transit-vs-Origin Trap — DoH encrypts the last-mile query link for confidentiality, but does not verify whether an upstream resolver's cached record was poisoned."
+      },
+      {
+        "text": "Deploy DNSSEC to cryptographically sign authoritative zones and establish a chain of trust from root.",
+        "isCorrect": true,
+        "tag": "Correct — DNSSEC digitally signs authoritative DNS records (RRSIG/DNSKEY/DS) so validating resolvers reject forged or tampered DNS responses."
+      },
+      {
+        "text": "Disable IPv6 AAAA records on external name servers to simplify legacy IPv4 routing lookups.",
+        "isCorrect": false,
+        "tag": "Unrelated-Control Trap — Removing IPv6 records does nothing to stop IPv4 DNS cache poisoning or forged responses."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "DNSSEC provides cryptographic origin authentication and integrity for authoritative DNS records via a signed chain of trust from the root zone, defeating cache poisoning. By contrast, DoH/DoT encrypt query transport without signing authoritative zone integrity."
+  },
+  {
+    "id": "cat-d4-20",
+    "bank": "study",
+    "domainNum": 4,
+    "secondaryDomains": [
+      3,
+      6
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Process Chronology",
+    "fluff": "A multi-business-unit enterprise is consolidating forty independently created cloud Virtual Private Clouds (VPCs) across production, staging, and partner workloads using a central cloud Transit Gateway.",
+    "clue": "Architects discover that attaching all forty VPCs into a single default flat route table immediately enables unrestricted cross-environment reachability between partner sandboxes and production payment subnets",
+    "question": "Which cloud network governance step should architects execute <span class='qual-highlight'>BEFORE</span> attaching production VPCs to the Transit Gateway?",
+    "legaleseStem": "<span class='fluff-zone'>Prior to interconnecting heterogeneous multi-trust cloud virtual networks through a shared hub transit gateway,</span> which segmentation design step is <span class='qual-highlight'>FIRST</span> required?",
+    "archaicStem": "<span class='fluff-zone'>Ere disparate production and partner virtual clouds be joined via a shared transit hub,</span> which route-isolation discipline must architects <span class='qual-highlight'>NOT</span> postpone?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "POSTPONE"
+        ],
+        "result": "EXECUTE FIRST"
+      }
+    ],
+    "options": [
+      {
+        "text": "Define isolated trust-zone route tables and mandatory inspection VPC choke points before attaching workloads.",
+        "isCorrect": true,
+        "tag": "Correct — Establishing separate route domains (prod, non-prod, partner) and routing inter-zone flows through an inspection firewall VPC prevents flat transitive exposure on Day 1."
+      },
+      {
+        "text": "Attach all forty VPCs to the default route table first and audit VPC Flow Logs monthly for anomalies.",
+        "isCorrect": false,
+        "tag": "Connect-First Trap — Creating a flat transitive mesh between partner sandboxes and production before segmenting violates least privilege and defense in depth."
+      },
+      {
+        "text": "Enable automatic CIDR overlap translation across all partner sandboxes while maintaining shared route propagation.",
+        "isCorrect": false,
+        "tag": "Routing-Only Trap — NAT/CIDR translation resolves IP conflicts, not unauthorized trust-zone reachability between partner and production VPCs."
+      },
+      {
+        "text": "Disable cloud-native security groups on production instances once Transit Gateway attachments are active.",
+        "isCorrect": false,
+        "tag": "Single-Layer Trap — Removing instance-level stateful security groups strips away host micro-segmentation and breaks defense in depth."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Multi-VPC cloud hubs require segmented route tables per trust zone (production, non-production, third-party) and centralized inspection VPCs before attaching workloads—preventing flat transitive routing from bridging low-trust sandboxes straight into production."
+  }
+]

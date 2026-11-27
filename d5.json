@@ -1,0 +1,1000 @@
+[
+  {
+    "id": "cat-d5-01",
+    "bank": "study",
+    "domainNum": 5,
+    "secondaryDomains": [
+      4,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Double Negatives",
+    "fluff": "Despite enforcing corporate mobile push multifactor authentication workforce-wide, a publicly traded SaaS provider suffered two executive account takeovers over the past quarter.",
+    "clue": "Forensic review confirms attackers operated a real-time Adversary-in-the-Middle (AiTM) reverse proxy on a lookalike domain that relayed credentials, MFA approvals, and captured authenticated session cookies",
+    "question": "Which authentication upgrade is <span class='qual-highlight'>LEAST</span> prone to fail against real-time AiTM reverse-proxy phishing?",
+    "legaleseStem": "<span class='fluff-zone'>Where real-time interposing proxies relay interactive credentials and push approvals from lookalike domains,</span> which authentication control is <span class='qual-highlight'>LEAST</span> susceptible to token harvesting?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as interposing proxy contrivances relay one-time approvals even amid attentive staff,</span> which authentication control is <span class='qual-highlight'>LEAST</span> prone to fail?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST PRONE",
+          "TO FAIL"
+        ],
+        "result": "MOST RELIABLE"
+      }
+    ],
+    "options": [
+      {
+        "text": "Replace standard push alerts with authenticator apps enforcing two-digit number-matching challenge prompts.",
+        "isCorrect": false,
+        "tag": "Prompt-Fatigue-Only Trap — Number-matching stops blind push fatigue, but a deceived user typing the valid number into a live AiTM reverse proxy still hands over the session cookie."
+      },
+      {
+        "text": "Deploy FIDO2/WebAuthn hardware authenticators enforcing cryptographic TLS domain origin binding at login.",
+        "isCorrect": true,
+        "tag": "Correct — FIDO2/WebAuthn binds the cryptographic challenge directly to the authentic TLS origin, causing authentication to fail automatically on any lookalike AiTM proxy domain."
+      },
+      {
+        "text": "Shorten single sign-on idle session timeouts to thirty minutes and require twenty-character passphrases.",
+        "isCorrect": false,
+        "tag": "Wrong-Vector Trap — Longer passphrases and shorter idle timeouts do not stop an AiTM proxy from relaying credentials and immediately abusing the live session cookie."
+      },
+      {
+        "text": "Expand monthly executive phishing simulations paired with mandatory remedial training for credential submitters.",
+        "isCorrect": false,
+        "tag": "Human-Layer-Only Trap — Awareness training helps reduce clicks, but cannot provide deterministic cryptographic protection against sophisticated real-time AiTM proxies."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Phishing-resistant authentication (FIDO2/WebAuthn) cryptographically binds credentials to the legitimate TLS origin so lookalike Adversary-in-the-Middle reverse proxies automatically fail verification, whereas TOTP codes and number-matching pushes can still be relayed live."
+  },
+  {
+    "id": "cat-d5-02",
+    "bank": "study",
+    "domainNum": 5,
+    "secondaryDomains": [
+      1,
+      6
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A commercial bank executes quarterly user access reviews across core treasury and wire platforms, yet external SOX auditors classify the control as ineffective after observing 99% bulk approvals completed inside ninety seconds.",
+    "clue": "Business managers report that cryptic technical entitlement strings are unreadable and reviewing hundreds of benign permissions alongside high-risk wire roles causes severe fatigue",
+    "question": "Which IAM governance redesign <span class='qual-highlight'>MOST</span> directly resolves access-review rubber-stamping?",
+    "legaleseStem": "<span class='fluff-zone'>When periodic entitlement recertification fails audit scrutiny due to opaque role labels and bulk approval fatigue,</span> which governance remedy is <span class='qual-highlight'>MOST</span> effective?",
+    "archaicStem": "<span class='fluff-zone'>Whereas perfunctory bulk attestations nullify the assurance value of quarterly reviews,</span> which governance redesign shall audit leadership deem <span class='qual-highlight'>LEAST</span> deficient?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DEFICIENT"
+        ],
+        "result": "MOST EFFECTIVE"
+      }
+    ],
+    "options": [
+      {
+        "text": "Increase review frequency from quarterly to monthly so business managers stay familiar with entitlements.",
+        "isCorrect": false,
+        "tag": "Fatigue-Amplifier Trap — Tripling the frequency of opaque, cluttered reviews makes rubber-stamping worse rather than improving review quality."
+      },
+      {
+        "text": "Reassign quarterly business entitlement approvals exclusively to central IT identity administrators for accuracy.",
+        "isCorrect": false,
+        "tag": "Role-Boundary Trap — IT administrators do not know who has a valid business need for treasury access; Data/Business Owners must remain accountable."
+      },
+      {
+        "text": "Translate entitlements into business terms, highlight high-risk or dormant access, and revoke non-responses.",
+        "isCorrect": true,
+        "tag": "Correct — Plain business labels, risk-prioritized queues (toxic/dormant access), and revoke-by-default enforcement restore meaningful Data Owner accountability."
+      },
+      {
+        "text": "Require managers to type an electronic attestation phrase before clicking the bulk approval button.",
+        "isCorrect": false,
+        "tag": "Cosmetic-Friction Trap — Adding a typed attestation phrase still permits blind bulk approval of unreadable technical entitlement strings."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Meaningful access recertification eliminates review fatigue by translating technical permissions into clear business risk descriptions, highlighting dormant or toxic entitlements, and enforcing revoke-by-default on unreviewed items while keeping Data Owners accountable."
+  },
+  {
+    "id": "cat-d5-03",
+    "bank": "study",
+    "domainNum": 5,
+    "secondaryDomains": [
+      4,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Double Negatives",
+    "fluff": "During an active credential-compromise investigation, IAM responders disable a senior sales director's account in the centralized corporate Identity Provider within ten minutes of detection.",
+    "clue": "Threat hunters still observe the adversary exporting sensitive CRM pipeline records over SaaS REST APIs for three additional hours using previously minted OAuth bearer and refresh tokens",
+    "question": "Which session-governance control is <span class='qual-highlight'>NOT</span> optional for closing this post-revocation access window?",
+    "legaleseStem": "<span class='fluff-zone'>Where disabled federated accounts retain active SaaS access via long-lived cached bearer tokens,</span> which session-lifecycle control is <span class='qual-highlight'>LEAST</span> expendable?",
+    "archaicStem": "<span class='fluff-zone'>Whereas disabling a directory account fails to terminate cached bearer sessions instantaneously,</span> which session-governance safeguard is <span class='qual-highlight'>NOT</span> optional?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "OPTIONAL"
+        ],
+        "result": "MANDATORY"
+      }
+    ],
+    "options": [
+      {
+        "text": "Enforce short-lived access tokens with centralized refresh-token revocation and Continuous Access Evaluation.",
+        "isCorrect": true,
+        "tag": "Correct — Short access-token lifetimes paired with active refresh-token revocation and CAE signals terminate compromised SaaS sessions in near real time."
+      },
+      {
+        "text": "Mandate stronger password complexity and history policies on the centralized Identity Provider directory.",
+        "isCorrect": false,
+        "tag": "Pre-Compromise Trap — Password policies do nothing to invalidate already-issued stateless bearer and refresh tokens after account disablement."
+      },
+      {
+        "text": "Extend OAuth access-token lifetimes to twenty-four hours to reduce Identity Provider validation load.",
+        "isCorrect": false,
+        "tag": "Opposite-Effect Trap — Longer stateless access-token lifetimes widen the post-revocation exposure window dramatically."
+      },
+      {
+        "text": "Instruct the compromised employee to clear browser cookies manually across all personal mobile devices.",
+        "isCorrect": false,
+        "tag": "Client-Side Myth — Clearing the victim's browser does not revoke tokens already exfiltrated to the attacker's own infrastructure."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Disabling a directory user does not automatically kill stateless federated bearer tokens until they expire. Short access-token lifetimes, centralized refresh-token revocation, and Continuous Access Evaluation (CAE) close the post-revocation gap."
+  },
+  {
+    "id": "cat-d5-04",
+    "bank": "study",
+    "domainNum": 5,
+    "secondaryDomains": [
+      2,
+      8
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A B2B supply-chain portal permits thirty independent partner enterprises to authenticate users via each partner's own SAML 2.0 Identity Provider to manage confidential procurement bids.",
+    "clue": "Security architects warn that if one smaller supplier's IdP is compromised, attackers might mint forged SAML assertions claiming executive email identities belonging to a competing manufacturer",
+    "question": "Which federation trust-boundary control <span class='qual-highlight'>MOST</span> reliably prevents cross-tenant assertion spoofing?",
+    "legaleseStem": "<span class='fluff-zone'>Within a multi-tenant federated portal trusting numerous independent external Identity Providers,</span> which relying-party safeguard is <span class='qual-highlight'>PRIMARY</span> against cross-tenant impersonation?",
+    "archaicStem": "<span class='fluff-zone'>Insofar as a subverted partner Identity Provider might mint assertions outside its lawful domain,</span> which federation boundary control is <span class='qual-highlight'>LEAST</span> dispensable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DISPENSABLE"
+        ],
+        "result": "MOST ESSENTIAL"
+      }
+    ],
+    "options": [
+      {
+        "text": "Distribute one shared enterprise SAML signing certificate across all participating supply-chain partner IdPs.",
+        "isCorrect": false,
+        "tag": "Shared-Trust Catastrophe — Sharing one signing key across all thirty partners lets any single compromised partner forge assertions for every other tenant."
+      },
+      {
+        "text": "Validate the email-domain string typed in the browser login form before redirecting to SAML.",
+        "isCorrect": false,
+        "tag": "Client-Input Trap — Home-realm discovery in the browser only chooses where to redirect; without server-side issuer scoping, an IdP-initiated assertion can still spoof another domain."
+      },
+      {
+        "text": "Require partner organizations to rotate internal Active Directory passwords every sixty days.",
+        "isCorrect": false,
+        "tag": "Off-Target Control — Partner password rotation does not isolate cross-tenant SAML trust boundaries if a partner IdP server itself is compromised."
+      },
+      {
+        "text": "Bind each partner IdP's unique signing certificate strictly to its authorized domain and tenant scope.",
+        "isCorrect": true,
+        "tag": "Correct — Isolating each issuer's unique signing certificate and strictly restricting accepted identity claims to that partner's authorized domains blocks cross-tenant spoofing."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Multi-tenant SAML/OIDC Service Providers must isolate trust per external Identity Provider by validating each issuer's distinct cryptographic signing key and enforcing strict domain/tenant claim scoping so a compromised IdP cannot assert identities outside its own tenant."
+  },
+  {
+    "id": "cat-d5-05",
+    "bank": "study",
+    "domainNum": 5,
+    "secondaryDomains": [
+      1,
+      3
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Constraint Violation",
+    "fluff": "An enterprise maintains two emergency 'break-glass' cloud super-administrator accounts strictly for disaster recovery if its primary federated Identity Provider suffers a prolonged regional outage.",
+    "clue": "During a standardization push, an IAM engineer proposes routing break-glass logins through the corporate federated SSO portal so all authentication telemetry stays consolidated in one login path",
+    "question": "Which governance flaw makes routing break-glass accounts through federated SSO unacceptable?",
+    "legaleseStem": "<span class='fluff-zone'>When architecting emergency administrative recovery accounts for cloud control planes,</span> which availability dependency must governance <span class='qual-highlight'>NOT</span> introduce?",
+    "archaicStem": "<span class='fluff-zone'>Whereas emergency recovery accounts exist expressly to restore operations amid identity-provider collapse,</span> which design choice is <span class='qual-highlight'>MOST</span> self-defeating?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "MOST",
+          "SELF-DEFEATING"
+        ],
+        "result": "CIRCULAR AVAILABILITY DEPENDENCY"
+      }
+    ],
+    "options": [
+      {
+        "text": "It creates a circular dependency that locks out emergency recovery whenever the Identity Provider fails.",
+        "isCorrect": true,
+        "tag": "Correct — Break-glass accounts must be cloud-native and independent of federated SSO so admins can still recover the tenant during an IdP outage or misconfiguration."
+      },
+      {
+        "text": "It prevents cloud providers from forwarding break-glass login events to external enterprise SIEM platforms.",
+        "isCorrect": false,
+        "tag": "Factual Error — Cloud control-plane audit logs capture both native and federated sign-ins and stream them to SIEMs."
+      },
+      {
+        "text": "It prohibits protecting emergency cloud accounts with hardware-backed FIDO2 multifactor authentication tokens.",
+        "isCorrect": false,
+        "tag": "Factual Error — Hardware FIDO2 tokens work on both federated and cloud-native break-glass accounts."
+      },
+      {
+        "text": "It forces security teams to store break-glass credentials inside unencrypted shared operations spreadsheets.",
+        "isCorrect": false,
+        "tag": "False-Causality Trap — Credential vaulting and split-custody storage are independent of whether an account uses federated SSO."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Emergency break-glass accounts must remain cloud-native and decoupled from federated SSO to eliminate circular availability dependencies during an Identity Provider outage, compensated by hardware MFA, split-custody vaulting, and immediate high-severity alerting."
+  },
+  {
+    "id": "cat-d5-06",
+    "bank": "study",
+    "domainNum": 5,
+    "secondaryDomains": [
+      7,
+      1
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A cloud-native fintech currently assigns thirty senior site-reliability engineers permanent, standing Global Administrator privileges across production cloud accounts around the clock.",
+    "clue": "An external security review flags that compromising any single engineer's laptop outside maintenance windows would immediately expose production encryption keys, IAM policies, and backups",
+    "question": "Which Privileged Access Management redesign <span class='qual-highlight'>MOST</span> directly eliminates standing privilege exposure?",
+    "legaleseStem": "<span class='fluff-zone'>To eliminate persistent standing super-administrator blast radius across production cloud control planes,</span> which Privileged Access Management practice is <span class='qual-highlight'>PRIMARY</span>?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as perpetual standing administrative entitlements invite catastrophic compromise upon a single endpoint breach,</span> which PAM control is <span class='qual-highlight'>LEAST</span> dispensable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DISPENSABLE"
+        ],
+        "result": "MOST ESSENTIAL (JUST-IN-TIME PAM)"
+      }
+    ],
+    "options": [
+      {
+        "text": "Require all thirty engineers to rotate their permanent Global Administrator passphrases every thirty days.",
+        "isCorrect": false,
+        "tag": "Standing-Privilege Trap — Password rotation does not shrink the 24/7 standing privilege blast radius if an active workstation or session token is hijacked."
+      },
+      {
+        "text": "Enforce Just-in-Time privileged elevation with approval workflows, time-bound sessions, vaulting, and session recording.",
+        "isCorrect": true,
+        "tag": "Correct — Zero Standing Privileges (JIT PAM) keeps routine accounts unprivileged and grants audited, time-boxed elevation only when justified and approved."
+      },
+      {
+        "text": "Transfer all thirty standing Global Administrator entitlements exclusively to engineering directors rather than engineers.",
+        "isCorrect": false,
+        "tag": "Wrong-Target Trap — Moving standing root privileges to executives increases phishing value while forcing awkward workarounds for actual operations."
+      },
+      {
+        "text": "Restrict cloud console logins to corporate VPN exit IP addresses while maintaining permanent admin roles.",
+        "isCorrect": false,
+        "tag": "Perimeter-Only Trap — A compromised corporate laptop already rides the VPN and still wields full 24/7 standing admin rights."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Modern Privileged Access Management enforces Zero Standing Privileges through Just-in-Time (JIT) elevation, approval workflows, time-bound tokens, credential vaulting, and full session recording—minimizing the attack window of high-impact administrative roles."
+  },
+  {
+    "id": "cat-d5-07",
+    "bank": "study",
+    "domainNum": 5,
+    "secondaryDomains": [
+      8,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "An enterprise IAM audit discovers over 450 non-human service accounts and long-lived static API keys embedded across CI/CD build pipelines and microservices.",
+    "clue": "Most machine identities hold broad cloud wildcard permissions, lack any recorded human owner, and have not been rotated since initial deployment three years ago",
+    "question": "Which governance strategy <span class='qual-highlight'>BEST</span> brings non-human machine identities under durable IAM lifecycle control?",
+    "legaleseStem": "<span class='fluff-zone'>When remediating ownerless static machine credentials proliferating across automated cloud pipelines,</span> which IAM governance framework is <span class='qual-highlight'>MOST</span> durable?",
+    "archaicStem": "<span class='fluff-zone'>Whereas ownerless static service keys evade human offboarding and rotation controls indefinitely,</span> which machine-identity discipline is <span class='qual-highlight'>LEAST</span> dispensable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DISPENSABLE"
+        ],
+        "result": "MOST ESSENTIAL"
+      }
+    ],
+    "options": [
+      {
+        "text": "Consolidate all 450 microservices onto three shared enterprise service keys to simplify quarterly rotation.",
+        "isCorrect": false,
+        "tag": "Blast-Radius Trap — Consolidating onto shared keys destroys per-service accountability and turns any single service leak into a platform-wide compromise."
+      },
+      {
+        "text": "Exempt automated CI/CD service identities from periodic access reviews to prevent unintended build outages.",
+        "isCorrect": false,
+        "tag": "Blind-Spot Trap — Exempting non-human identities—which often outnumber human accounts and hold higher privileges—leaves permanent shadow attack paths."
+      },
+      {
+        "text": "Assign accountable human owners, enforce least-privilege scopes, adopt short-lived workload identity tokens, and audit usage.",
+        "isCorrect": true,
+        "tag": "Correct — Establishes named ownership, tight least-privilege scoping, and ephemeral OIDC workload federation/vaulting instead of static long-lived API keys."
+      },
+      {
+        "text": "Store all existing static API keys inside a restricted internal wiki page monitored by quarterly audits.",
+        "isCorrect": false,
+        "tag": "Secrets-Sprawl Trap — Wikis are not secrets vaults, and storing static wildcard keys centrally fails to fix over-privileging or key longevity."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Non-human identity governance requires assigning an accountable human owner to every service identity, enforcing granular least-privilege scopes, replacing static secrets with short-lived federated workload identities or automated vaults, and auditing lifecycle usage."
+  },
+  {
+    "id": "cat-d5-08",
+    "bank": "study",
+    "domainNum": 5,
+    "secondaryDomains": [
+      3
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Constraint Violation",
+    "fluff": "A sovereign pharmaceutical research facility is calibrating biometric iris scanners guarding its restricted bio-containment laboratory where excluding unauthorized impostors is paramount.",
+    "clue": "Physical security leadership accepts occasional legitimate-scientist retry friction as long as impostor admission probability stays minimized and printed high-resolution iris photos are rejected",
+    "question": "Which biometric configuration <span class='qual-highlight'>BEST</span> meets both sensitivity and anti-spoofing constraints?",
+    "legaleseStem": "<span class='fluff-zone'>When calibrating biometric access controls for a high-assurance enclosure prioritizing impostor exclusion over retry convenience,</span> which configuration is <span class='qual-highlight'>MOST</span> appropriate?",
+    "archaicStem": "<span class='fluff-zone'>Whereas excluding unauthorized entrants supersedes minor retry inconvenience in high-security zones,</span> which biometric calibration shall management deem <span class='qual-highlight'>BEST</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "BEST",
+          "HIGH-SECURITY BIOMETRIC"
+        ],
+        "result": "MINIMIZE FAR + LIVENESS DETECTION"
+      }
+    ],
+    "options": [
+      {
+        "text": "Loosen matching sensitivity to minimize the False Rejection Rate so scientists never face retry delays.",
+        "isCorrect": false,
+        "tag": "Constraint Violation — Minimizing FRR (Type I error) loosens matching thresholds and raises False Acceptance Rate (FAR), letting impostors into a restricted lab."
+      },
+      {
+        "text": "Tighten sensitivity strictly to the Crossover Error Rate while disabling secondary presentation-attack sensors.",
+        "isCorrect": false,
+        "tag": "CER-Misuse Trap — CER is a benchmark for comparing competing biometric devices, not the optimal operating threshold for a high-security vault—and disabling liveness invites photo spoofing."
+      },
+      {
+        "text": "Replace iris scanners entirely with magnetic-stripe proximity badges to eliminate false rejection anomalies.",
+        "isCorrect": false,
+        "tag": "Downgrade Trap — Magnetic-stripe badges are trivially cloned or shared and fail high-assurance identity binding."
+      },
+      {
+        "text": "Tighten matching sensitivity to minimize False Acceptance Rate paired with active physiological liveness detection.",
+        "isCorrect": true,
+        "tag": "Correct — High-security zones minimize FAR (Type II error) while accepting slightly higher FRR, and liveness detection defeats photographic presentation attacks."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Biometric systems trade off False Rejection Rate (Type I) against False Acceptance Rate (Type II). High-assurance environments tighten thresholds to minimize FAR and layer physiological liveness detection to block presentation spoofing."
+  },
+  {
+    "id": "cat-d5-09",
+    "bank": "study",
+    "domainNum": 5,
+    "secondaryDomains": [
+      4,
+      2
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A national hospital network wants dynamic authorization across its electronic health record platform to prevent unauthorized snooping on VIP and off-shift patient records.",
+    "clue": "Policies must simultaneously evaluate the clinician's specialty, assigned hospital ward, active shift schedule, managed device health, and patient consent flags without creating thousands of static roles",
+    "question": "Which access-control architecture <span class='qual-highlight'>BEST</span> satisfies these dynamic multi-variable policy rules?",
+    "legaleseStem": "<span class='fluff-zone'>When enterprise authorization must dynamically evaluate subject, resource, device, and environmental context concurrently without role explosion,</span> which model is <span class='qual-highlight'>MOST</span> capable?",
+    "archaicStem": "<span class='fluff-zone'>Whereas static role matrices grow unmanageable when authorization hinges upon dynamic environmental and device attributes,</span> which access paradigm shall architects deem <span class='qual-highlight'>BEST</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "BEST",
+          "DYNAMIC MULTI-VARIABLE"
+        ],
+        "result": "ATTRIBUTE-BASED ACCESS CONTROL (ABAC)"
+      }
+    ],
+    "options": [
+      {
+        "text": "Attribute-Based Access Control evaluating dynamic rules across subject, object, action, and environmental attributes.",
+        "isCorrect": true,
+        "tag": "Correct — ABAC natively combines user specialty, ward, shift time, device posture, and record consent attributes at decision time without role explosion."
+      },
+      {
+        "text": "Pure Role-Based Access Control creating separate static roles for every ward, shift, and specialty permutation.",
+        "isCorrect": false,
+        "tag": "Role-Explosion Trap — Encoding shift times, wards, and device states into static RBAC roles creates thousands of unmanageable roles, violating the stem constraint."
+      },
+      {
+        "text": "Discretionary Access Control allowing individual attending physicians to maintain ad-hoc file access lists.",
+        "isCorrect": false,
+        "tag": "Governance-Loss Trap — DAC delegates inconsistent ad-hoc sharing to individuals and cannot centrally enforce shift-hour or device-posture policies."
+      },
+      {
+        "text": "Mandatory Access Control relying exclusively on static military clearance levels enforced by kernel labels.",
+        "isCorrect": false,
+        "tag": "Rigidity Trap — Static hierarchical clearance labels do not dynamically evaluate hospital shift schedules, device health, or patient consent flags."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Attribute-Based Access Control (ABAC) evaluates fine-grained policies combining subject, resource, action, and environmental attributes dynamically—solving complex context-aware authorization without the role explosion of pure RBAC."
+  },
+  {
+    "id": "cat-d5-10",
+    "bank": "study",
+    "domainNum": 5,
+    "secondaryDomains": [
+      8,
+      4
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A digital wealth platform wants customers to authorize third-party tax-preparation apps to read annual dividend statements via API without ever sharing their brokerage passwords.",
+    "clue": "At the same time, internal mobile apps need verifiable federated user identity assertions confirming exactly who logged in",
+    "question": "Which open-standards pairing <span class='qual-highlight'>MOST</span> accurately separates delegated API authorization from user authentication?",
+    "legaleseStem": "<span class='fluff-zone'>When architecting secure third-party API delegation alongside verifiable federated user login,</span> which standards alignment <span class='qual-highlight'>BEST</span> avoids token-conflation flaws?",
+    "archaicStem": "<span class='fluff-zone'>Whereas treating raw authorization tokens as proof of user identity introduces severe impersonation vulnerabilities,</span> which protocol distinction is <span class='qual-highlight'>MOST</span> accurate?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "MOST",
+          "ACCURATE"
+        ],
+        "result": "OAUTH 2.0 (AUTHORIZATION) + OIDC (AUTHENTICATION)"
+      }
+    ],
+    "options": [
+      {
+        "text": "Use OAuth 2.0 alone as both the delegated authorization standard and standalone user authentication proof.",
+        "isCorrect": false,
+        "tag": "Token-Conflation Trap — OAuth 2.0 is an authorization framework, not an authentication protocol; treating raw access tokens as identity proof creates serious security flaws."
+      },
+      {
+        "text": "Use OAuth 2.0 for scoped API delegation and layer OpenID Connect for verifiable user authentication.",
+        "isCorrect": true,
+        "tag": "Correct — OAuth 2.0 issues scoped access tokens for delegated API access without password sharing, while OIDC adds signed ID tokens specifically for user authentication."
+      },
+      {
+        "text": "Use RADIUS accounting packets to govern external third-party tax API permissions across mobile clients.",
+        "isCorrect": false,
+        "tag": "Wrong-Domain Protocol — RADIUS is a network-access AAA protocol (VPN/802.1X), not a modern web/mobile API delegation standard."
+      },
+      {
+        "text": "Use Kerberos service tickets issued directly over public internet connections to external tax-prep vendors.",
+        "isCorrect": false,
+        "tag": "Wrong-Environment Trap — Kerberos is designed for trusted internal enterprise domains with direct KDC reachability, not federated public internet API delegation."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "OAuth 2.0 governs scoped delegated authorization (granting apps access without exposing passwords), while OpenID Connect (OIDC) layers standardized, cryptographically signed authentication (ID tokens) on top of OAuth 2.0."
+  },
+  {
+    "id": "cat-d5-11",
+    "bank": "study",
+    "domainNum": 5,
+    "secondaryDomains": [
+      1,
+      2
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Process Chronology",
+    "fluff": "A state workforce agency is launching an online unemployment-benefits portal that will disburse $400 million annually directly to verified citizens.",
+    "clue": "Fraud investigators warn that organized crime rings use stolen personal data from prior retail breaches to register synthetic accounts and bind their own MFA apps before legitimate citizens enroll",
+    "question": "Which upfront IAM lifecycle stage <span class='qual-highlight'>FIRST</span> prevents fraudulent account creation before authentication occurs?",
+    "legaleseStem": "<span class='fluff-zone'>To establish high assurance that an online applicant genuinely matches a claimed real-world identity prior to issuing credentials,</span> which IAM lifecycle phase is <span class='qual-highlight'>FIRST</span> required?",
+    "archaicStem": "<span class='fluff-zone'>Ere strong authenticators be bound to a newly enrolled digital account,</span> which foundational identity-assurance phase must governance enforce <span class='qual-highlight'>FIRST</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "ENFORCE",
+          "FIRST"
+        ],
+        "result": "IDENTITY PROOFING & REGISTRATION"
+      }
+    ],
+    "options": [
+      {
+        "text": "Enforce FIDO2 hardware MFA on all subsequent portal sign-ins after initial self-service enrollment completes.",
+        "isCorrect": false,
+        "tag": "Wrong-Stage Trap — Strong MFA only proves the same attacker holds the key they bound during fraudulent registration; it cannot catch a fake identity upfront."
+      },
+      {
+        "text": "Shorten web portal idle session timeouts to fifteen minutes and enforce breached-password screening.",
+        "isCorrect": false,
+        "tag": "Post-Enrollment Trap — Session timeouts and password hygiene protect valid accounts, not initial synthetic account registration."
+      },
+      {
+        "text": "Implement rigorous identity proofing and registration verification aligned to high Identity Assurance Levels.",
+        "isCorrect": true,
+        "tag": "Correct — NIST SP 800-63A Identity Proofing (IAL2/IAL3) verifies the applicant's real-world identity and blocks synthetic impersonation before credentials are ever issued."
+      },
+      {
+        "text": "Execute quarterly user access recertification reviews across existing citizen benefit portal accounts.",
+        "isCorrect": false,
+        "tag": "Too-Late Trap — Quarterly reviews occur months after fraudulent benefits have already been disbursed."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Authentication proves a user controls a credential, whereas identity proofing during initial registration proves the credential belongs to the genuine real-world individual. High-value portals require strong upfront identity proofing (IAL) before issuing authenticators."
+  },
+  {
+    "id": "cat-d5-12",
+    "bank": "study",
+    "domainNum": 5,
+    "secondaryDomains": [
+      1,
+      6
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "During an annual compliance audit at a rapidly growing retail group, auditors identify 64 active accounts belonging to departed contractors plus 38 transferred employees still holding legacy payroll-write privileges.",
+    "clue": "Investigation reveals IT relies on manual help-desk emails from busy managers to revoke or modify entitlements whenever staff transfer departments or complete contracts",
+    "question": "Which governance redesign <span class='qual-highlight'>MOST</span> sustainably eliminates both orphaned accounts and privilege creep?",
+    "legaleseStem": "<span class='fluff-zone'>To prevent departed contractors and transferred staff from retaining obsolete privileges across enterprise directories,</span> which IAM lifecycle governance control is <span class='qual-highlight'>MOST</span> durable?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as manual ticket-based offboarding routinely leaves dormant and accumulated entitlements active,</span> which identity lifecycle control is <span class='qual-highlight'>PRIMARY</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "PREVENT ORPHAN & CREEP"
+        ],
+        "result": "HR-DRIVEN AUTOMATED JML + PERIODIC REVIEWS"
+      }
+    ],
+    "options": [
+      {
+        "text": "Send quarterly reminder emails urging department managers to submit help-desk tickets promptly for transfers.",
+        "isCorrect": false,
+        "tag": "Manual-Process Trap — Relying on busy managers to remember ad-hoc manual emails is the exact fragile workflow causing orphaned accounts today."
+      },
+      {
+        "text": "Disable any user account automatically after seven days without outbound email activity.",
+        "isCorrect": false,
+        "tag": "Operational-Disruption Trap — Auto-disabling after seven quiet days locks out vacationing staff, field technicians, and service accounts while missing active transferred insiders."
+      },
+      {
+        "text": "Enforce stricter twenty-character password rotation policies across all contractor and finance user accounts.",
+        "isCorrect": false,
+        "tag": "Wrong-Control Trap — Password complexity does not remove obsolete payroll privileges or deprovision departed contractors."
+      },
+      {
+        "text": "Integrate IAM provisioning directly with authoritative HR and vendor records paired with scheduled recertification.",
+        "isCorrect": true,
+        "tag": "Correct — Authoritative HR/VMS-driven Joiner-Mover-Leaver automation revokes obsolete permissions upon role transfer or contract end, verified by periodic reviews."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Preventing orphaned accounts and privilege creep sustainably requires tying automated IAM provisioning/deprovisioning directly to authoritative HR and vendor-management systems (Joiner-Mover-Leaver lifecycle), reinforced by periodic access recertification."
+  },
+  {
+    "id": "cat-d5-13",
+    "bank": "study",
+    "domainNum": 5,
+    "secondaryDomains": [
+      4,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "Incident responders investigating an internal Active Directory intrusion confirm adversaries used a compromised standard workstation to harvest Service Principal Name (SPN) Kerberos tickets and crack a weak SQL service-account password offline.",
+    "clue": "Using that cracked service account, the attacker escalated to Domain Admin and extracted the domain's `krbtgt` hash, enabling forged Golden Tickets across the entire forest",
+    "question": "Which combined IAM remediation sequence <span class='qual-highlight'>MOST</span> completely evicts Golden Ticket persistence and prevents repeat Kerberoasting?",
+    "legaleseStem": "<span class='fluff-zone'>Following confirmed Active Directory krbtgt hash compromise enabled by offline Kerberoasting of weak service credentials,</span> which remediation sequence is <span class='qual-highlight'>MOST</span> complete?",
+    "archaicStem": "<span class='fluff-zone'>Whereas a solitary krbtgt reset leaves forged Golden Tickets valid via prior-key history,</span> which Active Directory recovery discipline must responders <span class='qual-highlight'>NOT</span> omit?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "OMIT"
+        ],
+        "result": "DOUBLE KRBTGT RESET + gMSA / AES HARDENING"
+      }
+    ],
+    "options": [
+      {
+        "text": "Rotate the krbtgt password twice with replication intervals and migrate service accounts to gMSAs.",
+        "isCorrect": true,
+        "tag": "Correct — Active Directory retains the current and previous krbtgt hash, so two spaced resets invalidate all forged Golden Tickets, while gMSAs with strong 120-char random keys defeat Kerberoasting."
+      },
+      {
+        "text": "Reset the krbtgt password once immediately and enforce standard user password complexity across workstations.",
+        "isCorrect": false,
+        "tag": "Single-Reset Trap — Because Active Directory still honors the previous krbtgt hash after a single reset, existing forged Golden Tickets remain valid."
+      },
+      {
+        "text": "Disable Kerberos authentication enterprise-wide and force all Windows servers back to NTLMv1 authentication.",
+        "isCorrect": false,
+        "tag": "Severe-Downgrade Trap — NTLMv1 is cryptographically broken and far more vulnerable to relay and offline cracking than hardened Kerberos."
+      },
+      {
+        "text": "Block outbound internet traffic from domain controllers while retaining existing static SQL service passwords.",
+        "isCorrect": false,
+        "tag": "Incomplete-Eradication Trap — Does not evict active internal Golden Tickets or replace the weak crackable SQL SPN credential."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Evicting Kerberos Golden Ticket persistence requires resetting the `krbtgt` account password twice (spaced for AD replication and ticket lifetime) to flush both current and previous hashes, while migrating SPN services to Group Managed Service Accounts (gMSAs) with AES defeats Kerberoasting."
+  },
+  {
+    "id": "cat-d5-14",
+    "bank": "study",
+    "domainNum": 5,
+    "secondaryDomains": [
+      7,
+      1
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "During forensic review of an unauthorized payroll-table export, investigators discover that seven database administrators routinely connected directly via one shared `db_root` login to avoid managing individual accounts.",
+    "clue": "Because all seven administrators used the identical credential from jump hosts, logs cannot prove which individual executed the export command",
+    "question": "Which IAM redesign <span class='qual-highlight'>BEST</span> restores individual accountability while supporting necessary administrative work?",
+    "legaleseStem": "<span class='fluff-zone'>When shared generic administrative logins prevent attributing privileged database actions to a specific person,</span> which IAM remediation is <span class='qual-highlight'>PRIMARY</span>?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as collective root credentials obliterate individual audit attribution,</span> which accountability control shall governance deem <span class='qual-highlight'>LEAST</span> dispensable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DISPENSABLE"
+        ],
+        "result": "MOST ESSENTIAL"
+      }
+    ],
+    "options": [
+      {
+        "text": "Rotate the shared db_root password weekly and email the new value exclusively to senior DBAs.",
+        "isCorrect": false,
+        "tag": "Shared-Account Trap — Rotating a shared password still leaves seven people logging in as the same anonymous identity with zero individual attribution."
+      },
+      {
+        "text": "Mandate unique named administrator accounts with audited privilege elevation or vaulted PAM checkout tracking.",
+        "isCorrect": true,
+        "tag": "Correct — Unique individual logins paired with audited elevation (`sudo`/RBAC) or PAM credential checkout tie every privileged command cleanly to one accountable person."
+      },
+      {
+        "text": "Disable database query audit logging during routine maintenance windows to reduce log correlation ambiguity.",
+        "isCorrect": false,
+        "tag": "Audit-Destruction Trap — Turning off audit logs eliminates visibility completely and violates compliance and forensic readiness."
+      },
+      {
+        "text": "Require all seven DBAs to sign an annual statement promising to log commands in a notebook.",
+        "isCorrect": false,
+        "tag": "Honor-System Trap — Manual self-reported notebooks are easily falsified by a malicious insider and cannot satisfy non-repudiation or accountability."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Accountability—the cornerstone of IAAA governance—requires unique personal identification so every privileged action maps unambiguously to a single individual via named accounts, audited elevation, or PAM vaulted checkout."
+  },
+  {
+    "id": "cat-d5-15",
+    "bank": "study",
+    "domainNum": 5,
+    "secondaryDomains": [
+      1,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "A global insurance carrier is modernizing its enterprise authentication standard to align with NIST SP 800-63B guidance after help-desk analytics show 40% of support calls stem from legacy 90-day forced password resets.",
+    "clue": "Compliance auditors question whether retiring arbitrary 90-day password expiration weakens enterprise credential security against credential-stuffing and brute-force attacks",
+    "question": "Which modernized credential policy <span class='qual-highlight'>BEST</span> replaces arbitrary periodic rotation while strengthening real security?",
+    "legaleseStem": "<span class='fluff-zone'>When replacing arbitrary ninety-day password expiration with contemporary NIST-aligned credential governance,</span> which policy combination <span class='qual-highlight'>MOST</span> strengthens actual authentication resilience?",
+    "archaicStem": "<span class='fluff-zone'>Whereas unprovoked periodic credential expiration drives predictable human patterns,</span> which modern credential control set shall auditors deem <span class='qual-highlight'>LEAST</span> deficient?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DEFICIENT"
+        ],
+        "result": "MOST EFFECTIVE"
+      }
+    ],
+    "options": [
+      {
+        "text": "Eliminate password expiration and drop minimum length to eight characters to minimize user friction.",
+        "isCorrect": false,
+        "tag": "Weak-Entropy Trap — Removing rotation without enforcing longer passphrases, breach-list screening, and MFA leaves weak passwords exposed indefinitely."
+      },
+      {
+        "text": "Keep 90-day rotation alongside mandatory special-character composition rules and three personal security questions.",
+        "isCorrect": false,
+        "tag": "Legacy-Anti-Pattern Trap — Forced periodic rotation and arbitrary character composition rules cause predictable incremental passwords (`Summer2026!`) and sticky notes, while security questions are weak."
+      },
+      {
+        "text": "Enforce longer passphrases screened against breached lists, phishing-resistant MFA, and compromise-triggered resets.",
+        "isCorrect": true,
+        "tag": "Correct — Follows NIST SP 800-63B: prioritize length over arbitrary composition, block known breached passwords, enforce MFA, and force rotation immediately upon evidence of compromise."
+      },
+      {
+        "text": "Allow unlimited login attempts without rate limiting while requiring users to alternate uppercase letters.",
+        "isCorrect": false,
+        "tag": "Brute-Force Trap — Removing rate limiting invites online password spraying regardless of character casing rules."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "NIST SP 800-63B discourages arbitrary periodic password rotation because it induces predictable patterns and workarounds. Stronger modern governance combines longer passphrases, breached-password blocklists, rate limiting, MFA, and immediate rotation upon suspected compromise."
+  },
+  {
+    "id": "cat-d5-16",
+    "bank": "study",
+    "domainNum": 5,
+    "secondaryDomains": [
+      3,
+      4
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Double Negatives",
+    "fluff": "A distributed consulting enterprise supports 14,000 traveling staff accessing hybrid cloud applications across thirty countries, and leadership wants low login friction during normal workdays.",
+    "clue": "At the same time, security operations must automatically escalate scrutiny or block access whenever an account exhibits impossible-travel logins, anonymous proxy IPs, or unmanaged device posture",
+    "question": "Which IAM governance capability is <span class='qual-highlight'>LEAST</span> dispensable for delivering this dynamic balance?",
+    "legaleseStem": "<span class='fluff-zone'>To apply proportionate authentication challenges dynamically based on real-time contextual and behavioral risk telemetry,</span> which IAM architecture is <span class='qual-highlight'>NOT</span> inconsistent with Zero Trust?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as static authentication rules either burden routine users needlessly or fail to intercept anomalous takeovers,</span> which adaptive IAM capability is <span class='qual-highlight'>LEAST</span> dispensable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DISPENSABLE"
+        ],
+        "result": "MOST ESSENTIAL"
+      }
+    ],
+    "options": [
+      {
+        "text": "Mandate manual telephone verification with the SOC for every morning login across all thirty countries.",
+        "isCorrect": false,
+        "tag": "Usability-Failure Trap — Constant manual verification violates the low-friction business requirement and fails to scale to 14,000 users."
+      },
+      {
+        "text": "Disable MFA on managed corporate laptops permanently while relying on static country IP blocklists.",
+        "isCorrect": false,
+        "tag": "Static-Control Trap — Static country lists break legitimate traveling consultants and removing MFA exposes stolen or compromised corporate laptops."
+      },
+      {
+        "text": "Grant persistent ninety-day trusted browser cookies across both corporate and unmanaged hotel kiosk devices.",
+        "isCorrect": false,
+        "tag": "Exposure Trap — Long persistent tokens on unmanaged kiosk devices invite trivial session hijacking and credential theft."
+      },
+      {
+        "text": "Deploy risk-based Conditional Access evaluating identity telemetry, device compliance, and location to trigger step-up checks.",
+        "isCorrect": true,
+        "tag": "Correct — Risk-based (adaptive) Conditional Access keeps trusted, healthy sessions smooth while automatically forcing step-up MFA or blocking anomalous/unmanaged logins."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Risk-based (adaptive) authentication and Conditional Access evaluate real-time identity risk, device compliance, and geolocation anomalies per session—preserving smooth usability for normal traffic while dynamically enforcing step-up verification or blocks on suspicious activity."
+  },
+  {
+    "id": "cat-d5-17",
+    "bank": "study",
+    "domainNum": 5,
+    "secondaryDomains": [
+      1,
+      3
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Process Chronology",
+    "fluff": "A publicly traded logistics enterprise acquires a regional freight competitor running a separate legacy Active Directory forest with weak password hygiene and undocumented service accounts.",
+    "clue": "Integration leads push to enable a Day-1 bidirectional transitive forest trust so both companies can immediately share internal portals and file shares",
+    "question": "Which IAM integration step should the security manager require <span class='qual-highlight'>BEFORE</span> establishing cross-forest directory trust?",
+    "legaleseStem": "<span class='fluff-zone'>Prior to interconnecting an acquired subsidiary's unassessed Active Directory forest with the parent enterprise trust boundary,</span> which IAM step is <span class='qual-highlight'>FIRST</span> warranted?",
+    "archaicStem": "<span class='fluff-zone'>Ere unvetted legacy identity forests be joined into a unified enterprise trust boundary,</span> which preparatory IAM discipline must leadership <span class='qual-highlight'>NOT</span> postpone?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "POSTPONE"
+        ],
+        "result": "EXECUTE FIRST"
+      }
+    ],
+    "options": [
+      {
+        "text": "Enable the bidirectional forest trust immediately and schedule a post-merger Active Directory cleanup next quarter.",
+        "isCorrect": false,
+        "tag": "Contagion Trap — Opening an unrestricted transitive trust before assessing the acquired forest instantly exposes the parent enterprise to latent compromises or weak admin tiers."
+      },
+      {
+        "text": "Copy the acquired company's domain administrators into the parent Enterprise Admins group for faster support.",
+        "isCorrect": false,
+        "tag": "Privilege-Escalation Trap — Expanding Enterprise Admins across unvetted acquired personnel violates least privilege and dramatically increases takeover risk."
+      },
+      {
+        "text": "Audit authoritative identity sources, remediate privileged risks, and use scoped federation or selective authentication.",
+        "isCorrect": true,
+        "tag": "Correct — Assessing identity hygiene, cleaning up legacy privilege debt, and using scoped federation/selective authentication prevents Day-1 cross-forest contagion."
+      },
+      {
+        "text": "Decommission the acquired company's HR directory on Day 1 before mapping active contractor entitlements.",
+        "isCorrect": false,
+        "tag": "Blind-Cutover Trap — Destroying the acquired HR source of truth before inventorying identities creates mass orphaned accounts and operational lockouts."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Post-merger IAM integration must never bridge unequal trust domains via Day-1 unrestricted transitive trusts. Auditing identity hygiene, remediating privileged exposure, and using scoped federation or selective authentication protects the parent forest during phased migration."
+  },
+  {
+    "id": "cat-d5-18",
+    "bank": "study",
+    "domainNum": 5,
+    "secondaryDomains": [
+      1
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Constraint Violation",
+    "fluff": "A regional credit union updates its remote teller portal to require both a twelve-character corporate passphrase and the answer to two personal memorized challenge questions before granting login.",
+    "clue": "Regulatory examiners review the portal against a strict statutory mandate requiring Multifactor Authentication (MFA) for all remote financial system access",
+    "question": "Why does this remote teller login design fail true Multifactor Authentication requirements?",
+    "legaleseStem": "<span class='fluff-zone'>When assessing whether combining a corporate passphrase with memorized personal security questions satisfies statutory MFA mandates,</span> which architectural flaw is <span class='qual-highlight'>PRIMARY</span>?",
+    "archaicStem": "<span class='fluff-zone'>Whereas true multifactor assurance demands distinct independent authentication factor categories,</span> why must auditors deem passphrase-plus-security-question <span class='qual-highlight'>NOT</span> compliant?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "COMPLIANT"
+        ],
+        "result": "SAME FACTOR CATEGORY (BOTH KNOWLEDGE)"
+      }
+    ],
+    "options": [
+      {
+        "text": "Both credentials belong to the knowledge category, delivering two-step single-factor verification rather than MFA.",
+        "isCorrect": true,
+        "tag": "Correct — True MFA requires at least two distinct factor categories (Knowledge, Possession, Inherence); passphrase + security questions are both Type 1 (something you know)."
+      },
+      {
+        "text": "Personal security questions qualify as biometric inherence factors and violate employee privacy regulations.",
+        "isCorrect": false,
+        "tag": "Category Error — Memorized answers are Type 1 knowledge factors, not Type 3 biometric inherence factors."
+      },
+      {
+        "text": "Statutory MFA mandates require all three authentication categories simultaneously on every remote login.",
+        "isCorrect": false,
+        "tag": "Overstatement Trap — Multifactor authentication requires two or more distinct factor categories, not necessarily all three."
+      },
+      {
+        "text": "Corporate passphrases cannot be combined with any second verification method inside web browser portals.",
+        "isCorrect": false,
+        "tag": "Factual Error — Passphrases are routinely paired with possession factors (hardware keys/smart cards) or inherence factors in web portals."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "True Multifactor Authentication demands independent credentials from at least two distinct categories: something you know (Type 1), something you have (Type 2), or something you are (Type 3). Stacking two knowledge prompts is only single-factor two-step verification."
+  },
+  {
+    "id": "cat-d5-19",
+    "bank": "study",
+    "domainNum": 5,
+    "secondaryDomains": [
+      3,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "An enterprise consolidates authentication for fifty mission-critical SaaS platforms—spanning ERP, source code, email, and HR—behind a single centralized cloud Identity Provider using SAML 2.0 and OIDC.",
+    "clue": "While onboarding and termination speed improve dramatically, the Board Risk Committee asks what primary systemic risk this architectural consolidation creates",
+    "question": "Which concentrated SSO governance risk requires the <span class='qual-highlight'>HIGHEST</span> architectural mitigation?",
+    "legaleseStem": "<span class='fluff-zone'>When consolidating authentication for fifty critical enterprise SaaS applications behind one centralized Identity Provider,</span> which systemic risk requires <span class='qual-highlight'>PRIMARY</span> governance mitigation?",
+    "archaicStem": "<span class='fluff-zone'>Whereas federated Single Sign-On streamlines deprovisioning and usability across cloud platforms,</span> which concentrated exposure must leadership <span class='qual-highlight'>NOT</span> underestimate?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "UNDERESTIMATE"
+        ],
+        "result": "SINGLE POINT OF COMPROMISE & FAILURE"
+      }
+    ],
+    "options": [
+      {
+        "text": "Employees must memorize fifty separate complex passwords across every federated SaaS business application.",
+        "isCorrect": false,
+        "tag": "Opposite Effect — Eliminating password sprawl across 50 apps is the primary benefit of SSO, not its risk."
+      },
+      {
+        "text": "The Identity Provider becomes a high-value single point of compromise and availability failure requiring hardened resilience.",
+        "isCorrect": true,
+        "tag": "Correct — Compromising or knocking out the central IdP impacts all 50 downstream apps at once, demanding phishing-resistant MFA, high availability, strict PAM, and independent break-glass accounts."
+      },
+      {
+        "text": "Centralized SAML and OIDC federation prohibits downstream SaaS apps from enforcing internal role-based authorization.",
+        "isCorrect": false,
+        "tag": "Factual Error — SAML attributes and OIDC claims actively feed granular RBAC/ABAC group and role assignments into downstream apps."
+      },
+      {
+        "text": "Federated Single Sign-On prevents security teams from revoking terminated employee access from one console.",
+        "isCorrect": false,
+        "tag": "Opposite Effect — Centralized offboarding is a major governance advantage of enterprise SSO."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Centralizing authentication behind a single Identity Provider improves lifecycle control and user experience, but concentrates security and availability risk into one tier—requiring phishing-resistant MFA, redundant failover, continuous monitoring, and independent break-glass recovery."
+  },
+  {
+    "id": "cat-d5-20",
+    "bank": "study",
+    "domainNum": 5,
+    "secondaryDomains": [
+      2,
+      3
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "A defense subcontractor stores export-controlled satellite telemetry inside a standard corporate file server governed by Discretionary Access Control (DAC).",
+    "clue": "Auditors observe that engineers who create technical blueprints can freely grant read permissions to cleared or uncleared colleagues outside their project without central security approval",
+    "question": "Which architectural access-control shift <span class='qual-highlight'>BEST</span> prevents users from arbitrarily re-sharing restricted files?",
+    "legaleseStem": "<span class='fluff-zone'>Where Discretionary Access Control permits file creators to propagate restricted engineering blueprints beyond authorized boundaries,</span> which access-control paradigm is <span class='qual-highlight'>MOST</span> appropriate?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as discretionary object custody permits individual authors to confer unauthorized file access unilaterally,</span> which centrally enforced access model is <span class='qual-highlight'>PRIMARY</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "PREVENT ARBITRARY RE-SHARING"
+        ],
+        "result": "MANDATORY ACCESS CONTROL (MAC)"
+      }
+    ],
+    "options": [
+      {
+        "text": "Retain Discretionary Access Control while asking project engineers to verify colleague clearances verbally.",
+        "isCorrect": false,
+        "tag": "Honor-System Trap — Verbal verification leaves unilateral file-sharing permissions completely intact and fails mandatory regulatory enforcement."
+      },
+      {
+        "text": "Migrate the restricted enclave to Mandatory Access Control enforcing system-level sensitivity and clearance labels.",
+        "isCorrect": true,
+        "tag": "Correct — MAC removes permission-granting discretion from individual file creators, enforcing non-bypassable central clearance and compartment labels at the system level."
+      },
+      {
+        "text": "Enable weekly email notifications alerting file creators whenever someone opens their shared blueprint folders.",
+        "isCorrect": false,
+        "tag": "Detective-Only Trap — Alerting after an uncleared user downloads export-controlled blueprints fails to prevent unauthorized disclosure."
+      },
+      {
+        "text": "Apply full-disk encryption to the file server storage array while preserving existing folder sharing permissions.",
+        "isCorrect": false,
+        "tag": "Wrong-Control Trap — Disk encryption protects physical drives at rest, not authorized users arbitrarily granting logical DAC read permissions."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Discretionary Access Control (DAC) allows object owners to grant permissions to other users at will, making it unsuitable for strict classified or export-controlled enclaves. Mandatory Access Control (MAC) enforces central, non-bypassable clearance and classification labels that users cannot override."
+  }
+]

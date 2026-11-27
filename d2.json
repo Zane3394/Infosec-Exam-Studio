@@ -1,0 +1,914 @@
+[
+  {
+    "id": "cat-d2-01",
+    "bank": "study",
+    "domainNum": 2,
+    "secondaryDomains": [
+      3,
+      1
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "A regulated brokerage is retiring 400 self-encrypting NVMe solid-state drives from a client-ledger cluster under a lease-return contract requiring intact, functional hardware to recover $180,000 in residual value.",
+    "clue": "Asset security standards mandate eliminating data remanence across both active logical sectors and unmapped wear-leveled spare flash cells before equipment leaves custody",
+    "question": "Which sanitization method <span class='qual-highlight'>BEST</span> satisfies both remanence assurance and lease-return constraints?",
+    "legaleseStem": "<span class='fluff-zone'>When divesting self-encrypting solid-state storage under contractual resale obligations requiring intact hardware,</span> which sanitization procedure is <span class='qual-highlight'>NOT</span> inconsistent with eliminating flash remanence?",
+    "archaicStem": "<span class='fluff-zone'>Whereas leased self-encrypting flash modules must be returned intact without harboring unmapped residual ledgers,</span> which sanitization expedient is <span class='qual-highlight'>LEAST</span> contrary to both mandates?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "CONTRARY TO"
+        ],
+        "result": "MOST ALIGNED WITH"
+      }
+    ],
+    "options": [
+      {
+        "text": "Execute multi-pass software overwrites across all addressable disk sectors and retain verification hashes.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Apply high-coercivity electromagnetic degaussing to every module prior to documented courier pickup.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Invoke native cryptographic erasure to destroy internal media encryption keys and verify purge completion.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Witness physical shredding of each drive on-site and negotiate lease-buyout penalties with Finance.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Cryptographic erasure purges self-encrypting flash drives by destroying internal encryption keys, rendering wear-leveled spare blocks unrecoverable while keeping hardware reusable. Degaussing does not affect solid-state media, logical overwrites miss remapped cells, and shredding breaches the lease-return constraint."
+  },
+  {
+    "id": "cat-d2-02",
+    "bank": "study",
+    "domainNum": 2,
+    "secondaryDomains": [
+      1
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "Automated retention workflows are scheduled at midnight to purge seven-year-old customer communications across three regional mail archives in accordance with corporate privacy minimization policy.",
+    "clue": "Late this afternoon, General Counsel issues a preservation notice covering one subsidiary under active regulatory inquiry, while storage administrators report archive volume utilization at 96%",
+    "question": "Which action should the asset custodian execute <span class='qual-highlight'>FIRST</span>?",
+    "legaleseStem": "<span class='fluff-zone'>Confronted with an imminent automated retention purge colliding with a formal legal preservation notice and tight disk capacity,</span> which custodial action is <span class='qual-highlight'>FIRST</span> mandatory?",
+    "archaicStem": "<span class='fluff-zone'>Notwithstanding automated minimization schedules and storage constraints,</span> which custodial measure must governance <span class='qual-highlight'>NOT</span> forbear upon receipt of a legal preservation order?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "FORBEAR"
+        ],
+        "result": "MUST EXECUTE"
+      }
+    ],
+    "options": [
+      {
+        "text": "Allow scheduled automated disposal to proceed because retention policy predates the regulatory inquiry.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Suspend automated deletion for scoped subsidiary records immediately and preserve them under documented custody.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Anonymize personal identifiers inside scoped archives tonight to satisfy both privacy minimization and capacity.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Export scoped archives to an administrator's encrypted workstation before allowing central purge completion.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Formal legal holds override routine retention and privacy disposal schedules; deleting or altering scoped records creates spoliation liability. Custodians must halt disposal for affected assets under intact chain of custody until Counsel lifts the hold."
+  },
+  {
+    "id": "cat-d2-03",
+    "bank": "study",
+    "domainNum": 2,
+    "secondaryDomains": [
+      1,
+      6
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A global financial group deploys a machine-learning classification engine across forty terabytes of legacy unstructured shares to drive automated egress DLP blocking.",
+    "clue": "Initial validation sampling shows 18% of Confidential merger term sheets are mislabeled as Internal while legitimate supplier invoices are routinely blocked",
+    "question": "Which governance adjustment <span class='qual-highlight'>MOST</span> effectively restores accurate asset protection without stalling operations?",
+    "legaleseStem": "<span class='fluff-zone'>When automated classification tools exhibit material false negatives on confidential records and disrupt operational egress,</span> which governance correction is <span class='qual-highlight'>MOST</span> balanced?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as untuned automated labeling neither satisfies fiduciary protection nor spares legitimate commerce,</span> which corrective governance path is <span class='qual-highlight'>LEAST</span> deficient?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DEFICIENT"
+        ],
+        "result": "MOST EFFECTIVE"
+      }
+    ],
+    "options": [
+      {
+        "text": "Default every unstructured repository to Confidential until engineering finishes retraining the classification model.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Switch DLP to monitor mode while Data Owners refine taxonomy rules and validate sensitive repositories.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Disable automated classification permanently and mandate manual sensitivity tagging by individual document authors.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Exempt supplier finance folders from DLP inspection permanently while maintaining automated blocking elsewhere.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Data Owners—not automated engines—remain accountable for accurate classification and proportionate controls. Running DLP in monitor mode while owners refine taxonomies and validate high-risk repositories protects sensitive data without disrupting business workflows."
+  },
+  {
+    "id": "cat-d2-04",
+    "bank": "study",
+    "domainNum": 2,
+    "secondaryDomains": [
+      3,
+      6
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "An analytics division consolidates millions of individually unclassified retail loyalty transactions, store timestamps, and support chat transcripts into a centralized cloud data lake.",
+    "clue": "Privacy engineers demonstrate that correlating those combined datasets reliably reconstructs sensitive customer health conditions and financial distress profiles",
+    "question": "Which asset-governance action is <span class='qual-highlight'>MOST</span> appropriate upon identifying this composite sensitivity?",
+    "legaleseStem": "<span class='fluff-zone'>When consolidating numerous low-sensitivity operational records enables inference of sensitive personal profiles within a shared repository,</span> which asset governance step is <span class='qual-highlight'>PRIMARY</span>?",
+    "archaicStem": "<span class='fluff-zone'>Whereas compiling disparate benign records yields composite intelligence exceeding any isolated item's classification,</span> which governance remedy must owners <span class='qual-highlight'>NOT</span> omit?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "OMIT"
+        ],
+        "result": "MUST EXECUTE"
+      }
+    ],
+    "options": [
+      {
+        "text": "Retain the existing unclassified label because individual source tables contain no regulated direct identifiers.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Engage Data Owners to reclassify the aggregated repository upward and enforce proportionate access controls.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Upgrade storage-layer encryption on the data lake without altering analyst query permissions.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Update customer privacy notices to acknowledge analytical profiling while maintaining open internal access.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Data aggregation and inference elevate the sensitivity of combined datasets above any individual input table. Data Owners must reassess classification upward and apply stricter access and privacy controls whenever consolidation produces high-risk intelligence."
+  },
+  {
+    "id": "cat-d2-05",
+    "bank": "study",
+    "domainNum": 2,
+    "secondaryDomains": [
+      1
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "To reduce cloud object-storage charges before quarter-end, an infrastructure manager proposes downgrading a legacy customer claims archive from Confidential to Internal so it can move to standard unencrypted cold storage.",
+    "clue": "The infrastructure team administers backups, lifecycle tiering, and disk quotas for the archive, while the VP of Claims serves as the designated business executive for the dataset",
+    "question": "Which governance rule <span class='qual-highlight'>MOST</span> directly governs modifying the archive's classification label?",
+    "legaleseStem": "<span class='fluff-zone'>When operational custodians propose lowering an information asset's sensitivity tier to achieve infrastructure cost savings,</span> which accountability boundary must management <span class='qual-highlight'>NOT</span> breach?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as technical custodians administer storage media without holding business risk accountability,</span> which authority rule is <span class='qual-highlight'>LEAST</span> permissible to bypass?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST PERMISSIBLE",
+          "TO BYPASS"
+        ],
+        "result": "MANDATORY AUTHORITY"
+      }
+    ],
+    "options": [
+      {
+        "text": "Infrastructure custodians may downgrade classification labels whenever storage budgets exceed approved quarterly forecasts.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Only the accountable Data Owner may authorize classification changes after assessing business and regulatory risk.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Internal audit must approve all storage-tier migrations before modifying encryption parameters on cold archives.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Database administrators may reclassify archives automatically once records exceed five years of operational age.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Data Owners hold exclusive accountability for assigning and modifying data classification based on business value and regulatory exposure. Data Custodians implement technical safeguards prescribed by the owner and cannot unilaterally downgrade protection."
+  },
+  {
+    "id": "cat-d2-06",
+    "bank": "study",
+    "domainNum": 2,
+    "secondaryDomains": [
+      5,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "An academic medical center wants to release five years of oncology treatment outcomes to an external university consortium for public-health research under strict privacy statutes.",
+    "clue": "Privacy reviewers note that replacing patient names with hashed identifiers still allows re-identification when rare diagnosis codes are joined with public ZIP-code and birth-year registries",
+    "question": "Which privacy-engineering approach <span class='qual-highlight'>BEST</span> eliminates re-identification liability before external release?",
+    "legaleseStem": "<span class='fluff-zone'>When preparing regulated clinical outcomes for external research where quasi-identifiers enable linkage attacks against hashed records,</span> which de-identification control is <span class='qual-highlight'>MOST</span> effective?",
+    "archaicStem": "<span class='fluff-zone'>Whereas simple identifier hashing fails to thwart quasi-identifier linkage against public registries,</span> which privacy safeguard is <span class='qual-highlight'>LEAST</span> reversible for preventing re-identification?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "REVERSIBLE"
+        ],
+        "result": "IRREVERSIBLE ANONYMIZATION"
+      }
+    ],
+    "options": [
+      {
+        "text": "Apply keyed pseudonymization and store the re-identification lookup table inside an internal corporate vault.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Apply validated anonymization using generalization, suppression, or differential privacy against quasi-identifier linkage risk.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Transmit the unmodified clinical dataset over mutually authenticated TLS channels under a signed NDA.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Mask patient surnames inside the consortium's reporting dashboard while sharing underlying relational tables intact.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Pseudonymization remains reversible and still counts as regulated personal data, while simple masking leaves indirect quasi-identifiers vulnerable to linkage attacks. Validated anonymization—such as k-anonymity generalization or differential privacy—removes identifiability irreversibly."
+  },
+  {
+    "id": "cat-d2-07",
+    "bank": "study",
+    "domainNum": 2,
+    "secondaryDomains": [
+      3,
+      6
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A national retail processor wants to sharply reduce its annual PCI DSS audit footprint across thirty-five internal analytics, customer-support, and billing microservices.",
+    "clue": "Downstream applications must correlate recurring customer orders by payment instrument without ever needing to recover or display the actual primary account number",
+    "question": "Which data-protection architecture <span class='qual-highlight'>BEST</span> minimizes compliance scope while preserving workflow correlation?",
+    "legaleseStem": "<span class='fluff-zone'>To isolate regulated payment card numbers from numerous downstream business microservices while preserving referential continuity,</span> which protection mechanism is <span class='qual-highlight'>MOST</span> effective?",
+    "archaicStem": "<span class='fluff-zone'>Whereas storing encrypted cardholder numbers across every downstream service retains broad audit boundaries,</span> which data-substitution method is <span class='qual-highlight'>PRIMARY</span> for scope reduction?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "SCOPE REDUCTION"
+        ],
+        "result": "TOKENIZATION"
+      }
+    ],
+    "options": [
+      {
+        "text": "Deploy format-preserving tokenization backed by a segmented vault so downstream systems process meaningless surrogates.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Encrypt card numbers with AES-256 while distributing shared decryption keys to each downstream microservice.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Encode primary account numbers with Base64 across microservice logs and reporting export tables.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Restrict network ingress to all thirty-five microservices while retaining raw card numbers in memory.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Tokenization replaces sensitive payment numbers with mathematically unrelated surrogate tokens stored outside an isolated vault, shrinking regulatory compliance scope while letting downstream applications maintain referential consistency."
+  },
+  {
+    "id": "cat-d2-08",
+    "bank": "study",
+    "domainNum": 2,
+    "secondaryDomains": [
+      3
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "An industrial manufacturer adopts a federal security baseline to harden its hybrid cloud and factory-floor environments ahead of a defense contract renewal.",
+    "clue": "Plant engineers demonstrate that three mandatory host-firewall and kernel-hardening baseline items crash legacy programmable logic controller interfaces that cannot be replaced for two years",
+    "question": "Which asset-baseline governance process <span class='qual-highlight'>BEST</span> reconciles security compliance with operational continuity?",
+    "legaleseStem": "<span class='fluff-zone'>When standardized security baselines contain host-level settings incompatible with irreplaceable industrial control hardware,</span> which governance adaptation process is <span class='qual-highlight'>MOST</span> appropriate?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as rigid baseline defaults disrupt mission-critical industrial interfaces without viable near-term replacement,</span> which governance practice shall leadership deem <span class='qual-highlight'>LEAST</span> deficient?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DEFICIENT"
+        ],
+        "result": "MOST APPROPRIATE"
+      }
+    ],
+    "options": [
+      {
+        "text": "Apply formal scoping and tailoring, deploy compensating isolation controls, and record risk-owner approval.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Enforce every default baseline setting uniformly across plant controllers to preserve strict audit parity.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Exclude the entire manufacturing division from enterprise baseline governance until controllers are replaced.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Remove the three incompatible controls silently from internal compliance checklists before external assessment.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Scoping identifies applicable baseline controls while tailoring adapts infeasible items through documented compensating safeguards and formal risk-owner approval. This preserves defensible security posture without breaking mission-essential operational technology."
+  },
+  {
+    "id": "cat-d2-09",
+    "bank": "study",
+    "domainNum": 2,
+    "secondaryDomains": [
+      4,
+      5
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A boutique investment bank encrypts confidential deal books with full-disk encryption on laptops and TLS 1.3 across file-sharing portals.",
+    "clue": "Managing directors still worry that authorized external buyers could save, print, or forward decrypted pitch documents to unauthorized competitors after downloading them",
+    "question": "Which asset-protection capability <span class='qual-highlight'>MOST</span> directly enforces persistent usage controls after authorized decryption?",
+    "legaleseStem": "<span class='fluff-zone'>Beyond safeguarding stored volumes and transit links,</span> which control <span class='qual-highlight'>BEST</span> enforces persistent viewing, printing, and forwarding restrictions on externally shared documents?",
+    "archaicStem": "<span class='fluff-zone'>Whereas disk encryption and TLS cease governing usage once an authorized recipient deciphers a file,</span> which safeguard is <span class='qual-highlight'>PRIMARY</span> for persistent document rights?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "PERSISTENT RIGHTS"
+        ],
+        "result": "ENTERPRISE DRM / IRM"
+      }
+    ],
+    "options": [
+      {
+        "text": "Enterprise Information Rights Management (DRM) binding persistent access, expiration, and print policies to files.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Hardware-backed full-disk encryption enforced across all internal corporate banking laptops.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Perimeter data loss prevention sensors blocking outbound email attachments containing deal-code keywords.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Immutable write-once cloud storage locks preventing modification of archived pitch presentations.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Enterprise DRM / Information Rights Management travels with the document itself to enforce persistent usage restrictions—such as blocking printing, copying, or post-expiration viewing—even after legitimate download and decryption."
+  },
+  {
+    "id": "cat-d2-10",
+    "bank": "study",
+    "domainNum": 2,
+    "secondaryDomains": [
+      1,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Process Chronology",
+    "fluff": "A newly appointed Asset Security Director uncovers widespread shadow IT across four business units that independently provisioned untracked cloud storage buckets and third-party file-sharing workspaces.",
+    "clue": "Initial logs suggest some buckets hold proprietary product blueprints while others support active customer invoicing workflows",
+    "question": "Which governance step should the director execute <span class='qual-highlight'>FIRST</span> to bring these repositories under control?",
+    "legaleseStem": "<span class='fluff-zone'>Confronted with untracked cloud repositories hosting a mix of sensitive designs and live operational workflows,</span> which asset-management lifecycle step is <span class='qual-highlight'>FIRST</span> mandatory?",
+    "archaicStem": "<span class='fluff-zone'>Ere enforcement controls or disposal actions be levied upon untracked cloud repositories,</span> which foundational governance duty must leadership <span class='qual-highlight'>NOT</span> bypass?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "BYPASS"
+        ],
+        "result": "EXECUTE FIRST"
+      }
+    ],
+    "options": [
+      {
+        "text": "Delete all unapproved cloud buckets immediately to eliminate unauthorized data exposure across divisions.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Discover and inventory repositories, assign accountable Data Owners, and classify their information assets.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Re-encrypt every discovered bucket under a single central KMS key before notifying business leaders.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Issue formal policy-violation warnings to department heads before identifying what business data exists.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Asset security begins with discovery, inventorying, ownership assignment, and classification before enforcing controls or decommissioning resources. Blind deletion or re-encryption risks disrupting live customer workflows or destroying legally protected records."
+  },
+  {
+    "id": "cat-d2-11",
+    "bank": "study",
+    "domainNum": 2,
+    "secondaryDomains": [
+      7
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Constraint Violation",
+    "fluff": "A defense aerospace supplier is retiring ninety LTO magnetic backup tapes that stored export-controlled propulsion schematics over the past seven years.",
+    "clue": "Facility security regulations prohibit sensitive media from leaving the controlled physical perimeter until data remanence is irreversibly eliminated under witnessed accountability",
+    "question": "Which disposal workflow <span class='qual-highlight'>BEST</span> satisfies both remanence elimination and chain-of-custody requirements?",
+    "legaleseStem": "<span class='fluff-zone'>When decommissioning high-classification magnetic backup media subject to strict on-site custody rules,</span> which sanitization workflow <span class='qual-highlight'>BEST</span> prevents remanence exposure?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as classified magnetic tapes may not lawfully exit controlled custody prior to irreversible remanence elimination,</span> which disposal discipline is <span class='qual-highlight'>LEAST</span> deficient?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DEFICIENT"
+        ],
+        "result": "BEST PRACTICE"
+      }
+    ],
+    "options": [
+      {
+        "text": "Ship intact tapes via bonded courier to a certified off-site vendor for batch degaussing.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Perform verified on-site degaussing and witnessed physical destruction with signed certificates of destruction.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Overwrite tape headers logically using backup management software before transferring cartridges to recycling.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Store retired tapes indefinitely inside a locked server-room cabinet to avoid external transport.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "High-classification magnetic media governed by strict perimeter custody requires verified on-site purging (high-coercivity degaussing) and witnessed physical destruction documented via chain-of-custody certificates. Off-site transport of unsanitized media or simple header overwrites violate security constraints."
+  },
+  {
+    "id": "cat-d2-12",
+    "bank": "study",
+    "domainNum": 2,
+    "secondaryDomains": [
+      3
+    ],
+    "difficulty": 4,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A quantitative hedge fund runs proprietary trading models inside multi-tenant public cloud compute nodes where volumes are encrypted at rest and APIs enforce mutual TLS in transit.",
+    "clue": "The Chief Risk Officer asks how to protect live trading parameters from inspection by a compromised underlying hypervisor or privileged cloud host administrator during active computation",
+    "question": "Which asset-state protection technology <span class='qual-highlight'>MOST</span> directly safeguards data in use?",
+    "legaleseStem": "<span class='fluff-zone'>Beyond encrypting stored volumes and transit links in shared multi-tenant cloud infrastructure,</span> which capability <span class='qual-highlight'>MOST</span> directly protects active data in use?",
+    "archaicStem": "<span class='fluff-zone'>Whereas storage and transit encryption leave active system memory exposed to host-level compromise,</span> which protection paradigm is <span class='qual-highlight'>PRIMARY</span> for data in use?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "DATA IN USE"
+        ],
+        "result": "CONFIDENTIAL COMPUTING / TEE"
+      }
+    ],
+    "options": [
+      {
+        "text": "Confidential computing using hardware-enforced Trusted Execution Environments to isolate and encrypt active memory.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Transparent Database Encryption encrypting underlying relational tables with customer-managed KMS keys.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Hardware Security Modules accelerating asymmetric TLS handshakes across cloud ingress load balancers.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Immutable object-lock storage policies preventing unauthorized modification of nightly model checkpoints.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Protecting data across all three states requires dedicated controls for data in use. Confidential computing leverages hardware-backed Trusted Execution Environments (TEEs) to isolate active memory and verify code integrity even against privileged host administrators."
+  },
+  {
+    "id": "cat-d2-13",
+    "bank": "study",
+    "domainNum": 2,
+    "secondaryDomains": [
+      1
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A consumer fitness app collects full government ID numbers, home addresses, and continuous background GPS histories during onboarding, even though step tracking only requires a username and opt-in workout metrics.",
+    "clue": "Privacy auditors warn that retaining unnecessary personal fields dramatically expands breach liability and violates core statutory privacy principles",
+    "question": "Which foundational privacy principle does this collection practice <span class='qual-highlight'>MOST</span> directly violate?",
+    "legaleseStem": "<span class='fluff-zone'>When an organization captures extensive personal attributes unrelated to stated service functionality,</span> which foundational privacy governance principle is <span class='qual-highlight'>MOST</span> directly breached?",
+    "archaicStem": "<span class='fluff-zone'>Whereas accumulating superfluous personal attributes magnifies statutory breach exposure without business necessity,</span> which privacy principle does this practice <span class='qual-highlight'>DIRECTLY</span> contravene?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "DIRECTLY",
+          "CONTRAVENE"
+        ],
+        "result": "DATA MINIMIZATION"
+      }
+    ],
+    "options": [
+      {
+        "text": "Data portability requiring streamlined export of customer records to competing service providers.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Data minimization restricting collection and retention strictly to attributes necessary for stated purposes.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Non-repudiation preventing users from disputing prior mobile application activity logs.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Integrity assurance validating that sensor telemetry cannot be altered during synchronization.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Data minimization (collection limitation) mandates gathering and retaining only personal data strictly necessary for a documented, lawful purpose. Reducing unnecessary data shrinks both compliance overhead and breach blast radius."
+  },
+  {
+    "id": "cat-d2-14",
+    "bank": "study",
+    "domainNum": 2,
+    "secondaryDomains": [
+      4,
+      6
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "An enterprise asset review reveals that remote staff routinely sync Confidential financial spreadsheets across both sanctioned corporate SaaS drives and unsanctioned personal cloud workspaces from unmanaged laptops.",
+    "clue": "Perimeter firewalls at headquarters see less than 20% of remote cloud traffic and cannot interpret API-level file sharing permissions inside SaaS apps",
+    "question": "Which architectural control layer <span class='qual-highlight'>BEST</span> centralizes SaaS data visibility and sharing governance?",
+    "legaleseStem": "<span class='fluff-zone'>To enforce uniform classification, sharing, and shadow-IT controls across distributed SaaS platforms accessed remotely,</span> which architectural layer is <span class='qual-highlight'>MOST</span> purpose-built?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as perimeter firewalls lack granular visibility into encrypted remote SaaS sharing behaviors,</span> which cloud asset-protection broker is <span class='qual-highlight'>LEAST</span> dispensable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DISPENSABLE"
+        ],
+        "result": "MOST ESSENTIAL (CASB)"
+      }
+    ],
+    "options": [
+      {
+        "text": "A Cloud Access Security Broker integrating API-based SaaS visibility, DLP, and classification policies.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Expanded stateful firewall egress rules deployed at headquarters internet perimeter gateways.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Quarterly employee self-attestation surveys listing personal cloud storage applications used for work.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Full-disk encryption enforced strictly on corporate-issued headquarters desktop workstations.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "A Cloud Access Security Broker (CASB) extends classification, DLP, and shadow-IT discovery directly into sanctioned and unsanctioned cloud SaaS applications via API and proxy enforcement, covering remote traffic invisible to corporate perimeter firewalls."
+  },
+  {
+    "id": "cat-d2-15",
+    "bank": "study",
+    "domainNum": 2,
+    "secondaryDomains": [
+      1,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Double Negatives",
+    "fluff": "A multinational pharmaceutical firm plans to consolidate European clinical trial datasets into a centralized cloud analytics platform hosted in North America to accelerate cross-study AI modeling.",
+    "clue": "Regional data-protection officers warn that local residency laws restrict unapproved cross-border transfers and require formal privacy impact review before processing begins",
+    "question": "Which governance action must leadership complete <span class='qual-highlight'>BEFORE</span> authorizing the cross-border migration?",
+    "legaleseStem": "<span class='fluff-zone'>Prior to consolidating regulated regional datasets into an extraterritorial cloud analytics repository,</span> which cross-border data governance requirement must leadership <span class='qual-highlight'>NOT</span> bypass?",
+    "archaicStem": "<span class='fluff-zone'>Ere regulated regional personal records be conveyed beyond sovereign jurisdictional boundaries,</span> which data-sovereignty assurance step is <span class='qual-highlight'>LEAST</span> permissible to forbear?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST PERMISSIBLE",
+          "TO FORBEAR"
+        ],
+        "result": "MANDATORY FIRST STEP"
+      }
+    ],
+    "options": [
+      {
+        "text": "Encrypt datasets with TLS 1.3 during transfer so extraterritorial privacy residency mandates no longer apply.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Complete a Data Protection Impact Assessment with Legal and validate lawful transfer mechanisms or residency.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Stage anonymized and raw trial copies in North America first before notifying regional supervisory authorities.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Delegate sovereign transfer approval directly to the lead cloud data-lake architect to meet timelines.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Cross-border data governance requires conducting a Data Protection Impact Assessment (DPIA) with Legal and verifying lawful transfer mechanisms or regional residency before moving regulated data. Encryption alone does not bypass statutory data sovereignty rules."
+  },
+  {
+    "id": "cat-d2-16",
+    "bank": "study",
+    "domainNum": 2,
+    "secondaryDomains": [
+      5,
+      8
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "An internal audit finds that database engineers routinely clone live production customer-billing tables directly into development and QA sandboxes to reproduce software bugs quickly.",
+    "clue": "External contractors hold elevated query privileges inside QA sandboxes that lack production DLP, masking, and privileged access monitoring controls",
+    "question": "Which asset-lifecycle governance control <span class='qual-highlight'>BEST</span> eliminates live data exposure in non-production tiers?",
+    "legaleseStem": "<span class='fluff-zone'>To prevent exposure of regulated production records replicated into lower-assurance testing environments,</span> which governance safeguard is <span class='qual-highlight'>MOST</span> effective?",
+    "archaicStem": "<span class='fluff-zone'>Whereas cloning live regulated tables into lower-trust development tiers expands sensitive exposure needlessly,</span> which data-protection discipline shall policy hold <span class='qual-highlight'>LEAST</span> dispensable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DISPENSABLE"
+        ],
+        "result": "MOST ESSENTIAL"
+      }
+    ],
+    "options": [
+      {
+        "text": "Require external QA contractors to sign updated confidentiality addenda before accessing cloned tables.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Prohibit live production data in non-production tiers and mandate synthetic data or irreversible masking.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Move cloned QA billing databases onto an isolated internal subnet while preserving live customer records.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Compress cloned database exports with password-protected archives prior to loading them into QA.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Non-production environments rarely maintain production-grade access controls and should never hold live sensitive records. Enforcing policy-backed synthetic data generation or irreversible data masking prevents sensitive data sprawl across development and QA tiers."
+  },
+  {
+    "id": "cat-d2-17",
+    "bank": "study",
+    "domainNum": 2,
+    "secondaryDomains": [
+      1,
+      6
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Double Negatives",
+    "fluff": "An enterprise is exiting a five-year multi-tenant SaaS ERP contract after migrating core accounting and payroll ledgers to a competing platform.",
+    "clue": "The outgoing vendor's infrastructure replicates tenant snapshots across three geographic backup zones and utilizes a fourth-party archival subprocessor",
+    "question": "Which contract-exit assurance deliverable is <span class='qual-highlight'>MOST</span> critical to close the data lifecycle?",
+    "legaleseStem": "<span class='fluff-zone'>Upon terminating a multi-tenant cloud service agreement housing regulated enterprise assets across replicated backups,</span> which offboarding deliverable is <span class='qual-highlight'>NOT</span> optional?",
+    "archaicStem": "<span class='fluff-zone'>Ere contractual severance with an outgoing cloud processor be formally closed,</span> which end-of-life asset assurance requirement shall the Data Owner deem <span class='qual-highlight'>LEAST</span> dispensable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DISPENSABLE"
+        ],
+        "result": "MOST ESSENTIAL"
+      }
+    ],
+    "options": [
+      {
+        "text": "Revoke enterprise SSO bookmarks and rely on the vendor's standard website privacy commitment.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Validate full data portability, revoke access, and obtain signed sanitization attestation covering backups and subprocessors.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Terminate automated billing payments immediately so the vendor suspends tenant storage partitions.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Run an unannounced external vulnerability scan against the outgoing tenant portal after migration.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Cloud offboarding closes the end-of-life stage of the data lifecycle by verifying complete data extraction, revoking access, and obtaining formal written sanitization attestation covering active storage, backup replicas, and subprocessors."
+  },
+  {
+    "id": "cat-d2-18",
+    "bank": "study",
+    "domainNum": 2,
+    "secondaryDomains": [
+      1
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A cloud payroll provider processes European employee salary and tax data exclusively under documented processing instructions issued by its enterprise banking clients.",
+    "clue": "During a joint compliance workshop, a vendor manager claims the payroll provider is legally the Data Controller because it operates the physical servers and encryption keys",
+    "question": "Which privacy-role classification <span class='qual-highlight'>MOST</span> accurately defines the payroll provider's status?",
+    "legaleseStem": "<span class='fluff-zone'>In delineating statutory privacy accountability between enterprise banking clients and an outsourced payroll platform,</span> which privacy designation is <span class='qual-highlight'>MOST</span> accurate?",
+    "archaicStem": "<span class='fluff-zone'>Insofar as the outsourced platform executes payroll tasks strictly upon client mandates without setting processing purposes,</span> which designation is <span class='qual-highlight'>LEAST</span> inaccurate?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "INACCURATE"
+        ],
+        "result": "MOST ACCURATE"
+      }
+    ],
+    "options": [
+      {
+        "text": "Data Controller because it physically hosts the databases and administers encryption key lifecycles.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Data Processor acting strictly under documented instructions from the client Data Controller.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Data Subject holding statutory consent rights over processed corporate payroll records.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Supervisory Authority empowered to issue cross-border data adequacy certifications.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "A Data Controller determines the lawful purposes and means of processing personal data, whereas a Data Processor executes processing strictly on the controller's behalf. Physical hosting or key administration does not transfer Controller status."
+  },
+  {
+    "id": "cat-d2-19",
+    "bank": "study",
+    "domainNum": 2,
+    "secondaryDomains": [
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "A global healthcare insurer stores encrypted daily database backups containing protected health information in a secondary cloud region for seven-year statutory retention.",
+    "clue": "An asset review discovers that backup administrators store the backup decryption keys inside the exact same cloud storage account and IAM boundary as the encrypted backup files",
+    "question": "Which asset-protection redesign <span class='qual-highlight'>MOST</span> directly remediates this backup key-management flaw?",
+    "legaleseStem": "<span class='fluff-zone'>Where encrypted long-retention archives and their cryptographic decryption keys reside within the same administrative trust boundary,</span> which key-governance control is <span class='qual-highlight'>PRIMARY</span>?",
+    "archaicStem": "<span class='fluff-zone'>Whereas co-locating enciphered archives with their keys nullifies encryption upon account compromise,</span> which key-custody separation is <span class='qual-highlight'>LEAST</span> expendable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "EXPENDABLE"
+        ],
+        "result": "MOST ESSENTIAL"
+      }
+    ],
+    "options": [
+      {
+        "text": "Upgrade the backup encryption algorithm while keeping keys stored alongside archive buckets for rapid recovery.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Isolate encryption keys in a separate hardened KMS/HSM account with distinct IAM roles and dual custody.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Shorten backup retention from seven years to ninety days to limit potential historical exposure.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Compress encrypted backup archives into multi-part files before uploading them to the secondary region.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Cryptographic protection of stored assets fails if keys share the same administrative trust boundary as ciphertext. Separating keys into an isolated KMS/HSM account under distinct IAM governance prevents a single storage compromise from exposing archived data."
+  },
+  {
+    "id": "cat-d2-20",
+    "bank": "study",
+    "domainNum": 2,
+    "secondaryDomains": [
+      1,
+      5
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Process Chronology",
+    "fluff": "A mid-sized manufacturer preparing for its first enterprise-wide security modernization receives vendor pitches for high-end DLP appliances, HSMs, and automated rights management suites.",
+    "clue": "The company currently lacks an asset inventory, has no defined sensitivity tiers, and has not assigned business executives as Data Owners",
+    "question": "Which foundational governance activity must management complete <span class='qual-highlight'>BEFORE</span> procuring advanced data-protection tools?",
+    "legaleseStem": "<span class='fluff-zone'>Prior to committing capital toward enterprise DLP and cryptographic tooling across undocumented repositories,</span> which governance step is <span class='qual-highlight'>FIRST</span> required?",
+    "archaicStem": "<span class='fluff-zone'>Ere costly data-protection suites be procured absent asset visibility or sensitivity tiers,</span> which foundational governance prerequisite must leadership <span class='qual-highlight'>NOT</span> postpone?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "POSTPONE"
+        ],
+        "result": "EXECUTE FIRST"
+      }
+    ],
+    "options": [
+      {
+        "text": "Deploy inline network DLP appliances in blocking mode across all corporate egress gateways.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Inventory information assets, establish data classification tiers, and assign accountable Data Owners.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Purchase enterprise Hardware Security Modules to encrypt every file share at maximum classification.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Mandate quarterly full-interruption disaster recovery tests across all manufacturing storage servers.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Effective asset security begins by identifying assets, establishing a clear classification scheme, and assigning accountable Data Owners. Without knowing what data exists and its business sensitivity, security spending is misallocated and controls cannot be proportionately enforced."
+  }
+]

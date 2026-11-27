@@ -1,0 +1,920 @@
+[
+  {
+    "id": "cat-d8-01",
+    "bank": "study",
+    "domainNum": 8,
+    "secondaryDomains": [
+      1,
+      3
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Process Chronology",
+    "fluff": "A commercial software enterprise repeatedly uncovers costly architectural authentication flaws during pre-release penetration tests two days before major customer launches, causing missed revenue commitments.",
+    "clue": "Engineering currently relies exclusively on dynamic testing at the end of each release sprint with no formal security design activities during planning",
+    "question": "Which SDLC governance shift <span class='qual-highlight'>MOST</span> cost-effectively eliminates recurring architectural defects?",
+    "legaleseStem": "<span class='fluff-zone'>To curtail late-stage remediation costs caused by recurring architectural defects uncovered right before release,</span> which SDLC integration strategy is <span class='qual-highlight'>MOST</span> effective?",
+    "archaicStem": "<span class='fluff-zone'>Whereas discovering structural flaws on the eve of deployment magnifies remediation expense exponentially,</span> which SDLC discipline is <span class='qual-highlight'>PRIMARY</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "SDLC DISCIPLINE"
+        ],
+        "result": "SHIFT LEFT"
+      }
+    ],
+    "options": [
+      {
+        "text": "Double external penetration-testing staffing during the final forty-eight hours before every quarterly release.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Embed security requirements, threat modeling, and architecture reviews into early planning and design phases.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Deploy a web application firewall in front of production APIs to mask coding errors.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Freeze all new feature engineering permanently until legacy modules achieve zero static-scanner warnings.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Shifting security left embeds security requirements, threat modeling, and architecture review into early SDLC phases where remediation is cheapest. Late-stage testing and perimeter WAFs treat symptoms after flawed designs are already built."
+  },
+  {
+    "id": "cat-d8-02",
+    "bank": "study",
+    "domainNum": 8,
+    "secondaryDomains": [
+      6,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "An enterprise DevSecOps team learns that a widely used open-source serialization library contains an actively exploited remote vulnerability, and leadership asks within two hours which of 140 production microservices are affected.",
+    "clue": "Engineering squads currently track software packages manually in inconsistent wiki tables and lack automated build-time component inventories",
+    "question": "Which software supply-chain capability <span class='qual-highlight'>BEST</span> delivers rapid, reliable impact visibility across pipelines?",
+    "legaleseStem": "<span class='fluff-zone'>To rapidly identify affected production services whenever critical third-party library vulnerabilities emerge across distributed microservices,</span> which DevSecOps control is <span class='qual-highlight'>PRIMARY</span>?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as manual documentation fails to track transitive dependencies during urgent disclosures,</span> which supply-chain control is <span class='qual-highlight'>LEAST</span> dispensable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DISPENSABLE"
+        ],
+        "result": "MOST ESSENTIAL"
+      }
+    ],
+    "options": [
+      {
+        "text": "Prohibit developers from using any open-source libraries and rewrite all utility functions internally.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Integrate automated Software Composition Analysis and signed SBOM generation into every CI/CD build.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Run annual manual source-code inspections across flagship customer repositories prior to compliance audits.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Require development managers to email quarterly dependency spreadsheets to the security operations center.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Automated Software Composition Analysis paired with build-time Software Bills of Materials (SBOMs) provides continuous visibility into direct and transitive dependencies. This enables rapid vulnerability triage without stalling development."
+  },
+  {
+    "id": "cat-d8-03",
+    "bank": "study",
+    "domainNum": 8,
+    "secondaryDomains": [
+      1,
+      2
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Constraint Violation",
+    "fluff": "A financial services firm licenses a proprietary cloud payroll calculation engine that is vital to customer operations, built by a small private startup with uncertain long-term venture funding.",
+    "clue": "Executive sponsors worry that if the startup abruptly enters bankruptcy, the enterprise will lose legal and technical access to patch or maintain the application",
+    "question": "Which contractual software-acquisition safeguard <span class='qual-highlight'>BEST</span> mitigates vendor-viability risk?",
+    "legaleseStem": "<span class='fluff-zone'>When licensing mission-critical proprietary software from a financially nascent vendor,</span> which acquisition governance clause <span class='qual-highlight'>BEST</span> protects long-term operational continuity?",
+    "archaicStem": "<span class='fluff-zone'>Whereas insolvency of a proprietary software licensor threatens abrupt operational abandonment,</span> which contractual safeguard shall procurement deem <span class='qual-highlight'>PRIMARY</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "VENDOR INSOLVENCY"
+        ],
+        "result": "SOURCE-CODE ESCROW"
+      }
+    ],
+    "options": [
+      {
+        "text": "Execute a software source-code escrow agreement with verified updates and clear insolvency release triggers.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Increase annual penetration testing on the vendor's production APIs to verify secure coding hygiene.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Add a standard financial penalty clause awarding service credits for unplanned monthly downtime.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Require the startup's developers to complete annual security awareness training prior to renewal.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Software escrow agreements deposit verified source code, build instructions, and dependencies with a neutral third party for release upon predefined triggers like bankruptcy. This protects long-term availability when relying on smaller proprietary vendors."
+  },
+  {
+    "id": "cat-d8-04",
+    "bank": "study",
+    "domainNum": 8,
+    "secondaryDomains": [
+      5,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "During an audit of a continuous delivery pipeline deploying financial microservices to production, auditors find that senior developers can write code, approve their own pull requests, and push directly to production hosts.",
+    "clue": "Engineering leadership wants to maintain fast daily deployment velocity while eliminating single-actor malicious code insertion risk",
+    "question": "Which CI/CD governance control <span class='qual-highlight'>BEST</span> enforces separation of duties without reverting to manual release queues?",
+    "legaleseStem": "<span class='fluff-zone'>To prevent unilateral malicious code deployment inside high-velocity automated delivery pipelines,</span> which governance safeguard is <span class='qual-highlight'>MOST</span> aligned with DevSecOps principles?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as self-approved commits and direct production pushes nullify separation of duties,</span> which automated pipeline control is <span class='qual-highlight'>LEAST</span> dispensable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DISPENSABLE"
+        ],
+        "result": "MOST ESSENTIAL"
+      }
+    ],
+    "options": [
+      {
+        "text": "Require manual email sign-off from the CISO before any microservice build enters staging.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Enforce branch protection, independent peer review, signed artifacts, and automated pipeline-only production deployments.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Grant production server SSH access to all senior engineers so peers can spot-check files.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Disable automated unit tests during hotfix deployments to shorten change review windows.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "DevSecOps maintains separation of duties at high velocity through protected branches, mandatory independent peer review, signed artifacts, and automated pipeline-only deployments that eliminate direct human write access to production."
+  },
+  {
+    "id": "cat-d8-05",
+    "bank": "study",
+    "domainNum": 8,
+    "secondaryDomains": [
+      3,
+      4
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A retail banking portal repeatedly suffers SQL injection findings across legacy customer search endpoints that build relational database queries via string concatenation.",
+    "clue": "Developers previously added blocklist filters stripping quotes and SQL keywords, yet penetration testers bypassed those filters within minutes using alternate encodings",
+    "question": "Which secure coding control <span class='qual-highlight'>MOST</span> reliably eliminates SQL injection at the root?",
+    "legaleseStem": "<span class='fluff-zone'>Where blocklist string filtering repeatedly fails to stop crafted SQL payloads against relational queries,</span> which coding safeguard is <span class='qual-highlight'>PRIMARY</span>?",
+    "archaicStem": "<span class='fluff-zone'>Whereas ad-hoc character filtering fails to separate untrusted input from executable database syntax,</span> which coding discipline is <span class='qual-highlight'>LEAST</span> expendable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "EXPENDABLE"
+        ],
+        "result": "MOST ESSENTIAL"
+      }
+    ],
+    "options": [
+      {
+        "text": "Expand the regular-expression blocklist to strip additional uppercase and lowercase SQL keywords.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Use parameterized queries (prepared statements) with strict data-type binding and least-privilege database accounts.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Obfuscate internal database table names across application configuration files to hinder attacker enumeration.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Encrypt client-side search forms with TLS 1.3 so SQL payloads cannot be intercepted.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Parameterized queries (prepared statements) enforce strict separation between SQL code structure and user-supplied data parameters so untrusted input is never interpreted as executable database commands."
+  },
+  {
+    "id": "cat-d8-06",
+    "bank": "study",
+    "domainNum": 8,
+    "secondaryDomains": [
+      5,
+      2
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "Security assessors reviewing a multi-tenant insurance mobile API discover that any authenticated policyholder can retrieve other customers' claim documents simply by incrementing the numeric claim ID in the API request URL.",
+    "clue": "The API gateway already verifies valid signed JWT authentication tokens on every request, yet backend microservices never verify whether the caller owns the requested record",
+    "question": "Which application security fix <span class='qual-highlight'>MOST</span> directly remediates this authorization defect?",
+    "legaleseStem": "<span class='fluff-zone'>Where valid authenticated sessions permit horizontal access to peer tenant records via predictable object identifiers,</span> which server-side safeguard is <span class='qual-highlight'>PRIMARY</span>?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as valid login tokens alone fail to restrict horizontal access across tenant records,</span> which authorization control must engineers <span class='qual-highlight'>NOT</span> omit?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "OMIT"
+        ],
+        "result": "MANDATORY"
+      }
+    ],
+    "options": [
+      {
+        "text": "Replace sequential numeric claim IDs with random UUIDs while omitting server-side ownership checks.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Enforce server-side object-level authorization verifying caller ownership and tenant scope on every request.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Hide claim ID parameters inside HTTP POST request bodies instead of query strings.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Shorten JWT token expiration lifetimes to five minutes without modifying backend handler logic.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Broken Object Level Authorization (BOLA/IDOR) requires deterministic server-side ownership and tenant-scope verification on every data access request. Randomizing IDs or moving parameters adds obscurity rather than true authorization enforcement."
+  },
+  {
+    "id": "cat-d8-07",
+    "bank": "study",
+    "domainNum": 8,
+    "secondaryDomains": [
+      2,
+      3
+    ],
+    "difficulty": 4,
+    "lengthTier": "double",
+    "trapType": "Constraint Violation",
+    "fluff": "A digital wallet application suffers financial losses when attackers submit twenty simultaneous withdrawal requests within milliseconds, draining accounts far below a zero balance.",
+    "clue": "Code review reveals the balance-check read and balance-deduction write execute as separate non-atomic operations without concurrency isolation",
+    "question": "Which database and coding control <span class='qual-highlight'>MOST</span> directly prevents this time-of-check to time-of-use (TOCTOU) race condition?",
+    "legaleseStem": "<span class='fluff-zone'>When concurrent API requests exploit a gap between balance verification and ledger debiting,</span> which transactional safeguard is <span class='qual-highlight'>PRIMARY</span>?",
+    "archaicStem": "<span class='fluff-zone'>Whereas non-atomic read-then-write sequences allow parallel requests to overdraw accounts,</span> which concurrency discipline does <span class='qual-highlight'>NOT</span> fail to uphold ledger integrity?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "FAIL TO UPHOLD"
+        ],
+        "result": "DIRECTLY PREVENTS"
+      }
+    ],
+    "options": [
+      {
+        "text": "Enforce atomic ACID database transactions with appropriate row locking or serializable isolation levels.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Add a client-side JavaScript debounce timer disabling the withdrawal button for three seconds.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Enable transparent database encryption at rest across all customer account ledger tables.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Run an overnight reconciliation batch job flagging overdrawn wallet accounts for manual review.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Time-of-check to time-of-use (TOCTOU) race conditions require atomic ACID transactions with proper locking or isolation levels so verification and state updates execute indivisibly. Client-side controls are trivially bypassed by direct parallel API requests."
+  },
+  {
+    "id": "cat-d8-08",
+    "bank": "study",
+    "domainNum": 8,
+    "secondaryDomains": [
+      2,
+      3
+    ],
+    "difficulty": 4,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A defense intelligence database co-hosts classified project names alongside unclassified employee directory records in a multi-level relational schema.",
+    "clue": "Analysts discover that lower-clearance users can deduce the existence of covert projects by attempting to insert identical primary keys and observing duplicate-key constraint errors",
+    "question": "Which database security mechanism <span class='qual-highlight'>MOST</span> directly prevents this covert existence inference?",
+    "legaleseStem": "<span class='fluff-zone'>Within a multi-level relational database where primary-key uniqueness errors leak the existence of higher-classification rows,</span> which database control is <span class='qual-highlight'>PRIMARY</span>?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as duplicate-key rejections reveal concealed higher-tier records to lower-clearance subjects,</span> which relational safeguard is <span class='qual-highlight'>MOST</span> purpose-built?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "MOST",
+          "PURPOSE-BUILT"
+        ],
+        "result": "POLYINSTANTIATION"
+      }
+    ],
+    "options": [
+      {
+        "text": "Polyinstantiation allowing multiple rows with the same primary key differentiated by classification level.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Database normalization splitting address columns into separate third-normal-form lookup tables.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Automated query-plan caching improving read latency across high-volume directory searches.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Weekly incremental transaction-log backups stored inside an off-site archival facility.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Polyinstantiation prevents inference attacks in multi-level databases by allowing multiple distinct rows with the same primary key at different sensitivity levels, ensuring lower-clearance users receive non-sensitive values without learning higher-tier records exist."
+  },
+  {
+    "id": "cat-d8-09",
+    "bank": "study",
+    "domainNum": 8,
+    "secondaryDomains": [
+      5,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "An enterprise repository scan reveals that developers repeatedly commit database passwords and third-party cloud API keys into internal Git repositories, where they persist indefinitely in commit history.",
+    "clue": "Manual quarterly audits catch leaked credentials weeks after commits occur, long after automated scrapers or insiders could harvest them",
+    "question": "Which DevSecOps secrets-governance architecture <span class='qual-highlight'>BEST</span> prevents credential exposure across the code lifecycle?",
+    "legaleseStem": "<span class='fluff-zone'>To prevent hardcoded secrets from entering version-control history across distributed engineering teams,</span> which DevSecOps control combination is <span class='qual-highlight'>MOST</span> effective?",
+    "archaicStem": "<span class='fluff-zone'>Whereas periodic repository audits discover committed secrets only after exposure has occurred,</span> which preventive secrets discipline is <span class='qual-highlight'>LEAST</span> dispensable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DISPENSABLE"
+        ],
+        "result": "MOST ESSENTIAL"
+      }
+    ],
+    "options": [
+      {
+        "text": "Instruct developers to delete leaked credential lines in follow-up commits without rotating keys.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Use centralized secrets vaults or short-lived workload identity paired with automated pre-commit and CI scanning.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Make all internal Git repositories private so committed static passwords remain inaccessible externally.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Require engineering managers to inspect every pull request manually for hardcoded API strings.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Effective secrets governance eliminates static credentials from source code via centralized vaults and short-lived workload identity, backed by automated pre-commit/CI secrets scanning and immediate automated rotation whenever a leak occurs."
+  },
+  {
+    "id": "cat-d8-10",
+    "bank": "study",
+    "domainNum": 8,
+    "secondaryDomains": [
+      1,
+      6
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Constraint Violation",
+    "fluff": "A commercial SaaS provider prepares to ship a flagship analytics product to enterprise buyers, and pre-release legal review discovers a developer copied a GPL-licensed library directly into proprietary core modules.",
+    "clue": "Legal warns that shipping copyleft-contaminated proprietary code risks forcing public source disclosure or triggering costly intellectual property litigation",
+    "question": "Which open-source governance control <span class='qual-highlight'>BEST</span> prevents unauthorized license contamination during development?",
+    "legaleseStem": "<span class='fluff-zone'>To prevent incompatible open-source licenses from contaminating proprietary commercial software prior to release,</span> which SDLC governance control is <span class='qual-highlight'>MOST</span> effective?",
+    "archaicStem": "<span class='fluff-zone'>Whereas unvetted copyleft dependencies jeopardize commercial intellectual property rights upon distribution,</span> which governance safeguard is <span class='qual-highlight'>PRIMARY</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "LICENSE GOVERNANCE"
+        ],
+        "result": "APPROVED REGISTRY + AUTOMATED SCA POLICY GATES"
+      }
+    ],
+    "options": [
+      {
+        "text": "Maintain an approved open-source policy, vetted artifact repository, and automated SCA license gates in CI/CD.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Strip copyright and license header comments from third-party libraries before compiling commercial binaries.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Allow developers to pull any public internet package freely and resolve legal disputes post-launch.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Rely solely on annual verbal reminders during new-hire engineering orientation sessions.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Open-source software governance combines an explicit license policy approved by Legal, vetted internal artifact registries, and automated Software Composition Analysis (SCA) policy gates in CI/CD to block incompatible licenses before merge."
+  },
+  {
+    "id": "cat-d8-11",
+    "bank": "study",
+    "domainNum": 8,
+    "secondaryDomains": [
+      1,
+      6
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Process Chronology",
+    "fluff": "A healthcare network plans to purchase a commercial off-the-shelf (COTS) patient-scheduling suite from an external software vendor to replace an aging in-house application.",
+    "clue": "Procurement wants to finalize the purchase order this week based solely on feature demos, without evaluating vendor secure-SDLC maturity, patching SLAs, or vulnerability history",
+    "question": "Which software-acquisition governance step should security require <span class='qual-highlight'>BEFORE</span> contract execution?",
+    "legaleseStem": "<span class='fluff-zone'>Prior to executing procurement contracts for commercial off-the-shelf software handling regulated patient workflows,</span> which acquisition assurance step is <span class='qual-highlight'>FIRST</span> required?",
+    "archaicStem": "<span class='fluff-zone'>Ere binding acquisition agreements be signed for unvetted commercial software packages,</span> which due-diligence requirement must leadership <span class='qual-highlight'>NOT</span> postpone?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "POSTPONE"
+        ],
+        "result": "EXECUTE FIRST"
+      }
+    ],
+    "options": [
+      {
+        "text": "Complete vendor security due diligence, review SBOM/assurance reports, and embed patching SLAs in contract.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Sign the standard vendor agreement immediately and run an external vulnerability scan next year.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Rely exclusively on the vendor's sales slide deck confirming industry-standard encryption practices.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Decompile the commercial application's proprietary binaries without vendor permission during trial evaluation.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Secure software acquisition embeds security due diligence—evaluating vendor SDLC maturity, independent attestations, SBOMs, and contractual vulnerability-patching SLAs—before contract signature, when buyers hold maximum leverage."
+  },
+  {
+    "id": "cat-d8-12",
+    "bank": "study",
+    "domainNum": 8,
+    "secondaryDomains": [
+      4
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A customer support portal allows users to post formatted troubleshooting comments, and attackers inject malicious JavaScript payloads that execute inside support agents' browsers to hijack active admin sessions.",
+    "clue": "Developers previously implemented client-side JavaScript form checks, which attackers bypassed directly using intercepting HTTP proxies",
+    "question": "Which defensive coding control pair <span class='qual-highlight'>MOST</span> reliably eliminates stored cross-site scripting (XSS)?",
+    "legaleseStem": "<span class='fluff-zone'>Where client-side form checks fail to stop injected scripts executing inside privileged support browsers,</span> which defensive coding pair is <span class='qual-highlight'>PRIMARY</span>?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as browser-side checks are trivially bypassed by proxy tools,</span> which server-side and rendering safeguard pair is <span class='qual-highlight'>LEAST</span> expendable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "EXPENDABLE"
+        ],
+        "result": "MOST ESSENTIAL"
+      }
+    ],
+    "options": [
+      {
+        "text": "Enforce strict server-side allowlist validation, context-aware output encoding, Content Security Policy, and HttpOnly cookies.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Expand client-side browser validation scripts to reject angle brackets before form submission.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Migrate the support portal database from SQL to NoSQL to eliminate script execution.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Require support agents to clear browser history manually at the end of every shift.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Preventing stored XSS requires server-side allowlist input validation combined with context-aware output encoding at render time, reinforced by Content Security Policy (CSP) and HttpOnly session cookies as defense in depth."
+  },
+  {
+    "id": "cat-d8-13",
+    "bank": "study",
+    "domainNum": 8,
+    "secondaryDomains": [
+      3
+    ],
+    "difficulty": 4,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "An embedded network-appliance manufacturer faces recurring critical buffer-overflow advisories in legacy C/C++ packet-parsing modules exposed directly to untrusted internet traffic.",
+    "clue": "Leadership wants an architectural engineering roadmap that addresses memory-corruption classes structurally rather than chasing individual patches indefinitely",
+    "question": "Which secure-engineering strategy <span class='qual-highlight'>MOST</span> structurally eliminates memory-corruption vulnerabilities over time?",
+    "legaleseStem": "<span class='fluff-zone'>To structurally curtail recurring buffer-overflow and use-after-free defects in internet-facing network parsers,</span> which engineering roadmap is <span class='qual-highlight'>MOST</span> durable?",
+    "archaicStem": "<span class='fluff-zone'>Whereas reactive point patching fails to stem chronic memory-safety errors in unmanaged parsers,</span> which structural engineering shift is <span class='qual-highlight'>PRIMARY</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "MEMORY SAFETY"
+        ],
+        "result": "MEMORY-SAFE LANGUAGES + COMPILER/OS MITIGATIONS"
+      }
+    ],
+    "options": [
+      {
+        "text": "Adopt memory-safe languages for exposed parsers alongside compiler bounds checks, ASLR, DEP, and fuzzing.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Strip debugging symbols from compiled C++ binaries to slow external reverse-engineering analysis.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Disable compiler warnings during nightly builds so legacy modules compile without developer delays.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Increase external bug-bounty payouts without modifying underlying unsafe memory-allocation routines.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Structurally eliminating memory-corruption classes combines adopting memory-safe languages (such as Rust or managed runtimes) for untrusted-input parsers with compiler/OS hardening (stack canaries, ASLR, DEP/NX) and continuous fuzzing for remaining legacy code."
+  },
+  {
+    "id": "cat-d8-14",
+    "bank": "study",
+    "domainNum": 8,
+    "secondaryDomains": [
+      3,
+      1
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "Across forty agile product teams, security reviews repeatedly flag inconsistent custom authentication wrappers, misconfigured cryptography, and missing input validation written independently by each squad.",
+    "clue": "The application security team has only four engineers and cannot manually review every pull request across all forty product squads",
+    "question": "Which scalable application-security governance model <span class='qual-highlight'>BEST</span> raises baseline code security across all squads?",
+    "legaleseStem": "<span class='fluff-zone'>Where a small application-security team must govern dozens of autonomous product squads introducing inconsistent custom security code,</span> which scaling strategy is <span class='qual-highlight'>MOST</span> effective?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as manual review by a small central team cannot scale across forty agile squads,</span> which secure-engineering strategy is <span class='qual-highlight'>PRIMARY</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "SCALING APPSEC"
+        ],
+        "result": "PAVED-ROAD LIBRARIES & SECURITY CHAMPIONS"
+      }
+    ],
+    "options": [
+      {
+        "text": "Provide vetted secure-by-default 'paved-road' libraries and frameworks backed by embedded Security Champions.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Route every single pull request from all forty squads into a central security approval queue.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Distribute a three-hundred-page static PDF coding manual annually without reusable code components.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Assign blame metrics publicly to squads that generate the highest monthly SAST warning counts.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Scaling application security across agile organizations relies on reusable, secure-by-default 'paved-road' libraries (for auth, crypto, and validation) paired with embedded Security Champions—making the secure path the easiest path for developers."
+  },
+  {
+    "id": "cat-d8-15",
+    "bank": "study",
+    "domainNum": 8,
+    "secondaryDomains": [
+      6,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "An enterprise enables automated SAST and SCA scanning inside CI/CD pipelines configured to fail every build on any 'Low' or 'Informational' scanner warning.",
+    "clue": "Within two weeks, developers face 70% false-positive build failures and begin bypassing security pipelines entirely to meet customer release deadlines",
+    "question": "Which DevSecOps pipeline-gate tuning <span class='qual-highlight'>BEST</span> preserves both high-impact security enforcement and delivery velocity?",
+    "legaleseStem": "<span class='fluff-zone'>When overly noisy automated CI/CD security gates provoke developer workarounds due to frequent false-positive build failures,</span> which gate governance adjustment is <span class='qual-highlight'>MOST</span> effective?",
+    "archaicStem": "<span class='fluff-zone'>Whereas blocking builds on low-confidence alerts erodes engineering trust and drives pipeline bypasses,</span> which gating discipline is <span class='qual-highlight'>LEAST</span> counterproductive?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "COUNTERPRODUCTIVE"
+        ],
+        "result": "MOST EFFECTIVE"
+      }
+    ],
+    "options": [
+      {
+        "text": "Enforce hard build breaks on high-confidence critical flaws while routing lower-severity findings to tracked backlogs.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Keep hard build breaks enabled for all informational warnings and penalize squads that miss deadlines.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Remove all automated security scanning from CI/CD permanently and rely on annual external pentests.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Allow developers to disable CI/CD security gates silently without logging risk-owner exceptions.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Effective DevSecOps gates use risk-tiered enforcement: blocking merges deterministically on high-confidence critical flaws (secrets, critical CVEs, verified injection) while tuning out false positives and feeding lower-risk findings into prioritized engineering backlogs."
+  },
+  {
+    "id": "cat-d8-16",
+    "bank": "study",
+    "domainNum": 8,
+    "secondaryDomains": [
+      3,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Double Negatives",
+    "fluff": "Following a high-profile industry software supply-chain compromise where adversaries injected backdoors directly inside a vendor's build servers, executive leadership asks how to assure the integrity of internal release binaries.",
+    "clue": "Current build servers are long-lived shared virtual machines that lack cryptographic provenance linking compiled production artifacts back to reviewed source commits",
+    "question": "Which build-pipeline safeguard is <span class='qual-highlight'>LEAST</span> expendable for guaranteeing artifact integrity from commit to deployment?",
+    "legaleseStem": "<span class='fluff-zone'>To prevent undetected tampering between reviewed source commits and deployed production binaries,</span> which build-integrity architecture is <span class='qual-highlight'>LEAST</span> expendable?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as persistent shared build hosts invite covert binary tampering post-review,</span> which supply-chain integrity control must engineering <span class='qual-highlight'>NOT</span> omit?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "OMIT"
+        ],
+        "result": "MANDATORY"
+      }
+    ],
+    "options": [
+      {
+        "text": "Use isolated ephemeral build runners, generate signed provenance attestations, and verify signatures at deployment.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Increase disk snapshot frequency on the existing shared build servers without signing output binaries.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Require developers to zip compiled binaries manually and email checksums to operations leads.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Restrict production deployment windows strictly to daytime hours without verifying build provenance.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Software supply-chain integrity (e.g., SLSA principles) relies on hardened, ephemeral build runners, cryptographically signed build provenance attestations linking binaries to reviewed commits, and admission/deployment signature verification."
+  },
+  {
+    "id": "cat-d8-17",
+    "bank": "study",
+    "domainNum": 8,
+    "secondaryDomains": [
+      2,
+      5
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Constraint Violation",
+    "fluff": "An enterprise hosts development, QA testing, and live production financial microservices inside the same shared cloud account and shared Kubernetes cluster to simplify initial setup.",
+    "clue": "A misconfigured debug script deployed by a junior intern in the development namespace accidentally consumes shared cluster CPU and queries live production database credentials",
+    "question": "Which SDLC environment-governance control <span class='qual-highlight'>BEST</span> prevents non-production activity from impacting production?",
+    "legaleseStem": "<span class='fluff-zone'>When co-locating development and production workloads within shared infrastructure causes cross-tier exposure and availability impact,</span> which separation control is <span class='qual-highlight'>PRIMARY</span>?",
+    "archaicStem": "<span class='fluff-zone'>Whereas commingling development sandboxes with production control planes invites accidental or malicious spillover,</span> which environmental boundary is <span class='qual-highlight'>LEAST</span> optional?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "OPTIONAL"
+        ],
+        "result": "MANDATORY SEPARATION"
+      }
+    ],
+    "options": [
+      {
+        "text": "Enforce strict logical and account-level separation across Dev, Test, Staging, and Production with distinct credentials.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Prohibit junior interns from running debug scripts while keeping all tiers in one cluster.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Add more CPU capacity to the shared cluster so development scripts no longer starve production.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Require developers to append a '_dev' suffix to variable names inside the shared database.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Strict environment segregation isolates Development, Test, Staging, and Production across distinct cloud accounts/networks with separate IAM planes, secrets, and synthetic non-production data—preventing lower-tier errors or compromises from affecting live production."
+  },
+  {
+    "id": "cat-d8-18",
+    "bank": "study",
+    "domainNum": 8,
+    "secondaryDomains": [
+      1,
+      2
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Process Chronology",
+    "fluff": "An enterprise is retiring a ten-year-old custom customer-billing web application that still connects to active archive databases, external payment webhooks, and federated SSO integrations.",
+    "clue": "Operations engineers propose simply turning off the web server VM tomorrow morning to save cloud compute costs immediately",
+    "question": "Which SDLC disposal-phase governance workflow <span class='qual-highlight'>BEST</span> retires the application safely?",
+    "legaleseStem": "<span class='fluff-zone'>When executing the final disposal phase of the software development lifecycle for a legacy billing system,</span> which decommissioning workflow is <span class='qual-highlight'>MOST</span> complete?",
+    "archaicStem": "<span class='fluff-zone'>Ere a retired billing application be abruptly extinguished leaving orphaned keys and unarchived records,</span> which disposal discipline must owners <span class='qual-highlight'>NOT</span> omit?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "OMIT"
+        ],
+        "result": "MANDATORY DECOMMISSIONING"
+      }
+    ],
+    "options": [
+      {
+        "text": "Power off the web server VM immediately and leave associated IAM roles and DNS records intact.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Execute a formal decommissioning plan covering data archival/sanitization, credential revocation, dependency cleanup, and sign-off.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Leave the unpatched legacy web application running indefinitely in read-only mode for historical reference.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Delete all historical billing database backups first before checking statutory financial retention rules.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "The SDLC disposal/decommissioning phase requires formal archival of legally retained records, verified sanitization of remaining data, revocation of service accounts/certificates/DNS entries (preventing subdomain takeover), and asset-inventory retirement."
+  },
+  {
+    "id": "cat-d8-19",
+    "bank": "study",
+    "domainNum": 8,
+    "secondaryDomains": [
+      1,
+      6
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "Software squads widely adopt generative AI coding assistants to accelerate feature delivery across customer-facing microservices.",
+    "clue": "Security reviews discover AI-suggested snippets introducing subtle injection flaws, hallucinated non-existent package names (slopsquatting risk), and proprietary source code pasted into public consumer AI tiers",
+    "question": "Which SDLC governance framework <span class='qual-highlight'>BEST</span> enables safe AI-assisted software development?",
+    "legaleseStem": "<span class='fluff-zone'>When governing enterprise adoption of AI coding assistants exhibiting hallucinated dependencies, insecure patterns, and IP leakage risks,</span> which SDLC control set is <span class='qual-highlight'>MOST</span> balanced?",
+    "archaicStem": "<span class='fluff-zone'>Whereas unvetted AI-authored code introduces novel supply-chain and leakage exposures alongside productivity gains,</span> which governance posture is <span class='qual-highlight'>LEAST</span> deficient?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DEFICIENT"
+        ],
+        "result": "MOST EFFECTIVE"
+      }
+    ],
+    "options": [
+      {
+        "text": "Deploy sanctioned enterprise AI tiers with zero-retention terms, mandatory peer review, SAST/SCA, and package verification.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Exempt AI-generated pull requests from SAST and peer review because models train on modern codebases.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Ban all IDE automation permanently across engineering without offering approved productivity alternatives.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Allow developers to paste proprietary algorithms into free consumer chatbots if variable names are shortened.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Governing AI-assisted development requires sanctioned enterprise tools with contractual zero-data-retention guarantees, treating AI-generated code identically to untrusted code through mandatory human peer review, SAST/SCA scanning, and verified internal package registries."
+  },
+  {
+    "id": "cat-d8-20",
+    "bank": "study",
+    "domainNum": 8,
+    "secondaryDomains": [
+      3,
+      6
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Double Negatives",
+    "fluff": "An enterprise web engineering team is designing an authenticated API that processes customer tax filings and must resist both malformed input crashes and silent privilege escalation when downstream services time out.",
+    "clue": "During design review, one developer proposes allowing requests to succeed with default elevated privileges whenever the authorization microservice times out so users never see an error screen",
+    "question": "Which secure coding and error-handling principle must architects <span class='qual-highlight'>NOT</span> violate during authorization failures?",
+    "legaleseStem": "<span class='fluff-zone'>When designing exception handling for security-critical authorization dependencies experiencing transient timeouts,</span> which resilience principle must architects <span class='qual-highlight'>NOT</span> breach?",
+    "archaicStem": "<span class='fluff-zone'>Whereas defaulting to permissive access upon authorization timeout invites trivial denial-of-service bypasses,</span> which secure-coding principle is <span class='qual-highlight'>LEAST</span> dispensable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DISPENSABLE"
+        ],
+        "result": "FAIL-CLOSED (FAIL-SECURE)"
+      }
+    ],
+    "options": [
+      {
+        "text": "Fail-open authorization granting temporary default access during microservice timeouts to preserve user experience.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Fail-secure (fail-closed) authorization denying access on error while returning generic messages and logging details.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Returning full backend stack traces and SQL queries to the browser so users can report bugs.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Disabling exception logging on authorization timeouts to prevent SIEM storage spikes during outages.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Security-critical software logic must fail securely (fail-closed), denying access whenever authentication or authorization checks fail or time out. Returning generic user-facing errors while recording detailed server-side logs prevents information leakage without sacrificing diagnostics."
+  }
+]

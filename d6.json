@@ -1,0 +1,993 @@
+[
+  {
+    "id": "cat-d6-01",
+    "bank": "study",
+    "domainNum": 6,
+    "secondaryDomains": [
+      1,
+      2
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "A wealth-management enterprise is completing annual third-party assurance for a cloud portfolio vendor whose unqualified SOC 2 Type II report observation window ended five months ago.",
+    "clue": "The report utilizes the carve-out method to exclude its underlying public cloud hosting provider and lists twelve Complementary User Entity Controls that the wealth firm itself must operate",
+    "question": "Which verification package <span class='qual-highlight'>MOST</span> completely closes all three third-party audit gaps?",
+    "legaleseStem": "<span class='fluff-zone'>Confronted with an aged Type II attestation containing a subservice carve-out and unverified client-side control dependencies,</span> which verification package is <span class='qual-highlight'>NOT</span> deficient?",
+    "archaicStem": "<span class='fluff-zone'>Whereas the attestation lapsed five months heretofore, carved out its hosting subservice, and assumed unverified client safeguards,</span> which verification workflow is <span class='qual-highlight'>LEAST</span> incomplete?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "INCOMPLETE"
+        ],
+        "result": "MOST COMPLETE"
+      }
+    ],
+    "options": [
+      {
+        "text": "Obtain a signed bridge letter, review the subservice host's Type II report, and validate CUECs.",
+        "isCorrect": true,
+        "tag": "Correct — Bridges the five-month elapsed gap, covers the carved-out infrastructure provider independently, and confirms internal Complementary User Entity Controls actually operate."
+      },
+      {
+        "text": "Accept the unqualified CPA opinion because twelve months of operating effectiveness were independently validated.",
+        "isCorrect": false,
+        "tag": "Gap-Blindness Trap — Leaves a five-month unverified period, an unreviewed carved-out cloud host, and twelve unconfirmed client-side controls."
+      },
+      {
+        "text": "Request a current-week SOC 2 Type I report while deferring underlying cloud-host assurance review.",
+        "isCorrect": false,
+        "tag": "Point-in-Time Trap — A Type I report checks control design only on one date and still leaves the carved-out cloud subservice and CUECs unverified."
+      },
+      {
+        "text": "Require the vendor to exit public cloud infrastructure so subservice carve-outs no longer appear.",
+        "isCorrect": false,
+        "tag": "Disproportionate Trap — Demanding a full cloud exit is commercially unrealistic when reviewing the cloud host's own SOC 2 Type II report closes the carve-out."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Complete third-party SOC 2 review closes three classic gaps simultaneously: a management-signed bridge letter covers elapsed months since period-end, the subservice provider's independent Type II covers carve-outs, and internal verification proves Complementary User Entity Controls (CUECs) operate."
+  },
+  {
+    "id": "cat-d6-02",
+    "bank": "study",
+    "domainNum": 6,
+    "secondaryDomains": [
+      1,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Process Chronology",
+    "fluff": "Midway through an authorized external penetration test of a financial firm's investor portal, the contracted ethical tester discovers an active webshell and staged archive files belonging to an unrelated criminal actor.",
+    "clue": "Trying to be helpful, the tester offers to quietly delete the webshell, probe the intruder's external staging server for attribution, and finish the scheduled test before notifying leadership",
+    "question": "Which directive must the security manager issue <span class='qual-highlight'>IMMEDIATELY</span>?",
+    "legaleseStem": "<span class='fluff-zone'>Upon receiving notice that an authorized assessment team uncovered an active live intrusion inside scoped production assets,</span> which directive is <span class='qual-highlight'>FIRST</span> required?",
+    "archaicStem": "<span class='fluff-zone'>Ere further test payloads contaminate forensic artifacts or alert an active intruder,</span> which immediate directive must assessment leadership <span class='qual-highlight'>NOT</span> defer?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "DEFER"
+        ],
+        "result": "EXECUTE IMMEDIATELY"
+      }
+    ],
+    "options": [
+      {
+        "text": "Instruct the tester to remove the webshell immediately and resume scheduled penetration testing.",
+        "isCorrect": false,
+        "tag": "Evidence-Destruction Trap — Deleting the webshell destroys volatile forensic artifacts and alerts the active criminal actor before Incident Response takes command."
+      },
+      {
+        "text": "Halt testing on affected hosts, preserve artifacts intact, and escalate to Incident Response and Legal.",
+        "isCorrect": true,
+        "tag": "Correct — Follows standard RoE stop-work rules: immediately pause assessment activity to avoid evidence contamination and hand off control to Incident Response and Legal."
+      },
+      {
+        "text": "Authorize the tester to probe the external staging server to gather criminal attribution intelligence.",
+        "isCorrect": false,
+        "tag": "Hack-Back Liability Trap — Probing unauthorized external servers violates computer crime statutes and breaches Rules of Engagement."
+      },
+      {
+        "text": "Reboot the affected investor portal servers immediately to evict the intruder from volatile memory.",
+        "isCorrect": false,
+        "tag": "Volatile-Loss Trap — Rebooting wipes RAM evidence (running processes, keys, network sockets) and fails to close the underlying root-cause entry point."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Uncovering an active real-world compromise during authorized testing immediately triggers Rules of Engagement stop-work escalation: halt testing on impacted assets, preserve forensic evidence untouched, and transition control to Incident Response and Legal."
+  },
+  {
+    "id": "cat-d6-03",
+    "bank": "study",
+    "domainNum": 6,
+    "secondaryDomains": [
+      1
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "To reduce annual assurance consulting expenses, a Chief Information Officer proposes assigning the internal Security Operations Manager to conduct the formal annual compliance audit of firewall, SIEM, and IAM controls.",
+    "clue": "The CIO argues that the operations manager built those exact rule sets, knows the environment better than any outside assessor, and can deliver the audit opinion in half the time",
+    "question": "Which fundamental audit governance principle <span class='qual-highlight'>PRIMARILY</span> compels the Audit Committee to reject this proposal?",
+    "legaleseStem": "<span class='fluff-zone'>When determining evaluator eligibility and functional reporting lines for formal enterprise control audits,</span> which governance principle does self-auditing <span class='qual-highlight'>MOST</span> directly violate?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as operational custodians cannot objectively adjudicate safeguards they personally administer,</span> which foundational audit tenet does self-review <span class='qual-highlight'>DIRECTLY</span> breach?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "DIRECTLY",
+          "BREACH"
+        ],
+        "result": "VIOLATES AUDIT INDEPENDENCE"
+      }
+    ],
+    "options": [
+      {
+        "text": "Defense in depth requiring external third-party vendors to operate all corporate SIEM infrastructure.",
+        "isCorrect": false,
+        "tag": "Factual Distortion — Defense in depth layers controls; it does not require outsourcing SIEM operations to external vendors."
+      },
+      {
+        "text": "Least privilege restricting internal operations managers from reading enterprise firewall rule baselines.",
+        "isCorrect": false,
+        "tag": "Wrong Principle — The operations manager already manages those baselines; the conflict is self-review bias, not insufficient read access."
+      },
+      {
+        "text": "Audit independence requiring evaluators to stand organizationally separate from operational control owners.",
+        "isCorrect": true,
+        "tag": "Correct — Credible audits require organizational independence and objectivity free from self-review conflicts, reporting functionally to the Audit Committee or Board."
+      },
+      {
+        "text": "Non-repudiation preventing internal personnel from signing quarterly operational control self-assessment reports.",
+        "isCorrect": false,
+        "tag": "Self-Assessment vs. Audit Trap — Operations can perform internal self-assessments, but a formal audit opinion demands an independent auditor."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Formal audit assurance depends on organizational independence and objectivity so findings are free from self-review bias or management suppression. Operational teams conduct self-assessments, while independent internal or external auditors report functionally to the Audit Committee."
+  },
+  {
+    "id": "cat-d6-04",
+    "bank": "study",
+    "domainNum": 6,
+    "secondaryDomains": [
+      8
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "A lending fintech has ten business days and a capped consulting budget to uncover high-impact authorization bypasses and complex multi-tenant business-logic flaws in a newly built loan-origination API before public launch.",
+    "clue": "Executive sponsors explicitly state they want maximum vulnerability depth per consulting dollar rather than measuring how fast the SOC detects external reconnaissance",
+    "question": "Which assessment knowledge model <span class='qual-highlight'>BEST</span> aligns with the stated schedule, budget, and defect-discovery goals?",
+    "legaleseStem": "<span class='fluff-zone'>When optimizing constrained assessment hours to uncover deep authorization and logic vulnerabilities prior to launch,</span> which testing transparency model is <span class='qual-highlight'>MOST</span> efficient?",
+    "archaicStem": "<span class='fluff-zone'>Whereas blind reconnaissance expends scarce assessment hours rediscovering known architecture,</span> which testing model yields the <span class='qual-highlight'>GREATEST</span> defect depth per dollar?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "GREATEST",
+          "DEPTH PER DOLLAR"
+        ],
+        "result": "WHITE-BOX / SCOPED GRAY-BOX"
+      }
+    ],
+    "options": [
+      {
+        "text": "Pure black-box external testing with zero documentation to simulate unprivileged internet adversaries.",
+        "isCorrect": false,
+        "tag": "Budget-Burn Trap — Blind black-box testing spends scarce days on external reconnaissance rather than probing authenticated multi-tenant logic flaws."
+      },
+      {
+        "text": "Unauthenticated perimeter vulnerability scanning focused strictly on exposed network ports and banners.",
+        "isCorrect": false,
+        "tag": "Shallow-Coverage Trap — Automated unauthenticated port scanners cannot discover deep authenticated authorization bypasses or loan-origination logic errors."
+      },
+      {
+        "text": "Covert red-team social engineering targeting customer support staff to measure SOC escalation timing.",
+        "isCorrect": false,
+        "tag": "Constraint Violation — The stem explicitly rules out measuring SOC detection latency and focuses on deep API business-logic flaws before launch."
+      },
+      {
+        "text": "Scoped white-box or gray-box testing supplying test accounts, architecture diagrams, and API specifications.",
+        "isCorrect": true,
+        "tag": "Correct — Sharing authenticated role accounts, API specs, and source/architecture eliminates reconnaissance waste and concentrates all ten days on high-impact logic defects."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Providing testers with authenticated test accounts, architecture diagrams, and API documentation (gray-box/white-box) maximizes vulnerability discovery ROI under fixed timelines—especially for authorization and business-logic defects."
+  },
+  {
+    "id": "cat-d6-05",
+    "bank": "study",
+    "domainNum": 6,
+    "secondaryDomains": [
+      1,
+      8
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A commercial bank deploys a machine-learning credit-underwriting and fraud-triage platform into production and submits its updated annual security assessment plan to financial regulators.",
+    "clue": "Traditional SAST, DAST, and network vulnerability scans report zero critical defects, yet examiners ask how the bank continuously validates training-data integrity, adversarial model robustness, and decision drift",
+    "question": "Which assurance expansion <span class='qual-highlight'>MOST</span> thoroughly addresses production AI/ML governance risk?",
+    "legaleseStem": "<span class='fluff-zone'>When extending enterprise assurance programs beyond conventional software scanning to govern production machine-learning models,</span> which testing scope is <span class='qual-highlight'>MOST</span> comprehensive?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as classical code scanners overlook data poisoning, evasion, and statistical model drift,</span> which AI assurance strategy shall audit leadership deem <span class='qual-highlight'>LEAST</span> incomplete?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "INCOMPLETE"
+        ],
+        "result": "MOST COMPREHENSIVE"
+      }
+    ],
+    "options": [
+      {
+        "text": "Audit training-data lineage, run adversarial red-teaming, monitor model drift, and validate regulatory explainability.",
+        "isCorrect": true,
+        "tag": "Correct — Covers full AI lifecycle assurance: data provenance/poisoning checks, adversarial robustness testing, ongoing drift/bias telemetry, and explainable underwriting decisions."
+      },
+      {
+        "text": "Increase automated SAST scanning cadence across the model's Python web wrapper before quarterly releases.",
+        "isCorrect": false,
+        "tag": "Code-Only Trap — Scanning wrapper code checks syntax bugs, not training-data poisoning, evasion attacks, bias, or live prediction drift."
+      },
+      {
+        "text": "Rely exclusively on vendor accuracy benchmarks recorded during initial offline laboratory validation runs.",
+        "isCorrect": false,
+        "tag": "Static-Benchmark Trap — Offline pre-deployment benchmarks ignore live data drift, evolving fraud evasion, and enterprise-specific fairness obligations."
+      },
+      {
+        "text": "Restrict model inference endpoints strictly to internal subnets so adversarial testing becomes unnecessary.",
+        "isCorrect": false,
+        "tag": "Perimeter-Myth Trap — External loan applicants still supply the input features scored by the internal model, enabling indirect evasion and poisoning attacks."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Assuring production AI/ML systems extends traditional application testing to verify training-data provenance, execute adversarial red-teaming (evasion, poisoning, extraction), continuously monitor statistical drift and bias, and validate decision explainability."
+  },
+  {
+    "id": "cat-d6-06",
+    "bank": "study",
+    "domainNum": 6,
+    "secondaryDomains": [
+      1,
+      4
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Process Chronology",
+    "fluff": "A healthcare enterprise contracts an external penetration-testing firm to evaluate three customer-facing applications hosted inside a multi-tenant public cloud platform and a third-party colocation facility.",
+    "clue": "The testing lead wants to begin active exploitation tonight to beat a Friday release freeze, while cloud-provider notification and out-of-bounds clinical database exclusions remain unsigned",
+    "question": "Which governance step must the security manager complete <span class='qual-highlight'>BEFORE</span> any active testing begins?",
+    "legaleseStem": "<span class='fluff-zone'>Prior to authorizing external assessors to probe enterprise applications hosted across third-party cloud and colocation infrastructure,</span> which governance milestone is <span class='qual-highlight'>FIRST</span> mandatory?",
+    "archaicStem": "<span class='fluff-zone'>Ere external assessors dispatch active probes across hosted enterprise environments,</span> which authorization prerequisite must management <span class='qual-highlight'>NOT</span> bypass?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "BYPASS"
+        ],
+        "result": "MANDATORY FIRST STEP"
+      }
+    ],
+    "options": [
+      {
+        "text": "Allow passive and active port scanning tonight while Legal finalizes Rules of Engagement tomorrow morning.",
+        "isCorrect": false,
+        "tag": "Unauthorized-Testing Trap — Active scanning without signed authorization and third-party host approval creates immediate legal liability and outage risk."
+      },
+      {
+        "text": "Execute signed executive authorization, formal Rules of Engagement, scope exclusions, and third-party hosting permissions.",
+        "isCorrect": true,
+        "tag": "Correct — Written executive sign-off, explicit Rules of Engagement (scope, stop-work, emergency contacts), and third-party/cloud policy compliance must always precede active testing."
+      },
+      {
+        "text": "Notify the internal SOC team of the testers' IP addresses so automated intrusion alerts stay suppressed.",
+        "isCorrect": false,
+        "tag": "Premature-Ops Trap — Coordinating SOC rules happens inside or after RoE approval, never as a substitute for formal written legal authorization."
+      },
+      {
+        "text": "Disable production web application firewalls temporarily so testers can measure underlying server resilience accurately.",
+        "isCorrect": false,
+        "tag": "Production-Exposure Trap — Dropping production WAF protection exposes live healthcare portals to real internet attackers simultaneously."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Formal written executive authorization, explicit Rules of Engagement (defining scope, prohibited targets, emergency contacts, and escalation protocols), and required third-party/cloud provider approvals must always precede any penetration testing."
+  },
+  {
+    "id": "cat-d6-07",
+    "bank": "study",
+    "domainNum": 6,
+    "secondaryDomains": [
+      7
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "An e-commerce company wants continuous, 24/7 verification that its global checkout and payment-gateway flows remain available and responsive across six continents—including during low-traffic overnight windows.",
+    "clue": "Operations leadership wants alerts triggered automatically when multi-step checkout fails before real shoppers encounter errors or abandon carts",
+    "question": "Which assessment monitoring technique <span class='qual-highlight'>BEST</span> delivers proactive multi-step transaction validation?",
+    "legaleseStem": "<span class='fluff-zone'>To proactively validate end-to-end transaction availability and latency across distributed regions even during off-peak hours,</span> which monitoring method is <span class='qual-highlight'>MOST</span> appropriate?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as passive user telemetry falls silent during overnight hours and alerts only after customers suffer failures,</span> which active testing method is <span class='qual-highlight'>PRIMARY</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "PROACTIVE VALIDATION"
+        ],
+        "result": "SYNTHETIC TRANSACTIONS"
+      }
+    ],
+    "options": [
+      {
+        "text": "Passive Real User Monitoring capturing browser performance strictly when live shoppers submit orders.",
+        "isCorrect": false,
+        "tag": "Constraint Violation — RUM generates no telemetry during quiet overnight windows and only discovers outages after real customers already experience failures."
+      },
+      {
+        "text": "Weekly unauthenticated ICMP ping sweeps checking whether edge load-balancer IP addresses remain reachable.",
+        "isCorrect": false,
+        "tag": "Shallow-Check Trap — A server can reply to ICMP pings while the checkout database or payment API is completely broken."
+      },
+      {
+        "text": "Synthetic transactions executing scripted multi-step checkout workflows continuously from globally distributed monitoring nodes.",
+        "isCorrect": true,
+        "tag": "Correct — Active synthetic monitoring runs predictable, repeatable checkout journeys 24/7 across regions, catching broken dependencies before real shoppers are impacted."
+      },
+      {
+        "text": "Quarterly manual walkthroughs of e-commerce architecture diagrams conducted by regional operations leads.",
+        "isCorrect": false,
+        "tag": "Static-Review Trap — Paper walkthroughs cannot deliver continuous 24/7 runtime transaction monitoring."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Synthetic transactions (active monitoring) run automated, scripted user workflows continuously from distributed probes to validate end-to-end availability, performance, and multi-step business logic before real users encounter outages."
+  },
+  {
+    "id": "cat-d6-08",
+    "bank": "study",
+    "domainNum": 6,
+    "secondaryDomains": [
+      8
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "An enterprise application security team already runs SAST on internally written Java code and DAST against staging web interfaces, yet still gets blindsided by critical CVEs inside nested open-source libraries.",
+    "clue": "Legal Counsel also wants automated detection of copyleft open-source licenses embedded deep inside transitive package dependencies before software ships to commercial clients",
+    "question": "Which testing capability <span class='qual-highlight'>DIRECTLY</span> closes both third-party CVE and license-compliance gaps?",
+    "legaleseStem": "<span class='fluff-zone'>Within an enterprise DevSecOps testing suite already operating SAST and DAST,</span> which testing discipline <span class='qual-highlight'>PRIMARILY</span> governs transitive open-source vulnerabilities and license exposure?",
+    "archaicStem": "<span class='fluff-zone'>Whereas custom-code static scanners overlook inherited third-party library defects and restrictive licenses,</span> which automated discipline is <span class='qual-highlight'>PRIMARY</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "THIRD-PARTY DEPENDENCIES"
+        ],
+        "result": "SOFTWARE COMPOSITION ANALYSIS (SCA)"
+      }
+    ],
+    "options": [
+      {
+        "text": "Generation-based fuzz testing injecting malformed binary packets into compiled staging network daemons.",
+        "isCorrect": false,
+        "tag": "Wrong-Target Trap — Fuzzing discovers unknown input-handling crashes and memory corruption, not open-source package inventories or copyleft licenses."
+      },
+      {
+        "text": "Manual social-engineering assessments evaluating whether developers recognize supply-chain phishing emails.",
+        "isCorrect": false,
+        "tag": "Off-Target Trap — Phishing drills do not inventory transitive software dependencies or flag restrictive open-source licenses in builds."
+      },
+      {
+        "text": "Expanded unauthenticated DAST spidering across public login forms prior to quarterly production releases.",
+        "isCorrect": false,
+        "tag": "Runtime-Blindness Trap — External DAST crawling cannot reliably enumerate nested backend libraries or inspect open-source license terms."
+      },
+      {
+        "text": "Software Composition Analysis generating SBOMs and scanning direct and transitive dependencies against CVE/license databases.",
+        "isCorrect": true,
+        "tag": "Correct — SCA parses package manifests and lockfiles in CI/CD to produce SBOMs, flagging known vulnerable libraries and non-compliant open-source licenses."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Software Composition Analysis (SCA) inventories direct and transitive open-source components (producing SBOMs) and checks them against vulnerability and license compliance databases—closing the third-party software gap missed by SAST and DAST."
+  },
+  {
+    "id": "cat-d6-09",
+    "bank": "study",
+    "domainNum": 6,
+    "secondaryDomains": [
+      1,
+      7
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Process Chronology",
+    "fluff": "An independent external compliance audit reports four high-severity control deficiencies spanning privileged access reviews, immutable backups, and firewall change approvals.",
+    "clue": "System owners promise verbally to fix everything 'next quarter,' yet the Audit Committee requires structured accountability and verified proof before the six-month follow-up examination",
+    "question": "Which audit-governance mechanism <span class='qual-highlight'>BEST</span> ensures accountable, verifiable closure of audit findings?",
+    "legaleseStem": "<span class='fluff-zone'>Upon receiving formal external audit exceptions detailing material control deficiencies,</span> which management governance artifact <span class='qual-highlight'>BEST</span> drives verified remediation?",
+    "archaicStem": "<span class='fluff-zone'>Whereas informal verbal assurances routinely decay into repeat audit exceptions,</span> which formal remediation-tracking instrument is <span class='qual-highlight'>PRIMARY</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "REMEDIATION GOVERNANCE"
+        ],
+        "result": "CORRECTIVE ACTION PLAN / POA&M"
+      }
+    ],
+    "options": [
+      {
+        "text": "Create a formal Corrective Action Plan (POA&M) assigning owners, milestones, interim controls, and independent re-testing.",
+        "isCorrect": true,
+        "tag": "Correct — A formal CAP/POA&M tracks root-cause fixes, accountable owners, target dates, compensating controls, and independent validation before closure."
+      },
+      {
+        "text": "Close all four audit findings internally as soon as IT opens standard remediation tickets.",
+        "isCorrect": false,
+        "tag": "Premature-Closure Trap — Opening a trouble ticket is not remediation; findings stay open until controls operate effectively and pass independent re-testing."
+      },
+      {
+        "text": "Ask the external audit partner to downgrade the four deficiencies into informal management observations.",
+        "isCorrect": false,
+        "tag": "Integrity-Violation Trap — Pressuring independent auditors to downplay material control failures violates ethics and hides real risk from the Board."
+      },
+      {
+        "text": "Restrict distribution of the audit report exclusively to the CISO until all fixes finish.",
+        "isCorrect": false,
+        "tag": "Transparency Trap — Withholding findings from accountable business owners and the Audit Committee prevents funding and cross-team remediation."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Material audit findings require a formal Corrective Action Plan or Plan of Action and Milestones (POA&M) mapping root-cause remediation, accountable owners, target dates, interim compensating controls, and independent validation prior to closure."
+  },
+  {
+    "id": "cat-d6-10",
+    "bank": "study",
+    "domainNum": 6,
+    "secondaryDomains": [
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A financial enterprise spends $3 million annually on EDR agents, SIEM correlation rules, and perimeter IPS policies, yet an external red-team exercise silently exfiltrated mock data without triggering a single SOC alert.",
+    "clue": "Post-exercise analysis reveals routine software updates silently broke log parsers and disabled key detection signatures months earlier between annual tests",
+    "question": "Which continuous assessment strategy <span class='qual-highlight'>BEST</span> detects control drift and validates detection efficacy safely year-round?",
+    "legaleseStem": "<span class='fluff-zone'>To empirically verify that deployed preventive and detective controls remain effective despite ongoing configuration drift between annual audits,</span> which validation strategy is <span class='qual-highlight'>MOST</span> effective?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as unvalidated detection rules decay silently following routine infrastructure changes,</span> which continuous validation discipline shall leadership deem <span class='qual-highlight'>PRIMARY</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "DETECT CONTROL DRIFT"
+        ],
+        "result": "BREACH & ATTACK SIMULATION (BAS) / PURPLE TEAMING"
+      }
+    ],
+    "options": [
+      {
+        "text": "Replace the SIEM platform immediately with a competing vendor while maintaining annual-only testing cycles.",
+        "isCorrect": false,
+        "tag": "Tool-Swap Trap — Buying a new SIEM without continuous validation simply repeats silent parser and rule drift over the next twelve months."
+      },
+      {
+        "text": "Deploy Breach and Attack Simulation alongside collaborative Purple Team exercises to validate detections continuously.",
+        "isCorrect": true,
+        "tag": "Correct — Automated BAS and Purple Teaming safely emulate real adversary TTPs (MITRE ATT&CK) continuously, catching broken log parsers and control drift immediately."
+      },
+      {
+        "text": "Disable preventive IPS blocking during business hours so SOC analysts can verify raw alert volume.",
+        "isCorrect": false,
+        "tag": "Self-Inflicted-Risk Trap — Turning off live preventive controls exposes production systems to real adversaries unnecessarily."
+      },
+      {
+        "text": "Expand annual paper-based policy attestation questionnaires distributed to firewall and SIEM engineering leads.",
+        "isCorrect": false,
+        "tag": "Paper-Assurance Trap — Self-attestations confirm engineers believe controls work, not empirical proof that SIEM rules fire on live attack techniques."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Breach and Attack Simulation (BAS) paired with Purple Team exercises continuously tests preventive blocks, log ingestion pipelines, and SIEM detections against safe adversary emulations—eliminating silent control drift between annual assessments."
+  },
+  {
+    "id": "cat-d6-11",
+    "bank": "study",
+    "domainNum": 6,
+    "secondaryDomains": [
+      7,
+      2
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Double Negatives",
+    "fluff": "An enterprise aggregates terabytes of firewall, Active Directory, and database audit events into a centralized SIEM, yet a regulatory forensic review flags severe evidentiary reliability gaps.",
+    "clue": "Investigators found system timestamps drifted by fourteen minutes across regions and attackers with local server admin rights cleared local event logs before scheduled hourly batch uploads ran",
+    "question": "Which logging governance control pair must leadership <span class='qual-highlight'>NOT</span> omit to preserve audit-trail integrity?",
+    "legaleseStem": "<span class='fluff-zone'>To ensure enterprise audit logs remain forensically correlatable and tamper-resistant against privileged host compromise,</span> which logging safeguard pair is <span class='qual-highlight'>LEAST</span> expendable?",
+    "archaicStem": "<span class='fluff-zone'>Whereas unsynchronized clocks and mutable local logs shatter forensic correlation and audit credibility,</span> which log-integrity safeguards must governance <span class='qual-highlight'>NOT</span> omit?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "OMIT"
+        ],
+        "result": "MANDATORY (NTP + REAL-TIME IMMUTABLE LOGGING)"
+      }
+    ],
+    "options": [
+      {
+        "text": "Keep security logs strictly on local server volumes while encrypting partitions with full-disk encryption.",
+        "isCorrect": false,
+        "tag": "Local-Tampering Trap — Full-disk encryption does not stop an attacker with live OS admin privileges from clearing local log files."
+      },
+      {
+        "text": "Grant local server administrators full delete permissions inside the SIEM to prune noisy routine events.",
+        "isCorrect": false,
+        "tag": "SoD-Violation Trap — Letting system administrators delete their own audit trails destroys accountability and evidentiary admissibility."
+      },
+      {
+        "text": "Enforce authenticated NTP time synchronization and real-time forwarding to immutable WORM centralized log storage.",
+        "isCorrect": true,
+        "tag": "Correct — Authenticated NTP aligns cross-region timelines accurately, while real-time streaming to write-once (WORM) isolated storage prevents local or SIEM log tampering."
+      },
+      {
+        "text": "Extend hourly batch log collection intervals to nightly uploads to reduce wide-area network congestion.",
+        "isCorrect": false,
+        "tag": "Wider-Window Trap — Delaying log forwarding from hourly to nightly gives attackers far more time to erase tracks before collection."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Evidentiary audit logs require authenticated Network Time Protocol (NTP) synchronization for accurate cross-system timeline reconstruction plus real-time forwarding to centralized, tamper-evident write-once (WORM) storage segregated from host administrators."
+  },
+  {
+    "id": "cat-d6-12",
+    "bank": "study",
+    "domainNum": 6,
+    "secondaryDomains": [
+      8
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A healthcare software director proposes retiring manual peer security code reviews on a clinical e-prescribing platform because automated SAST and DAST tools already scan every build cleanly.",
+    "clue": "Recent post-release incidents involved clinicians bypassing controlled-substance dosage approval workflows using valid, syntactically clean API calls",
+    "question": "Which vulnerability class makes manual peer code review <span class='qual-highlight'>LEAST</span> replaceable by automated scanners?",
+    "legaleseStem": "<span class='fluff-zone'>When justifying human peer code review alongside automated SAST and DAST pipelines for high-risk applications,</span> which defect category is <span class='qual-highlight'>MOST</span> dependent on human inspection?",
+    "archaicStem": "<span class='fluff-zone'>Whereas automated scanners scale efficiently against known syntax defects,</span> which flaw category renders manual peer review <span class='qual-highlight'>LEAST</span> replaceable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "REPLACEABLE"
+        ],
+        "result": "BUSINESS LOGIC & AUTHORIZATION INTENT FLAWS"
+      }
+    ],
+    "options": [
+      {
+        "text": "Known third-party open-source package CVEs listed in public national vulnerability databases.",
+        "isCorrect": false,
+        "tag": "Automation-Strength Trap — Automated SCA tools excel at matching package versions against known CVE databases far faster than humans."
+      },
+      {
+        "text": "Unencrypted plaintext HTTP endpoints listening on standard external web server ports.",
+        "isCorrect": false,
+        "tag": "Automation-Strength Trap — Basic DAST and network configuration scanners catch plaintext HTTP ports effortlessly."
+      },
+      {
+        "text": "Hardcoded AWS access keys accidentally committed inside public source-code configuration files.",
+        "isCorrect": false,
+        "tag": "Automation-Strength Trap — Automated secrets scanners and SAST regex/entropy engines reliably flag hardcoded credentials."
+      },
+      {
+        "text": "Complex business-logic flaws, workflow bypasses, and broken authorization intent lacking fixed syntax patterns.",
+        "isCorrect": true,
+        "tag": "Correct — Automated scanners do not understand clinical dosage approval intent; human peer reviewers catch context-dependent business-logic and authorization design flaws."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Automated SAST/DAST/SCA scanners deliver scale and repeatability for known syntax bugs, secrets, and CVEs, while manual peer code reviews remain essential for uncovering context-dependent business-logic flaws and broken authorization intent."
+  },
+  {
+    "id": "cat-d6-13",
+    "bank": "study",
+    "domainNum": 6,
+    "secondaryDomains": [
+      1
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "Board directors complain that quarterly security slides filled with '4.2 million firewall blocks' and '18,000 scanned hosts' fail to tell them whether operational risk is rising or controls are meeting targets.",
+    "clue": "The CISO wants to restructure executive metrics around meaningful Key Performance Indicators (KPIs) and Key Risk Indicators (KRIs) tied to business risk appetite",
+    "question": "Which pairing <span class='qual-highlight'>BEST</span> distinguishes an executive KPI from a forward-looking KRI?",
+    "legaleseStem": "<span class='fluff-zone'>When transitioning Board security reporting from raw event volumes to decision-oriented governance metrics,</span> which KPI-versus-KRI distinction is <span class='qual-highlight'>MOST</span> accurate?",
+    "archaicStem": "<span class='fluff-zone'>Whereas raw perimeter block counts obscure executive risk posture,</span> which distinction between KPIs and KRIs is <span class='qual-highlight'>LEAST</span> erroneous?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "ERRONEOUS"
+        ],
+        "result": "MOST ACCURATE"
+      }
+    ],
+    "options": [
+      {
+        "text": "KPIs measure control execution against operational targets; KRIs signal rising exposure approaching risk tolerance.",
+        "isCorrect": true,
+        "tag": "Correct — KPIs evaluate how well controls perform (e.g., % critical patches within SLA), while KRIs provide early warnings of escalating risk approaching Board appetite."
+      },
+      {
+        "text": "KPIs report external regulatory fines exclusively; KRIs count daily blocked intrusion-detection packets.",
+        "isCorrect": false,
+        "tag": "Metric-Confusion Trap — Regulatory fines are lagging loss outcomes and raw IDS packet counts are noisy operational volume, not structured KPIs/KRIs."
+      },
+      {
+        "text": "KPIs forecast emerging nation-state adversary intent; KRIs track internal software developer headcount.",
+        "isCorrect": false,
+        "tag": "Inversion Trap — Forecasting rising threat exposure is a KRI function, not a KPI."
+      },
+      {
+        "text": "KPIs and KRIs are interchangeable labels applied strictly to external annual CPA audit reports.",
+        "isCorrect": false,
+        "tag": "Definition Error — KPIs and KRIs serve distinct internal continuous governance functions and are not interchangeable."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Effective security metrics separate Key Performance Indicators (measuring how well security processes meet operational targets) from Key Risk Indicators (early-warning signals indicating rising risk exposure approaching corporate risk appetite)."
+  },
+  {
+    "id": "cat-d6-14",
+    "bank": "study",
+    "domainNum": 6,
+    "secondaryDomains": [
+      1,
+      2
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Constraint Violation",
+    "fluff": "A SaaS payroll processor serves publicly traded U.S. enterprises whose external financial auditors must verify controls affecting clients' internal control over financial reporting (ICFR) throughout the fiscal year.",
+    "clue": "Prospective corporate controllers explicitly ask for an independent CPA attestation covering financial-reporting control design and sustained operating effectiveness—not a general marketing seal",
+    "question": "Which AICPA SOC report <span class='qual-highlight'>BEST</span> satisfies the external financial auditors' requirement?",
+    "legaleseStem": "<span class='fluff-zone'>When enterprise clients' financial auditors require independent assurance over outsourced payroll controls impacting financial statements across a fiscal year,</span> which SOC report is <span class='qual-highlight'>MOST</span> appropriate?",
+    "archaicStem": "<span class='fluff-zone'>Whereas Trust Services privacy seals and single-date design reviews fail to assure year-round financial-reporting integrity,</span> which SOC report is <span class='qual-highlight'>PRIMARY</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "FINANCIAL REPORTING OVER TIME"
+        ],
+        "result": "SOC 1 TYPE II"
+      }
+    ],
+    "options": [
+      {
+        "text": "SOC 2 Type I attesting to Trust Services security control design on a single date.",
+        "isCorrect": false,
+        "tag": "Double-Mismatch Trap — SOC 2 covers Trust Services Criteria (not ICFR financial reporting), and Type I covers design on one date rather than sustained operation."
+      },
+      {
+        "text": "SOC 1 Type II attesting to ICFR control design and operating effectiveness over the review period.",
+        "isCorrect": true,
+        "tag": "Correct — SOC 1 specifically addresses Internal Control over Financial Reporting (ICFR), and Type II validates sustained operating effectiveness across the fiscal period."
+      },
+      {
+        "text": "SOC 3 public general-use trust seal summarizing high-level security posture without test details.",
+        "isCorrect": false,
+        "tag": "Insufficient-Detail Trap — SOC 3 is a high-level public marketing report omitting detailed control descriptions, test results, and ICFR scope."
+      },
+      {
+        "text": "SOC 2 Type II attesting strictly to Privacy and Availability Trust Services Criteria over six months.",
+        "isCorrect": false,
+        "tag": "Scope-Mismatch Trap — SOC 2 evaluates operational security/availability/privacy criteria rather than financial statement ICFR controls required by financial auditors."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "SOC 1 focuses specifically on Internal Control over Financial Reporting (ICFR) for client financial auditors, whereas SOC 2 covers Trust Services Criteria (Security, Availability, Processing Integrity, Confidentiality, Privacy) and SOC 3 is a public summary. Type II validates operating effectiveness over time."
+  },
+  {
+    "id": "cat-d6-15",
+    "bank": "study",
+    "domainNum": 6,
+    "secondaryDomains": [
+      7,
+      1
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "An enterprise vulnerability scanner reports 1,400 'High' and 'Critical' CVSS vulnerabilities across corporate laptops, isolated lab machines, and internet-facing payment APIs.",
+    "clue": "Operations teams can realistically patch only 150 findings this sprint, and threat intelligence confirms three CVEs on internet-facing payment hosts are actively exploited in the wild (CISA KEV) with medium-high CVSS base scores",
+    "question": "Which vulnerability prioritization strategy <span class='qual-highlight'>BEST</span> reduces immediate organizational risk within patching capacity?",
+    "legaleseStem": "<span class='fluff-zone'>When remediation capacity is constrained amid thousands of raw scanner findings spanning disparate asset tiers,</span> which prioritization approach <span class='qual-highlight'>MOST</span> effectively reduces real-world breach likelihood?",
+    "archaicStem": "<span class='fluff-zone'>Whereas sorting blindly by static severity scores ignores active exploitation and asset exposure,</span> which risk-based triage model is <span class='qual-highlight'>LEAST</span> deficient?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DEFICIENT"
+        ],
+        "result": "MOST EFFECTIVE (RISK-BASED PRIORITIZATION)"
+      }
+    ],
+    "options": [
+      {
+        "text": "Patch strictly from highest CVSS base score downward regardless of network exposure or asset criticality.",
+        "isCorrect": false,
+        "tag": "CVSS-Blindness Trap — Pure CVSS base scoring wastes scarce sprint capacity patching theoretical CVSS 9.8 flaws on isolated lab machines while actively exploited payment APIs stay exposed."
+      },
+      {
+        "text": "Patch oldest CVE publication dates first to clear historical audit backlog metrics across lab environments.",
+        "isCorrect": false,
+        "tag": "Age-Over-Risk Trap — Vulnerability age does not equal current exploitability or business impact."
+      },
+      {
+        "text": "Prioritize actively exploited vulnerabilities on exposed, high-criticality assets using threat intelligence, exposure, and business impact.",
+        "isCorrect": true,
+        "tag": "Correct — Risk-based vulnerability management combines active exploitation (KEV/EPSS), external reachability, compensating controls, and asset business criticality."
+      },
+      {
+        "text": "Suppress all findings below CVSS 9.0 permanently so vulnerability dashboards display clean compliance status.",
+        "isCorrect": false,
+        "tag": "Metric-Gaming Trap — Hiding CVSS 7.0–8.9 vulnerabilities misses actively exploited KEV flaws and falsifies risk posture."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Mature vulnerability management uses risk-based prioritization—combining active exploitation intelligence (KEV/EPSS), internet reachability, existing compensating controls, and asset business criticality—rather than sorting blindly by static CVSS base scores."
+  },
+  {
+    "id": "cat-d6-16",
+    "bank": "study",
+    "domainNum": 6,
+    "secondaryDomains": [
+      8
+    ],
+    "difficulty": 4,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "An embedded aerospace software vendor is testing a custom binary telemetry parser written in C++ that processes complex structured flight-control frames over serial interfaces.",
+    "clue": "Simple random bit-flipping inputs are rejected immediately at the parser's header checksum check before reaching deep protocol state-machine logic",
+    "question": "Which testing technique <span class='qual-highlight'>MOST</span> effectively reaches deep parser logic to uncover hidden memory-corruption flaws?",
+    "legaleseStem": "<span class='fluff-zone'>Where naïve random input mutation fails early protocol validation checks before exercising deep binary parser code,</span> which specialized testing approach is <span class='qual-highlight'>MOST</span> effective?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as blind bit-flipping stalls at initial checksum headers without traversing deep protocol logic,</span> which fuzzing discipline is <span class='qual-highlight'>PRIMARY</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "DEEP PROTOCOL FUZZING"
+        ],
+        "result": "GENERATION-BASED (PROTOCOL-AWARE) FUZZING"
+      }
+    ],
+    "options": [
+      {
+        "text": "Dumb mutation-based fuzzing flipping random bits across raw captured traffic without recalculating frame checksums.",
+        "isCorrect": false,
+        "tag": "Constraint Violation — The stem already notes random bit-flipping gets dropped immediately at the header checksum check."
+      },
+      {
+        "text": "Software Composition Analysis verifying open-source license headers inside external documentation repositories.",
+        "isCorrect": false,
+        "tag": "Wrong-Goal Trap — SCA checks third-party dependencies and licenses, not unknown memory-corruption bugs in custom C++ parsers."
+      },
+      {
+        "text": "External black-box web application scanning targeting HTTP cross-site scripting across corporate marketing pages.",
+        "isCorrect": false,
+        "tag": "Wrong-Interface Trap — Web XSS scanners do not test custom C++ binary serial telemetry parsers."
+      },
+      {
+        "text": "Generation-based (protocol-aware) fuzzing synthesizing valid headers and checksums while mutating deep payload fields.",
+        "isCorrect": true,
+        "tag": "Correct — Generation-based fuzzing models the protocol specification so test frames pass initial header/checksum checks and stress deep C++ state-machine memory handling."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Generation-based (smart/protocol-aware) fuzzing builds inputs from formal format models so frames pass initial syntax and checksum gates, reaching deep parser logic to expose buffer overflows and memory corruption that dumb mutation fuzzing misses."
+  },
+  {
+    "id": "cat-d6-17",
+    "bank": "study",
+    "domainNum": 6,
+    "secondaryDomains": [
+      8,
+      1
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "An engineering lead reports 95% statement code coverage from automated unit tests on a payment-authorization microservice and recommends skipping security regression testing for a hotfix release.",
+    "clue": "Quality assurance notes that complex conditional authorization branches (such as multi-currency limit overrides and negative refund paths) were never evaluated across both true and false outcomes",
+    "question": "Which testing governance limitation <span class='qual-highlight'>MOST</span> directly refutes relying on high statement coverage alone?",
+    "legaleseStem": "<span class='fluff-zone'>When engineering leadership equates high statement-coverage percentages with complete security assurance across complex authorization branches,</span> which testing limitation is <span class='qual-highlight'>PRIMARY</span>?",
+    "archaicStem": "<span class='fluff-zone'>Whereas executing each line once fails to test every logical branch permutation or misuse case,</span> which assurance truth must management <span class='qual-highlight'>NOT</span> overlook?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "OVERLOOK"
+        ],
+        "result": "STATEMENT COVERAGE MISSES BRANCH/MISUSE PATHS"
+      }
+    ],
+    "options": [
+      {
+        "text": "High statement coverage proves lines ran once, yet misses branch permutations and misuse cases.",
+        "isCorrect": true,
+        "tag": "Correct — Statement coverage is the weakest coverage metric; security assurance requires branch/condition coverage, negative/misuse-case tests, and regression validation."
+      },
+      {
+        "text": "Statement coverage metrics can only be measured in compiled assembly rather than modern microservices.",
+        "isCorrect": false,
+        "tag": "Factual Error — Statement, branch, and condition coverage are routinely measured in high-level microservice languages."
+      },
+      {
+        "text": "Automated unit test suites prohibit running regression tests after emergency payment-authorization hotfixes.",
+        "isCorrect": false,
+        "tag": "Opposite Effect — Automated regression tests exist precisely to verify hotfixes rapidly without reintroducing old security defects."
+      },
+      {
+        "text": "Reaching 95% statement coverage legally certifies that zero authorization defects exist in production.",
+        "isCorrect": false,
+        "tag": "False-Assurance Trap — No coverage metric—even 100% statement coverage—guarantees absence of logic flaws, missing checks, or abuse cases."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Statement coverage only verifies that code lines executed at least once—missing untested branch/condition combinations, missing authorization checks, and adversarial misuse cases. Security testing requires deeper branch coverage, negative tests, and regression checks."
+  },
+  {
+    "id": "cat-d6-18",
+    "bank": "study",
+    "domainNum": 6,
+    "secondaryDomains": [
+      3,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "A municipal water-treatment utility must validate resilience of its SCADA chemical-dosing controllers ahead of an annual infrastructure resilience audit.",
+    "clue": "Active exploitation or aggressive network vulnerability scanning against live operational controllers risks halting dosing pumps and endangering public drinking-water safety",
+    "question": "Which assessment methodology <span class='qual-highlight'>BEST</span> evaluates OT security posture without jeopardizing public safety?",
+    "legaleseStem": "<span class='fluff-zone'>When assessing legacy safety-critical operational technology controllers where active exploitation or aggressive scanning threatens physical safety,</span> which assessment strategy is <span class='qual-highlight'>MOST</span> defensible?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as aggressive active scans against live water-treatment controllers imperil public safety,</span> which OT assessment approach is <span class='qual-highlight'>LEAST</span> hazardous?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "HAZARDOUS"
+        ],
+        "result": "SAFEST & EFFECTIVE (PASSIVE + DIGITAL TWIN/LAB)"
+      }
+    ],
+    "options": [
+      {
+        "text": "Run unthrottled active credentialed exploit modules against live dosing controllers during off-peak overnight hours.",
+        "isCorrect": false,
+        "tag": "Life-Safety Violation — Crashing live water-treatment controllers overnight still compromises public drinking-water safety and availability."
+      },
+      {
+        "text": "Perform passive traffic analysis, configuration reviews, and active exploitation strictly inside an isolated lab twin.",
+        "isCorrect": true,
+        "tag": "Correct — Passive OT discovery and offline configuration audits assess live systems safely, while destructive/active tests run only on an isolated replica/staging testbed."
+      },
+      {
+        "text": "Exempt the water-treatment OT enclave permanently from all security assessments and architecture reviews.",
+        "isCorrect": false,
+        "tag": "Blind-Spot Trap — Skipping assurance completely leaves critical public infrastructure unassessed against nation-state and ransomware threats."
+      },
+      {
+        "text": "Schedule an unannounced full-scope external red-team exercise targeting live chemical-dosing HMIs.",
+        "isCorrect": false,
+        "tag": "Safety-Catastrophe Trap — Unannounced active exploitation on live industrial safety systems violates Canon 1 and basic OT safety engineering."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Assessing safety-critical OT/ICS infrastructure forbids disruptive active scanning or exploitation on live controllers. Combining passive network telemetry, offline configuration/architecture audits, and active testing exclusively on an isolated lab replica protects human safety."
+  },
+  {
+    "id": "cat-d6-19",
+    "bank": "study",
+    "domainNum": 6,
+    "secondaryDomains": [
+      1,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Double Negatives",
+    "fluff": "A cloud-first enterprise updates production infrastructure hundreds of times weekly via Infrastructure-as-Code pipelines, yet its governance program still relies strictly on a single annual point-in-time compliance audit.",
+    "clue": "Post-incident reviews show misconfigured public storage buckets and over-privileged IAM roles routinely persist for nine months between annual examinations",
+    "question": "Which assessment governance model is <span class='qual-highlight'>LEAST</span> expendable for closing the gap between rapid cloud change and annual audits?",
+    "legaleseStem": "<span class='fluff-zone'>Where high-velocity Infrastructure-as-Code deployments introduce rapid configuration drift between annual audits,</span> which governance monitoring strategy is <span class='qual-highlight'>LEAST</span> expendable?",
+    "archaicStem": "<span class='fluff-zone'>Whereas annual point-in-time reviews fail to catch cloud drift across weekly deployments,</span> which ongoing assurance discipline must leadership <span class='qual-highlight'>NOT</span> omit?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "OMIT"
+        ],
+        "result": "MANDATORY (CONTINUOUS MONITORING / ISCM)"
+      }
+    ],
+    "options": [
+      {
+        "text": "Freeze all cloud Infrastructure-as-Code deployments for eleven months each year outside audit season.",
+        "isCorrect": false,
+        "tag": "Business-Paralysis Trap — Halting cloud delivery destroys business agility rather than modernizing assurance to match operational tempo."
+      },
+      {
+        "text": "Double the length of the annual compliance checklist reviewed manually each December by internal auditors.",
+        "isCorrect": false,
+        "tag": "Point-in-Time Trap — A longer annual checklist still leaves misconfigurations exposed for months between December audits."
+      },
+      {
+        "text": "Implement Information Security Continuous Monitoring with automated CSPM/policy-as-code checks and risk-based cadence.",
+        "isCorrect": true,
+        "tag": "Correct — ISCM pairs automated Cloud Security Posture Management and policy-as-code guardrails with continuous telemetry so drift is detected and remediated in near real time."
+      },
+      {
+        "text": "Require cloud engineers to email weekly configuration screenshots to the compliance team for manual filing.",
+        "isCorrect": false,
+        "tag": "Manual-Theater Trap — Static screenshots do not scale across hundreds of weekly deployments and miss changes made minutes later."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Information Security Continuous Monitoring (ISCM, NIST SP 800-137) replaces point-in-time compliance snapshots with ongoing automated telemetry (CSPM, policy-as-code, vulnerability feeds) aligned to system change velocity and risk."
+  },
+  {
+    "id": "cat-d6-20",
+    "bank": "study",
+    "domainNum": 6,
+    "secondaryDomains": [
+      1
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "An organization completes an ISO/IEC 27001 internal audit, a quarterly vulnerability summary, and two major post-incident reviews over the past six months, producing actionable trend reports.",
+    "clue": "However, senior executives never convene to review the consolidated findings, adjust security budgets, or update corporate risk appetite in response to shifting threat trends",
+    "question": "Which governance feedback process is missing to turn assessment outputs into strategic leadership action?",
+    "legaleseStem": "<span class='fluff-zone'>When technical audits and incident metrics are compiled diligently but never translated into executive resource or policy updates,</span> which governance lifecycle phase is <span class='qual-highlight'>MISSING</span>?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as assessment reports accomplish little unless executive leadership evaluates systemic trends and reallocates resources,</span> which formal governance review is <span class='qual-highlight'>LEAST</span> dispensable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DISPENSABLE"
+        ],
+        "result": "FORMAL MANAGEMENT REVIEW"
+      }
+    ],
+    "options": [
+      {
+        "text": "Additional external penetration testing across low-risk corporate intranet brochure websites.",
+        "isCorrect": false,
+        "tag": "More-Testing Trap — Generating even more unread findings does not solve the missing executive decision-making loop."
+      },
+      {
+        "text": "Delegating final enterprise risk-appetite revisions directly to junior vulnerability-scanning analysts.",
+        "isCorrect": false,
+        "tag": "Authority-Inversion Trap — Risk appetite and strategic funding belong exclusively to senior executive leadership and the Board."
+      },
+      {
+        "text": "Deploying an automated network packet broker to archive raw firewall telemetry for three years.",
+        "isCorrect": false,
+        "tag": "Technical-Storage Trap — Storing additional raw network packets does not create executive strategic review or budget reallocation."
+      },
+      {
+        "text": "Formal periodic Management Review evaluating audit outcomes, risk trends, resource adequacy, and continual improvement.",
+        "isCorrect": true,
+        "tag": "Correct — Management Review (core to ISO 27001 and CBK Domain 6) closes the governance loop by bringing senior leadership together to act on assessment results and fund improvements."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Assessment and testing only create value when closed by formal Management Review—where executive leadership evaluates audit findings, KPI/KRI trends, and incident lessons to drive policy updates, budget allocation, and continual improvement."
+  }
+]

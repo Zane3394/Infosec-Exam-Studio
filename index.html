@@ -9047,7 +9047,9 @@
          APPLICATION STATE & PERSISTENCE
          ============================================================ */
       const STORAGE_KEY = "infosec_exam_studio_v6_0_state";
-      let questionBank = BASE_QUESTIONS.slice();
+      let activeBaseQuestions = BASE_QUESTIONS.slice();
+      const repoUpgradedDomains = new Set();
+      let questionBank = activeBaseQuestions.slice();
 
       const state = {
         mode: "study",            // "study" | "exam"
@@ -9105,9 +9107,9 @@
               if (typeof p.focusMode === "boolean") state.focusMode = p.focusMode;
               if (typeof p.studyFontSize === "number") state.studyFontSize = Math.min(22, Math.max(15, p.studyFontSize));
               if (Array.isArray(p.customQuestions) && p.customQuestions.length) {
-                const seen = new Set(BASE_QUESTIONS.map(q => q.id));
+                const seen = new Set(activeBaseQuestions.map(q => q.id));
                 const extras = p.customQuestions.filter(q => q && q.id && !seen.has(q.id));
-                questionBank = BASE_QUESTIONS.concat(extras);
+                questionBank = activeBaseQuestions.concat(extras);
               }
               // Backfill auto-graded correctness for any answers previously saved in self-check mode
               Object.keys(state.answers).forEach(qId => {
@@ -9127,7 +9129,7 @@
 
       function saveState() {
         try {
-          const baseIds = new Set(BASE_QUESTIONS.map(q => q.id));
+          const baseIds = new Set(activeBaseQuestions.map(q => q.id));
           const customQuestions = questionBank.filter(q => !baseIds.has(q.id));
           localStorage.setItem(STORAGE_KEY, JSON.stringify({
             answers: state.answers,
@@ -10668,7 +10670,7 @@
         try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
         if (typeof stopRainAudio === "function") stopRainAudio();
 
-        questionBank = BASE_QUESTIONS.slice();
+        questionBank = activeBaseQuestions.slice();
         state.mode = "study";
         state.darkMode = true;
         state.fogTier = "archaic";
@@ -11049,9 +11051,9 @@
       });
 
       document.getElementById("clearCustomPacksBtn").addEventListener("click", () => {
-        questionBank = BASE_QUESTIONS.slice();
+        questionBank = activeBaseQuestions.slice();
         saveState(); renderBankInventory(); renderStudy();
-        showToast("Cleared imported packs (160 built-in CBK items restored).");
+        showToast(`Cleared imported packs (${activeBaseQuestions.length} base CBK items restored).`);
       });
 
       document.getElementById("importJsonBtn").addEventListener("click", () => {
@@ -14447,7 +14449,12 @@
 
       function openWelcomeModal() {
         const sum = document.getElementById("welcomeBankSummary");
-        if (sum) sum.textContent = `${questionBank.length} original CBK items loaded across 8 domains`;
+        if (sum) {
+          const liveTag = repoUpgradedDomains.size
+            ? ` · CAT-upgraded: ${Array.from(repoUpgradedDomains).sort((a, b) => a - b).map(d => "D" + d).join(", ")}`
+            : "";
+          sum.textContent = `${questionBank.length} original CBK items loaded across 8 domains${liveTag}`;
+        }
         document.getElementById("studyDomainModal").classList.add("hidden");
         document.getElementById("welcomeModal").classList.remove("hidden");
       }
@@ -14554,12 +14561,101 @@
         });
       }
 
+      async function loadRepoDomainPacks() {
+        // Auto-load domain-by-domain JSON files (d1.json .. d8.json) hosted alongside index.html.
+        // Missing files or offline file:// runs silently keep the built-in BASE_QUESTIONS fallback.
+        const results = await Promise.allSettled(
+          [1, 2, 3, 4, 5, 6, 7, 8].map(async (dNum) => {
+            const resp = await fetch(`./d${dNum}.json`, { cache: "no-store" });
+            if (!resp.ok) return null;
+            const data = await resp.json();
+            if (!Array.isArray(data) || !data.length) return null;
+            const normalized = [];
+            data.forEach((item, idx) => {
+              if (!item || !item.clue || !item.question || !Array.isArray(item.options) || item.options.length < 2) return;
+              const safeOptions = item.options
+                .filter(o => o && typeof o.text === "string" && o.text.trim().length > 0)
+                .slice(0, 6)
+                .map(o => ({
+                  text: String(o.text).trim(),
+                  isCorrect: typeof o.isCorrect === "boolean" ? o.isCorrect : "<conceptual_placeholder>",
+                  tag: typeof o.tag === "string" ? o.tag.trim() : undefined
+                }));
+              if (safeOptions.length < 2) return;
+              normalized.push({
+                id: item.id || `repo-d${dNum}-${idx + 1}`,
+                bank: item.bank === "exam" ? "exam" : "study",
+                domainNum: dNum,
+                secondaryDomains: Array.isArray(item.secondaryDomains) ? item.secondaryDomains : [],
+                difficulty: Number(item.difficulty) || 3,
+                lengthTier: ["standard", "double", "triple"].includes(item.lengthTier) ? item.lengthTier : "double",
+                weight: typeof item.weight === "number" ? item.weight : undefined,
+                trapType: TRAP_FAMILIES.includes(item.trapType) ? item.trapType : "Governance vs. Technical",
+                fluff: item.fluff || "",
+                clue: item.clue,
+                question: item.question,
+                legaleseStem: item.legaleseStem || undefined,
+                archaicStem: item.archaicStem || undefined,
+                logicCancellations: Array.isArray(item.logicCancellations) ? item.logicCancellations : undefined,
+                conceptMechanism: item.conceptMechanism || item.logic || "Review the core governance and architectural principle.",
+                answerKey: item.answerKey || "auto-graded",
+                scoringRubric: item.scoringRubric,
+                options: safeOptions
+              });
+            });
+            return normalized.length ? { dNum, items: normalized } : null;
+          })
+        );
+
+        const loadedByDomain = new Map();
+        results.forEach(r => {
+          if (r.status === "fulfilled" && r.value && r.value.items.length) {
+            loadedByDomain.set(r.value.dNum, r.value.items);
+          }
+        });
+        if (!loadedByDomain.size) return;
+
+        // Preserve any user-imported custom packs beyond the previous base bank
+        const prevBaseIds = new Set(activeBaseQuestions.map(q => q.id));
+        const customExtras = questionBank.filter(q => !prevBaseIds.has(q.id));
+
+        const nextBase = [];
+        for (let d = 1; d <= 8; d++) {
+          if (loadedByDomain.has(d)) {
+            repoUpgradedDomains.add(d);
+            nextBase.push(...loadedByDomain.get(d));
+          } else {
+            nextBase.push(...BASE_QUESTIONS.filter(q => q.domainNum === d));
+          }
+        }
+        activeBaseQuestions = nextBase;
+
+        const nextBaseIds = new Set(activeBaseQuestions.map(q => q.id));
+        questionBank = activeBaseQuestions.concat(customExtras.filter(q => !nextBaseIds.has(q.id)));
+
+        // Refresh active UI & Welcome summary without wiping user progress
+        renderStudy();
+        const welcomeEl = document.getElementById("welcomeModal");
+        if (welcomeEl && !welcomeEl.classList.contains("hidden")) {
+          const sum = document.getElementById("welcomeBankSummary");
+          if (sum) {
+            const liveTag = ` · CAT-upgraded: ${Array.from(repoUpgradedDomains).sort((a, b) => a - b).map(d => "D" + d).join(", ")}`;
+            sum.textContent = `${questionBank.length} original CBK items loaded across 8 domains${liveTag}`;
+          }
+        }
+        const pickerEl = document.getElementById("studyDomainModal");
+        if (pickerEl && !pickerEl.classList.contains("hidden")) {
+          renderStudyDomainPicker();
+        }
+      }
+
       loadState();
       buildDictionary();
       initCalculator();
       renderStudy();
       initSpaceStarfield();
       openWelcomeModal();
+      loadRepoDomainPacks();
     })();
   </script>
 </body>

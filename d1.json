@@ -1,0 +1,991 @@
+[
+  {
+    "id": "cat-d1-01",
+    "bank": "study",
+    "domainNum": 1,
+    "secondaryDomains": [
+      2,
+      6
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "A regulated pharmaceutical enterprise is finalizing a master services agreement with a niche cloud analytics provider to process Phase III clinical trial telemetry across three sovereign jurisdictions. To meet an investor-committed regulatory filing deadline in six weeks, the VP of Clinical Research urges immediate onboarding.",
+    "clue": "Legal review notes the standard contract excludes on-site audit rights, limits subprocessor notices to annual web postings, relies on an unverified fourth-party AI inference host, and provides an ISO/IEC 27001 certificate scoped strictly to corporate headquarters",
+    "question": "Which action should the security manager recommend <span class='qual-highlight'>FIRST</span>?",
+    "legaleseStem": "<span class='fluff-zone'>Amid urgent commercial timelines for multinational clinical analytics onboarding,</span> where contractual audit rights are curtailed, fourth-party hosts remain unvetted, and vendor certification excludes the operational cloud platform, which advisory step is <span class='qual-highlight'>FIRST</span> warranted?",
+    "archaicStem": "<span class='fluff-zone'>Notwithstanding executive urgency to finalize clinical analytics onboarding within six weeks,</span> where vendor attestation omits the hosting platform and fourth-party subprocessors remain unexamined, which action is <span class='qual-highlight'>LEAST</span> deferrable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DEFERRABLE"
+        ],
+        "result": "FIRST PRIORITY"
+      }
+    ],
+    "options": [
+      {
+        "text": "Deploy an inline CASB and tokenization gateway to strip personal identifiers before clinical telemetry upload.",
+        "isCorrect": false,
+        "tag": "Technical Fix Trap — Strong technical safeguard, but it does not resolve integrity, audit-right, or fourth-party governance gaps before contract signature."
+      },
+      {
+        "text": "Validate the vendor's ISO/IEC 27001 certificate with the registrar to confirm active accreditation status.",
+        "isCorrect": false,
+        "tag": "Hidden-Constraint Trap — The stem explicitly notes the certificate is scoped only to corporate HQ, so verifying its active status still leaves the cloud platform uncertified."
+      },
+      {
+        "text": "Document the scope gap and fourth-party exposure to advise the accountable executive risk owner.",
+        "isCorrect": true,
+        "tag": "Correct — Stays in the risk-advisor lane by surfacing the certification scope gap and fourth-party risk so senior leadership can negotiate, mitigate, accept, or defer onboarding."
+      },
+      {
+        "text": "Issue a formal security veto blocking vendor onboarding until a full on-site audit concludes.",
+        "isCorrect": false,
+        "tag": "Authority Trap — Security managers advise on risk rather than issuing unilateral business vetoes, and on-site audits are not the only valid assurance mechanism."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Third-party risk governance requires surfacing out-of-scope certifications and fourth-party exposures to the accountable executive risk owner before contract execution. Security informs business risk decisions rather than issuing unilateral vetoes or substituting narrow point controls."
+  },
+  {
+    "id": "cat-d1-02",
+    "bank": "study",
+    "domainNum": 1,
+    "secondaryDomains": [
+      2,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "Following the acquisition of two regional freight brokers, a ninety-day integration review reveals that dispatch leads independently subscribed to external generative AI routing tools to summarize client manifests and driver schedules.",
+    "clue": "Enterprise customer contracts prohibit third-party AI model retention of shipment data, yet regional directors warn that abruptly blocking the tools during peak shipping season will trigger costly SLA delivery penalties",
+    "question": "Which measure <span class='qual-highlight'>BEST</span> establishes durable enterprise risk governance across the acquired divisions?",
+    "legaleseStem": "<span class='fluff-zone'>Where newly integrated operating units utilize unsanctioned external analytical services under conflicting client covenants and seasonal SLA penalties,</span> which governance measure is <span class='qual-highlight'>MOST</span> foundational?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as newly acquired divisions persist in engaging unvetted external services amid binding client restrictions and delivery penalties,</span> which governance remedy is <span class='qual-highlight'>LEAST</span> dispensable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DISPENSABLE"
+        ],
+        "result": "MOST ESSENTIAL"
+      }
+    ],
+    "options": [
+      {
+        "text": "Block all external generative AI domains immediately at the perimeter proxy across acquired branch offices.",
+        "isCorrect": false,
+        "tag": "Technical Fix Trap — Abruptly blocking without business alignment or alternatives violates the operational SLA constraint and drives shadow IT onto personal devices."
+      },
+      {
+        "text": "Establish an executive-ratified acceptable use and vendor review standard paired with sanctioned alternatives.",
+        "isCorrect": true,
+        "tag": "Correct — Umbrella governance sets enforceable policy aligned to client contracts while giving acquired teams a safe, approved workflow to meet delivery SLAs."
+      },
+      {
+        "text": "Configure endpoint data loss prevention rules to log outbound manifest uploads for monthly review.",
+        "isCorrect": false,
+        "tag": "Detective-Only Trap — Passive monthly logging documents ongoing contractual breaches after the fact without governing or enabling compliant operations."
+      },
+      {
+        "text": "Require acquired dispatch managers to complete targeted phishing and data-handling refresher training this week.",
+        "isCorrect": false,
+        "tag": "Narrow Control Trap — Awareness training supports policy, but cannot define lawful AI usage or satisfy vendor vetting requirements on its own."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Durable security governance flows top-down from executive-ratified policy and third-party risk standards paired with sanctioned business workflows. Purely punitive technical blocks without viable alternatives push sensitive data onto unmanaged channels."
+  },
+  {
+    "id": "cat-d1-03",
+    "bank": "study",
+    "domainNum": 1,
+    "secondaryDomains": [
+      6
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Constraint Violation",
+    "fluff": "An enterprise risk committee evaluates a $145,000 annual automated containment suite for a regional warehouse platform whose Single Loss Expectancy (SLE) is $240,000 with an Annualized Rate of Occurrence (ARO) of 0.5.",
+    "clue": "No statutory mandate requires this specific control, human safety is unaffected, and an alternative $40,000 compensating control reduces the expected annual occurrence rate to 0.25",
+    "question": "Which risk-treatment recommendation <span class='qual-highlight'>MOST</span> closely aligns with sound quantitative risk economics?",
+    "legaleseStem": "<span class='fluff-zone'>Upon modeling asset exposure where a proposed safeguard's annualized expense surpasses projected annualized loss absent statutory mandates,</span> which risk decision is <span class='qual-highlight'>NOT</span> contrary to fiduciary stewardship?",
+    "archaicStem": "<span class='fluff-zone'>Whereas prudent stewardship forbids expending capital beyond quantified annualized exposure absent statutory or safety compulsion,</span> which treatment counsel is <span class='qual-highlight'>LEAST</span> unsound?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "UNSOUND"
+        ],
+        "result": "MOST SOUND"
+      }
+    ],
+    "options": [
+      {
+        "text": "Approve the automated suite because single-incident loss significantly exceeds its annual subscription cost.",
+        "isCorrect": false,
+        "tag": "SLE vs. ALE Trap — ALE is $240,000 × 0.5 = $120,000/yr, which is less than the $145,000 annual control cost (negative net benefit)."
+      },
+      {
+        "text": "Recommend the lower-cost compensating control and document remaining residual exposure for executive acceptance.",
+        "isCorrect": true,
+        "tag": "Correct — The $40,000 control lowers ALE from $120,000 to $60,000 (saving $60,000 for $40,000 = +$20,000 net value), while escalating remaining residual risk properly."
+      },
+      {
+        "text": "Supplement the quantitative model with qualitative ratings to justify funding the comprehensive containment suite.",
+        "isCorrect": false,
+        "tag": "Bias Trap — Switching methodologies to justify an economically negative safeguard undermines objective risk-advisor integrity."
+      },
+      {
+        "text": "Defer all mitigation spending and increase cyber liability insurance limits to cover the $240,000 SLE.",
+        "isCorrect": false,
+        "tag": "Risk-Transfer Trap — Skipping a cost-positive control (+$20k/yr net benefit) leaves unnecessary operational disruption and ignores insurer due-care expectations."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Quantitative risk analysis compares annualized safeguard cost against Annualized Loss Expectancy (ALE = SLE × ARO). Sound stewardship rejects safeguards costing more than the annualized loss they prevent ($145k > $120k) and selects net-positive mitigations ($60k reduction - $40k cost = +$20k net value)."
+  },
+  {
+    "id": "cat-d1-04",
+    "bank": "study",
+    "domainNum": 1,
+    "secondaryDomains": [
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Process Chronology",
+    "fluff": "A newly appointed CISO is tasked with unifying a fragmented Business Continuity program across six autonomous manufacturing subsidiaries that currently maintain incompatible local disaster recovery binders.",
+    "clue": "Plant directors disagree on recovery priorities, cross-unit funding authority remains unresolved, and no enterprise-wide Business Impact Analysis has ever been conducted",
+    "question": "Which step should the CISO execute <span class='qual-highlight'>FIRST</span> to establish an enforceable enterprise continuity program?",
+    "legaleseStem": "<span class='fluff-zone'>Prior to harmonizing disparate subsidiary recovery procedures where sponsorship and funding authority remain unratified,</span> which continuity governance milestone is <span class='qual-highlight'>FIRST</span> required?",
+    "archaicStem": "<span class='fluff-zone'>Ere subsidiary disruption tolerances or alternate recovery facilities be adjudicated across autonomous divisions,</span> which inaugural mandate must leadership <span class='qual-highlight'>NOT</span> defer?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "DEFER"
+        ],
+        "result": "EXECUTE FIRST"
+      }
+    ],
+    "options": [
+      {
+        "text": "Conduct cross-plant Business Impact Analyses to establish Maximum Tolerable Downtime across production lines.",
+        "isCorrect": false,
+        "tag": "Wrong-Step Trap — BIA is Step 2 of BCP; without executive sponsorship and charter first, autonomous plant directors have no mandate to participate or agree."
+      },
+      {
+        "text": "Secure senior executive sponsorship, program charter, and steering committee scope across all subsidiaries.",
+        "isCorrect": true,
+        "tag": "Correct — Project scope, charter, and senior management sponsorship always come first in BCP to establish cross-divisional authority and funding."
+      },
+      {
+        "text": "Negotiate reciprocal warm-site standby agreements to standardize failover capacity across regional plants.",
+        "isCorrect": false,
+        "tag": "Premature Strategy Trap — Selecting recovery sites before completing a BIA and setting RTO/MTD targets risks over- or under-spending."
+      },
+      {
+        "text": "Execute structured tabletop exercises using existing plant binders to surface coordination bottlenecks.",
+        "isCorrect": false,
+        "tag": "Late-Stage Trap — Testing fragmented, unaligned plans before establishing enterprise scope and priorities wastes effort on obsolete procedures."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Business Continuity Planning follows strict chronology: (1) Scope, charter, and executive sponsorship; (2) Business Impact Analysis; (3) Continuity strategy selection; (4) Plan design, testing, and maintenance. Without executive chartering first, cross-subsidiary continuity stalls."
+  },
+  {
+    "id": "cat-d1-05",
+    "bank": "study",
+    "domainNum": 1,
+    "secondaryDomains": [
+      5,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Double Negatives",
+    "fluff": "During a contentious corporate divestiture, Human Resources alerts security at 09:00 that a principal cloud architect holding break-glass federation keys will be involuntarily separated at 14:00 today.",
+    "clue": "The architect's director requests a 24-hour supervised grace window post-notification so the architect can finish documenting undocumented production deployment pipelines",
+    "question": "Which offboarding course of action is <span class='qual-highlight'>LEAST</span> likely to introduce retaliatory insider risk?",
+    "legaleseStem": "<span class='fluff-zone'>When managing an involuntary termination of a highly privileged technologist despite operational transition requests,</span> which governance response is <span class='qual-highlight'>NOT</span> inconsistent with insider threat containment?",
+    "archaicStem": "<span class='fluff-zone'>Notwithstanding operational appeals for post-notice transition custody by an involuntarily separated architect,</span> which containment measure shall security <span class='qual-highlight'>LEAST</span> afford to omit?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "AFFORD TO OMIT"
+        ],
+        "result": "MOST CRITICAL TO EXECUTE"
+      }
+    ],
+    "options": [
+      {
+        "text": "Grant supervised read-only access for twenty-four hours while recording all workstation terminal activity.",
+        "isCorrect": false,
+        "tag": "Operational-Pressure Trap — Even read-only access by a freshly terminated privileged architect risks intellectual property theft and reconnaissance."
+      },
+      {
+        "text": "Synchronize logical, physical, and break-glass revocation concurrently with HR notification and audit prior sessions.",
+        "isCorrect": true,
+        "tag": "Correct — Revoking all privileges exactly at notification closes both tipping-off and post-notice sabotage windows; documentation gaps are managed operationally afterward."
+      },
+      {
+        "text": "Revoke cloud credentials four hours prior to HR notification to eliminate pre-notice tampering.",
+        "isCorrect": false,
+        "tag": "Tip-Off Trap — Cutting access before HR delivers notice immediately alerts a principal architect that termination is imminent, triggering last-minute sabotage via alternate paths."
+      },
+      {
+        "text": "Enable heightened SIEM behavioral alerting on the architect's sessions until severance paperwork is signed.",
+        "isCorrect": false,
+        "tag": "Detective-Only Trap — Monitoring does not prevent a privileged insider from wiping cloud tenants or exfiltrating keys after learning of termination."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Involuntary separations of privileged staff require synchronizing logical, physical, and break-glass revocation directly with HR notification. Premature revocation tips off the insider, while post-notice grace periods leave a live sabotage window."
+  },
+  {
+    "id": "cat-d1-06",
+    "bank": "study",
+    "domainNum": 1,
+    "secondaryDomains": [
+      8
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A quantitative trading firm develops a proprietary market-making pricing engine internally and plans to license its API outputs to institutional clients while keeping the underlying mathematical model confidential indefinitely.",
+    "clue": "Outside IP counsel confirms the mathematical model cannot easily be reverse-engineered from API outputs, whereas statutory patent filings mandate public technical disclosure and expire after twenty years",
+    "question": "Which intellectual property governance strategy <span class='qual-highlight'>BEST</span> aligns with management's confidentiality objective?",
+    "legaleseStem": "<span class='fluff-zone'>To preserve indefinite commercial exclusivity over proprietary internal algorithms without statutory public disclosure,</span> which intellectual property regime is <span class='qual-highlight'>MOST</span> suitable?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as public registration forfeits enduring secrecy over proprietary commercial formulas,</span> which protective regime is <span class='qual-highlight'>LEAST</span> detrimental to perpetual confidentiality?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DETRIMENTAL"
+        ],
+        "result": "BEST SUITED"
+      }
+    ],
+    "options": [
+      {
+        "text": "File utility patent applications across major jurisdictions to secure enforceable statutory monopoly rights.",
+        "isCorrect": false,
+        "tag": "Constraint Violation — Patents require public disclosure of how the model works and expire after a fixed term, directly violating indefinite confidentiality."
+      },
+      {
+        "text": "Register source-code copyright filings to prevent competitors from implementing equivalent mathematical models.",
+        "isCorrect": false,
+        "tag": "Scope Trap — Copyright protects the specific written expression of code, not the underlying mathematical idea or algorithm."
+      },
+      {
+        "text": "Maintain trade secret status backed by strict access controls, confidentiality covenants, and documented secrecy.",
+        "isCorrect": true,
+        "tag": "Correct — Trade secret protection lasts indefinitely without public filing, provided the organization enforces and documents reasonable administrative and technical secrecy safeguards."
+      },
+      {
+        "text": "Register international trademarks covering the pricing engine's commercial name and client API portal.",
+        "isCorrect": false,
+        "tag": "Wrong IP Type — Trademarks protect brand identifiers and commercial reputation, not confidential internal algorithms."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Trade secret governance protects confidential formulas indefinitely without public filing, provided the organization demonstrates reasonable efforts to maintain secrecy through NDAs, need-to-know access controls, and monitoring."
+  },
+  {
+    "id": "cat-d1-07",
+    "bank": "study",
+    "domainNum": 1,
+    "secondaryDomains": [
+      6,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Double Negatives",
+    "fluff": "An enterprise risk team has implemented all technically feasible mitigations on a revenue-critical legacy clearing portal, yet updated quantitative modeling confirms residual risk remains 20% above the Board's ratified risk appetite.",
+    "clue": "The CISO believes existing 24/7 SOC monitoring compensates well enough to launch next Monday without delaying quarterly earnings guidance",
+    "question": "Which governance action must the CISO take <span class='qual-highlight'>BEFORE</span> the portal launches?",
+    "legaleseStem": "<span class='fluff-zone'>When post-mitigation residual risk persists above Board-approved tolerance thresholds prior to production release,</span> which governance step must security <span class='qual-highlight'>NOT</span> bypass?",
+    "archaicStem": "<span class='fluff-zone'>Whereas residual exposure continues exceeding tolerances ratified by corporate governance,</span> which formal escalation step would it be <span class='qual-highlight'>LEAST</span> defensible to omit?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST DEFENSIBLE",
+          "TO OMIT"
+        ],
+        "result": "MANDATORY TO PERFORM"
+      }
+    ],
+    "options": [
+      {
+        "text": "Sign a formal security risk-acceptance waiver as CISO and schedule a ninety-day post-launch review.",
+        "isCorrect": false,
+        "tag": "Authority Trap — The CISO advises on risk and cannot unilaterally accept residual risk that exceeds Board-approved risk appetite."
+      },
+      {
+        "text": "Escalate the quantified excess residual exposure to senior executive leadership for formal risk decision.",
+        "isCorrect": true,
+        "tag": "Correct — Only accountable senior leadership or the Board-designated Risk Owner can formally accept, fund further mitigation for, or reject risk above corporate appetite."
+      },
+      {
+        "text": "Request internal audit to approve a temporary compliance exception covering the twenty-percent tolerance gap.",
+        "isCorrect": false,
+        "tag": "Independence Trap — Internal audit evaluates control effectiveness and must never approve exceptions or accept operational business risk."
+      },
+      {
+        "text": "Recalibrate the quantitative scoring weights so existing SOC monitoring falls within current risk appetite.",
+        "isCorrect": false,
+        "tag": "Integrity Trap — Manipulating risk scoring criteria to mask excess exposure violates professional ethics and misleads executive governance."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "When residual risk remains above established organizational appetite, security managers must escalate the quantified exposure to accountable senior leadership or the Board. Neither the CISO nor internal audit may unilaterally absorb excess business risk."
+  },
+  {
+    "id": "cat-d1-08",
+    "bank": "study",
+    "domainNum": 1,
+    "secondaryDomains": [
+      2,
+      6
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "A European retail bank contracts a U.S.-headquartered CRM SaaS provider to analyze EU customer churn behavior, and the SaaS provider subcontracts overnight support triage to an affiliate in a non-adequate jurisdiction.",
+    "clue": "The bank's marketing VP argues that signing the vendor's standard Data Processing Addendum transfers all GDPR cross-border compliance liability to the SaaS provider",
+    "question": "Which privacy governance principle <span class='qual-highlight'>MOST</span> accurately defines the bank's compliance accountability?",
+    "legaleseStem": "<span class='fluff-zone'>When an enterprise delegates customer analytics processing to an external SaaS provider utilizing offshore subprocessors,</span> which accountability rule does management <span class='qual-highlight'>NOT</span> extinguish through outsourcing?",
+    "archaicStem": "<span class='fluff-zone'>Notwithstanding contractual delegation of customer data handling to foreign subprocessors,</span> which fiduciary obligation shall the originating bank <span class='qual-highlight'>LEAST</span> shed?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "SHED"
+        ],
+        "result": "PERMANENTLY RETAINS"
+      }
+    ],
+    "options": [
+      {
+        "text": "Regulatory accountability transfers completely to the SaaS processor once standard contractual clauses are executed.",
+        "isCorrect": false,
+        "tag": "Outsourcing Myth Trap — Contracts allocate operational duties and indemnity, but never transfer ultimate statutory accountability away from the Data Controller."
+      },
+      {
+        "text": "The bank retains ultimate accountability as Data Controller for lawful transfers and subprocessor governance.",
+        "isCorrect": true,
+        "tag": "Correct — Under privacy governance frameworks, the Data Controller determines purpose and remains legally accountable for processor and subprocessor compliance."
+      },
+      {
+        "text": "Enforcing TLS 1.3 and AES-256 encryption exempts offshore support access from cross-border transfer rules.",
+        "isCorrect": false,
+        "tag": "Technical-Exemption Trap — Remote viewing of decrypted personal data by offshore support personnel still constitutes an international data transfer under GDPR."
+      },
+      {
+        "text": "Regulatory liability rests solely with the offshore affiliate because it performs live troubleshooting access.",
+        "isCorrect": false,
+        "tag": "Subprocessor Trap — Subprocessors hold processor obligations, but the originating bank still bears primary Data Controller oversight liability."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Organizations acting as Data Controllers can delegate technical processing to vendors and subprocessors, but can never outsource ultimate regulatory accountability. Lawful transfer mechanisms and subprocessor oversight remain the Controller's fiduciary duty."
+  },
+  {
+    "id": "cat-d1-09",
+    "bank": "study",
+    "domainNum": 1,
+    "secondaryDomains": [
+      3,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "During final pre-market verification of a connected insulin-pump telemetry gateway, a certified security architect uncovers an unauthenticated remote command flaw capable of altering patient dosage schedules.",
+    "clue": "The product VP directs the architect to omit the flaw from the regulatory readiness binder until after the quarterly launch to protect share price, promising a firmware patch within ninety days",
+    "question": "Which course of action <span class='qual-highlight'>MOST</span> faithfully upholds professional security ethics and governance hierarchy?",
+    "legaleseStem": "<span class='fluff-zone'>Confronted with an executive directive to conceal a safety-critical medical device vulnerability prior to public release,</span> which ethical mandate takes <span class='qual-highlight'>PRIMARY</span> precedence?",
+    "archaicStem": "<span class='fluff-zone'>Whereas commercial expediency conflicts directly with human safety in a connected medical appliance,</span> which ethical response must the practitioner <span class='qual-highlight'>LEAST</span> subordinate?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "SUBORDINATE"
+        ],
+        "result": "HIGHEST PRIORITY"
+      }
+    ],
+    "options": [
+      {
+        "text": "Follow the product VP's launch schedule while documenting the defect privately for post-release patching.",
+        "isCorrect": false,
+        "tag": "Canon Inversion Trap — Obeying a commercial directive that conceals a lethal defect violates Canon 1 (protect society and human life)."
+      },
+      {
+        "text": "Escalate the patient-safety defect through executive governance, Legal, and compliance to halt unsafe release.",
+        "isCorrect": true,
+        "tag": "Correct — Prioritizes human life safety (Canon 1) while acting honorably and responsibly (Canon 2) through formal internal governance and compliance escalation."
+      },
+      {
+        "text": "Publish full technical proof-of-concept exploit details online immediately to warn clinical users.",
+        "isCorrect": false,
+        "tag": "Reckless Disclosure Trap — Publishing a live exploit for a medical device before exhausting governance escalation endangers patients directly."
+      },
+      {
+        "text": "Resign immediately without notifying corporate compliance or senior leadership to preserve employer confidentiality.",
+        "isCorrect": false,
+        "tag": "Passive Avoidance Trap — Walking away silently leaves an unmitigated life-safety threat heading to patients, failing Canon 1."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "The ISC2 Code of Ethics establishes strict canon precedence: protecting society, the common good, and human life always outranks commercial interests or individual management directives. Responsible escalation through executive governance, Legal, and compliance protects patients without reckless public exploit release."
+  },
+  {
+    "id": "cat-d1-10",
+    "bank": "study",
+    "domainNum": 1,
+    "secondaryDomains": [
+      6
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "An enterprise information security policy currently embeds exact TLS cipher suites, firewall port tables, and OS registry hardening keys directly inside its Board-ratified corporate policy document.",
+    "clue": "Every time a vendor deprecates a cipher suite or upgrades an application port, engineering must wait up to four months for formal Board re-approval",
+    "question": "Which governance documentation redesign <span class='qual-highlight'>BEST</span> resolves this operational bottleneck without weakening enforceability?",
+    "legaleseStem": "<span class='fluff-zone'>Where volatile technical configurations are hard-coded inside high-level corporate policy causing chronic governance delays,</span> which document hierarchy fix is <span class='qual-highlight'>MOST</span> effective?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as embedding volatile technical syntax within senior policy paralyses routine updates,</span> which governance architecture is <span class='qual-highlight'>MOST</span> sound?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "MOST",
+          "SOUND"
+        ],
+        "result": "SEPARATE POLICY FROM STANDARDS"
+      }
+    ],
+    "options": [
+      {
+        "text": "Convert the entire corporate security policy into advisory guidelines maintained by infrastructure teams.",
+        "isCorrect": false,
+        "tag": "Enforceability Trap — Guidelines are discretionary; converting policy into guidelines destroys mandatory governance authority."
+      },
+      {
+        "text": "Keep high-level mandates in Board policy and move mandatory technical specifications into agile standards.",
+        "isCorrect": true,
+        "tag": "Correct — Policy stays technology-agnostic and stable at Board level, while mandatory standards and baselines update rapidly under CISO/governance oversight."
+      },
+      {
+        "text": "Schedule biweekly emergency Board committee sessions solely to ratify routine cipher and port updates.",
+        "isCorrect": false,
+        "tag": "Governance Misalignment — Boards oversee strategic risk and policy, not low-level cipher suites or firewall port lists."
+      },
+      {
+        "text": "Grant infrastructure leads direct edit rights to update Board policy whenever vendor defaults change.",
+        "isCorrect": false,
+        "tag": "Authority Trap — Bypassing executive approval on Board-level policy undermines separation of governance and operations."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Mature governance separates high-level, technology-agnostic executive policies from mandatory technical standards, baselines, and procedures. This hierarchy maintains formal enforceability while letting technical specifications evolve rapidly."
+  },
+  {
+    "id": "cat-d1-11",
+    "bank": "study",
+    "domainNum": 1,
+    "secondaryDomains": [
+      3,
+      8
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A defense logistics contractor procures ruggedized network switches for restricted warehouse operations through a regional gray-market reseller offering 35% discounts off manufacturer list pricing.",
+    "clue": "Threat intelligence warns of active nation-state supply-chain interdiction inserting counterfeit firmware chips into gray-market networking gear across the same shipping corridor",
+    "question": "Which supply-chain risk governance control <span class='qual-highlight'>BEST</span> counters hardware counterfeit and interdiction exposure?",
+    "legaleseStem": "<span class='fluff-zone'>When acquiring critical infrastructure hardware amid credible gray-market interdiction intelligence,</span> which procurement governance safeguard is <span class='qual-highlight'>MOST</span> effective?",
+    "archaicStem": "<span class='fluff-zone'>Whereas unvetted broker discounts heighten exposure to hardware interdiction and counterfeit implants,</span> which supply-chain control is <span class='qual-highlight'>LEAST</span> expendable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "EXPENDABLE"
+        ],
+        "result": "MOST ESSENTIAL"
+      }
+    ],
+    "options": [
+      {
+        "text": "Require the regional reseller to provide a two-year replacement warranty covering defective hardware modules.",
+        "isCorrect": false,
+        "tag": "Contract-Only Trap — A hardware warranty compensates for broken ports, not covert nation-state firmware implants."
+      },
+      {
+        "text": "Restrict procurement to authorized channels with tamper-evident chain of custody and firmware signature checks.",
+        "isCorrect": true,
+        "tag": "Correct — Preventive supply-chain governance combines vetted OEM/authorized distributors, chain-of-custody verification, and pre-deployment cryptographic integrity validation."
+      },
+      {
+        "text": "Perform authenticated network vulnerability scans against the switches thirty days after warehouse deployment.",
+        "isCorrect": false,
+        "tag": "Too-Late / Blind Trap — Post-deployment network scans rarely detect covert hardware or bootloader implants and occur after exposure."
+      },
+      {
+        "text": "Diversify purchases across three separate gray-market brokers to eliminate single-reseller availability risk.",
+        "isCorrect": false,
+        "tag": "Wrong Risk Trap — Multiplying unvetted gray-market sources actually expands counterfeit and interdiction exposure."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Hardware supply-chain risk management prevents counterfeit and interdiction threats upstream through authorized OEM procurement channels, tamper-evident chain of custody, and pre-deployment cryptographic firmware validation."
+  },
+  {
+    "id": "cat-d1-12",
+    "bank": "study",
+    "domainNum": 1,
+    "secondaryDomains": [
+      6
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Constraint Violation",
+    "fluff": "A logistics company launching a first-of-its-kind autonomous drone-delivery fleet needs an initial risk assessment within ten business days to prioritize Phase 1 engineering safeguards.",
+    "clue": "Because the operating model is unprecedented, no actuarial loss history, historical breach frequencies, or reliable asset-depreciation tables exist yet",
+    "question": "Which risk-assessment methodology <span class='qual-highlight'>BEST</span> fits the available data and schedule constraints?",
+    "legaleseStem": "<span class='fluff-zone'>When rapid risk prioritization is mandated for an unprecedented operational platform lacking historical loss statistics,</span> which evaluation methodology is <span class='qual-highlight'>MOST</span> appropriate?",
+    "archaicStem": "<span class='fluff-zone'>Absent empirical loss history or actuarial frequency records within a ten-day window,</span> which risk evaluation method is <span class='qual-highlight'>LEAST</span> impractical?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "IMPRACTICAL"
+        ],
+        "result": "MOST PRACTICAL"
+      }
+    ],
+    "options": [
+      {
+        "text": "Run a purely quantitative Monte Carlo model by estimating exact monetary values for every threat.",
+        "isCorrect": false,
+        "tag": "False-Precision Trap — Inventing precise financial inputs without actuarial history produces misleading metrics and misses the ten-day deadline."
+      },
+      {
+        "text": "Conduct a structured qualitative workshop using expert consensus scales to rank key threat scenarios.",
+        "isCorrect": true,
+        "tag": "Correct — Qualitative risk analysis is rapid, engages cross-functional experts, and excels when reliable historical monetary data does not yet exist."
+      },
+      {
+        "text": "Defer formal risk assessment for twelve months until live drone operational loss statistics accumulate.",
+        "isCorrect": false,
+        "tag": "Delayed-Security Trap — Launching a safety-critical drone platform without upfront risk prioritization violates basic due care."
+      },
+      {
+        "text": "Adopt an unrelated commercial banking institution's historical ALE tables to score drone engineering safeguards.",
+        "isCorrect": false,
+        "tag": "Invalid-Data Trap — Banking actuarial frequencies do not translate to physical aviation and autonomous telemetry risks."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Qualitative risk assessment is the proper tool when historical financial data is scarce and rapid stakeholder prioritization is required. Fabricating monetary figures without credible inputs yields false precision rather than actionable governance."
+  },
+  {
+    "id": "cat-d1-13",
+    "bank": "study",
+    "domainNum": 1,
+    "secondaryDomains": [
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "double",
+    "trapType": "Double Negatives",
+    "fluff": "To cut security operating expenses by 30%, a Chief Financial Officer proposes canceling endpoint detection and response (EDR) licenses while doubling the enterprise cyber liability insurance limit.",
+    "clue": "The policy carries a strict 'reasonable baseline security controls' warranty clause and excludes regulatory fines, intellectual property theft, and long-term customer churn",
+    "question": "Which risk-governance reality <span class='qual-highlight'>MOST</span> directly refutes substituting insurance for baseline safeguards?",
+    "legaleseStem": "<span class='fluff-zone'>When executive finance proposes substituting expanded cyber indemnity limits for foundational security safeguards,</span> which risk-transference limitation is <span class='qual-highlight'>PRIMARY</span>?",
+    "archaicStem": "<span class='fluff-zone'>Whereas indemnity policies neither avert operational disruption nor survive breached control warranties,</span> which risk principle must leadership <span class='qual-highlight'>NOT</span> overlook?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "OVERLOOK"
+        ],
+        "result": "MUST RECOGNIZE"
+      }
+    ],
+    "options": [
+      {
+        "text": "Insurance offsets bounded financial loss but never transfers operational impact, legal accountability, or warranty duties.",
+        "isCorrect": true,
+        "tag": "Correct — Risk transference shifts only specified monetary costs; dropping baseline safeguards leaves operational/reputational harm intact and can void coverage under policy warranties."
+      },
+      {
+        "text": "Cyber insurance contracts legally prohibit carriers from reimbursing third-party incident-response retainers.",
+        "isCorrect": false,
+        "tag": "Factual Error — Most cyber policies explicitly cover approved third-party forensic and incident-response expenses."
+      },
+      {
+        "text": "Doubling policy coverage limits mathematically raises the organization's quantitative Annualized Rate of Occurrence.",
+        "isCorrect": false,
+        "tag": "Metric Confusion — Coverage limits do not directly change threat frequency (ARO), though removing EDR increases actual exposure."
+      },
+      {
+        "text": "Risk transference requires external insurers to assume operational command over corporate security incident triage.",
+        "isCorrect": false,
+        "tag": "Role Confusion — Insurers may recommend panel vendors, but operational governance and command remain with the organization."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Risk transference mitigates bounded financial impact only—never fiduciary accountability, operational outage, reputational erosion, or baseline due-care duties. Removing foundational controls like EDR can also void policy coverage under insurer warranty clauses."
+  },
+  {
+    "id": "cat-d1-14",
+    "bank": "study",
+    "domainNum": 1,
+    "secondaryDomains": [
+      6
+    ],
+    "difficulty": 3,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "Annual compliance dashboards report 99.4% employee completion of the company's generic thirty-minute security awareness video across all 8,000 personnel.",
+    "clue": "Despite near-perfect completion metrics, finance clerks fell for two business email compromise wire-transfer schemes and developers committed hardcoded API secrets to public repositories",
+    "question": "Which security awareness program upgrade <span class='qual-highlight'>BEST</span> shifts from compliance check-boxing to measurable risk reduction?",
+    "legaleseStem": "<span class='fluff-zone'>Where high generic training completion metrics fail to curb role-specific human errors in finance and engineering,</span> which program refinement is <span class='qual-highlight'>MOST</span> impactful?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as uniform annual videos yield vanity completion scores without altering high-risk behavior,</span> which programmatic reform is <span class='qual-highlight'>PRIMARY</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "REFORM"
+        ],
+        "result": "ROLE-BASED TRAINING & BEHAVIORAL METRICS"
+      }
+    ],
+    "options": [
+      {
+        "text": "Lengthen the annual generic compliance video to ninety minutes and raise the final quiz score.",
+        "isCorrect": false,
+        "tag": "Vanity-Metric Trap — Making a generic video longer increases employee fatigue without addressing specialized finance or developer threat workflows."
+      },
+      {
+        "text": "Deliver role-specific training for high-risk functions and track behavioral metrics alongside technical guardrails.",
+        "isCorrect": true,
+        "tag": "Correct — Combines targeted role-based training (BEC verification for finance, secrets hygiene for devs), outcome-based behavioral metrics, and preventive guardrails."
+      },
+      {
+        "text": "Reallocate the entire security awareness budget exclusively into automated email and repository scanning tools.",
+        "isCorrect": false,
+        "tag": "Technical-Only Trap — Technical filters are essential but cannot replace human risk judgment or satisfy regulatory awareness mandates."
+      },
+      {
+        "text": "Publish monthly internal leaderboards identifying employees who fail simulated phishing tests by name.",
+        "isCorrect": false,
+        "tag": "Culture Trap — Public shaming erodes security culture and discourages prompt incident reporting when real mistakes happen."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Mature human-risk programs distinguish broad awareness from role-specific practical training, measuring real behavioral change (e.g., reporting rates, secret-commit reductions) paired with preventive guardrails rather than chasing completion percentages."
+  },
+  {
+    "id": "cat-d1-15",
+    "bank": "study",
+    "domainNum": 1,
+    "secondaryDomains": [
+      6
+    ],
+    "difficulty": 4,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A regional healthcare network passes its annual regulatory compliance audit with zero findings, prompting executive finance leaders to freeze all additional cybersecurity investments for the next two years.",
+    "clue": "Current threat intelligence shows ransomware affiliates actively exploiting unsegmented medical IoT infusion pumps that sit outside the narrow compliance audit scope",
+    "question": "Which executive advisory framing <span class='qual-highlight'>BEST</span> explains why compliance alone is insufficient for risk management?",
+    "legaleseStem": "<span class='fluff-zone'>When leadership equates a clean point-in-time regulatory audit with comprehensive enterprise threat resilience,</span> which governance principle is <span class='qual-highlight'>MOST</span> critical to clarify?",
+    "archaicStem": "<span class='fluff-zone'>Whereas point-in-time statutory attestation measures only minimum scoped mandates rather than evolving adversary exposure,</span> which governance truth is <span class='qual-highlight'>PRIMARY</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "TRUTH"
+        ],
+        "result": "COMPLIANCE IS A BASELINE, NOT RISK RESILIENCE"
+      }
+    ],
+    "options": [
+      {
+        "text": "Compliance establishes a point-in-time legal baseline rather than dynamic, threat-informed enterprise risk management.",
+        "isCorrect": true,
+        "tag": "Correct — Clearly communicates why passing a narrow periodic audit does not protect out-of-scope, patient-safety-critical systems from live ransomware."
+      },
+      {
+        "text": "Passing an external regulatory audit satisfies due care only when paired with semi-annual vulnerability scanning.",
+        "isCorrect": false,
+        "tag": "Incomplete Trap — Scanning alone does not fix architectural exposure on unsegmented medical IoT or replace risk-driven governance."
+      },
+      {
+        "text": "Security programs should deprioritize statutory compliance frameworks entirely to focus strictly on active threat hunting.",
+        "isCorrect": false,
+        "tag": "False-Dichotomy Trap — Compliance is still mandatory; sound governance treats compliance as a byproduct of strong risk management, not its opposite."
+      },
+      {
+        "text": "Medical IoT devices excluded from the annual audit scope require mitigation only after regulators expand scope.",
+        "isCorrect": false,
+        "tag": "Compliance-Mindset Trap — Waiting for regulations to catch up while patient-safety devices face active threats violates both risk governance and ethics."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Compliance represents a minimum, periodic legal floor that often lags behind evolving threats and omits critical adjacent assets. Effective security leadership aligns investment to continuous business and safety risk rather than audit checklists alone."
+  },
+  {
+    "id": "cat-d1-16",
+    "bank": "study",
+    "domainNum": 1,
+    "secondaryDomains": [
+      5,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "At a mid-sized credit union, one veteran treasury specialist has held sole responsibility for adding new wire beneficiaries, approving international transfers, and reconciling monthly bank statements for nine consecutive years without taking extended leave.",
+    "clue": "Due to a hiring freeze, the operations director states that adding two new full-time treasury positions is not financially possible this fiscal year",
+    "question": "Which governance control combination <span class='qual-highlight'>BEST</span> mitigates insider fraud risk within staffing constraints?",
+    "legaleseStem": "<span class='fluff-zone'>Where a single trusted treasury employee exercises end-to-end financial authority without relief amid tight headcount budgets,</span> which administrative safeguard pair is <span class='qual-highlight'>MOST</span> effective?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as undivided custody over initiation, approval, and reconciliation conceals prolonged malfeasance,</span> which administrative pairing is <span class='qual-highlight'>LEAST</span> dispensable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DISPENSABLE"
+        ],
+        "result": "MOST ESSENTIAL"
+      }
+    ],
+    "options": [
+      {
+        "text": "Require the specialist to sign an annual conflict-of-interest attestation reviewed by Human Resources.",
+        "isCorrect": false,
+        "tag": "Paper-Control Trap — Annual self-attestations neither prevent nor detect concealed fraud by a single insider controlling reconciliation."
+      },
+      {
+        "text": "Enforce cross-trained separation of duties for approval and reconciliation paired with mandatory vacations.",
+        "isCorrect": true,
+        "tag": "Correct — Cross-training existing finance staff achieves separation of duties without new hires, while mandatory consecutive leave exposes concealed anomalies."
+      },
+      {
+        "text": "Deploy hardware FIDO2 authentication tokens and screen-recording software on the treasury workstation.",
+        "isCorrect": false,
+        "tag": "Technical-Fix Trap — Strong MFA confirms the right person logged in, but does not stop an authorized insider from abusing unchecked end-to-end authority."
+      },
+      {
+        "text": "Conduct periodic credit and criminal background re-screenings while preserving the specialist's current workflow.",
+        "isCorrect": false,
+        "tag": "Weak-Compensating Trap — Periodic re-screening is helpful hygiene but leaves structural single-actor fraud completely unobstructed."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Separation of duties stops any single person from initiating, approving, and reconciling a sensitive transaction end-to-end—and can be achieved via cross-training existing staff during hiring freezes—while mandatory vacations force independent review that uncovers hidden fraud."
+  },
+  {
+    "id": "cat-d1-17",
+    "bank": "study",
+    "domainNum": 1,
+    "secondaryDomains": [
+      2,
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Process Chronology",
+    "fluff": "Two competing airlines launch a joint-venture loyalty platform hosted in a shared multi-cloud environment co-managed by both carriers' IT teams and a third-party systems integrator.",
+    "clue": "During a pre-launch account-takeover drill, containment stalls for four hours because neither carrier knows who holds authority to revoke partner API keys or notify aviation regulators",
+    "question": "Which governance artifact <span class='qual-highlight'>BEST</span> resolves multi-party decision paralysis prior to production launch?",
+    "legaleseStem": "<span class='fluff-zone'>When shared infrastructure across joint-venture partners exhibits ambiguous operational authority during crisis escalation,</span> which governance agreement is <span class='qual-highlight'>PRIMARY</span>?",
+    "archaicStem": "<span class='fluff-zone'>Ere multi-party operations commence across co-managed cloud enclaves without clear escalation authority,</span> which governance instrument must partners <span class='qual-highlight'>NOT</span> omit?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "OMIT"
+        ],
+        "result": "MANDATORY"
+      }
+    ],
+    "options": [
+      {
+        "text": "Deploy a unified SIEM dashboard forwarding raw cloud audit logs to both airlines' SOC teams.",
+        "isCorrect": false,
+        "tag": "Technical-Fix Trap — Shared visibility does not clarify who has legal and operational authority to suspend partner keys or notify regulators."
+      },
+      {
+        "text": "Ratify a joint Shared Responsibility Matrix and RACI charter defining authority, escalation, and reporting.",
+        "isCorrect": true,
+        "tag": "Correct — Explicitly assigns single-point accountability for containment actions, API revocation, and statutory notification across all three parties before go-live."
+      },
+      {
+        "text": "Standardize identical background-check and security-clearance criteria across the third-party integrator's engineering staff.",
+        "isCorrect": false,
+        "tag": "Off-Target Control — Personnel vetting improves trust in staff, but does not resolve cross-company crisis decision authority."
+      },
+      {
+        "text": "Execute a mutual Non-Disclosure Agreement covering loyalty-program telemetry exchanged during joint security drills.",
+        "isCorrect": false,
+        "tag": "Wrong Agreement — An NDA protects confidentiality of shared data, not operational incident-response roles or regulatory authority."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Multi-party cloud ecosystems require a ratified Shared Responsibility Matrix and RACI charter (paired with an ISA/MOU) establishing unambiguous decision authority, escalation paths, and regulatory notification ownership prior to production launch."
+  },
+  {
+    "id": "cat-d1-18",
+    "bank": "study",
+    "domainNum": 1,
+    "secondaryDomains": [
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "A Business Impact Analysis establishes a Maximum Tolerable Downtime (MTD) of 8 hours for an e-commerce checkout platform whose mandatory upstream identity-validation microservice is currently assigned a 12-hour RTO.",
+    "clue": "The checkout application cannot process any customer orders while the identity-validation microservice remains offline, and Work Recovery Time (WRT) for checkout validation takes 2 hours",
+    "question": "Which continuity-planning adjustment is <span class='qual-highlight'>MOST</span> necessary to align technical recovery with business survival?",
+    "legaleseStem": "<span class='fluff-zone'>Where a mandatory upstream dependency possesses a longer recovery time objective than the maximum tolerable downtime of the supported revenue service,</span> which planning correction is <span class='qual-highlight'>PRIMARY</span>?",
+    "archaicStem": "<span class='fluff-zone'>Whereas an upstream dependency's twelve-hour recovery exceeds the supported platform's eight-hour survival threshold,</span> which continuity alignment is <span class='qual-highlight'>LEAST</span> deferrable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DEFERRABLE"
+        ],
+        "result": "HIGHEST PRIORITY"
+      }
+    ],
+    "options": [
+      {
+        "text": "Retain the 12-hour microservice RTO because checkout web servers already restore within four hours.",
+        "isCorrect": false,
+        "tag": "Dependency Blindness — Checkout cannot operate without identity validation, so the effective service downtime becomes 12h + 2h WRT = 14h, breaching the 8h MTD."
+      },
+      {
+        "text": "Align the upstream dependency's RTO and combined WRT strictly below the checkout platform's 8-hour MTD.",
+        "isCorrect": true,
+        "tag": "Correct — Every mandatory upstream dependency must meet RTO + WRT <= MTD (here, identity-validation RTO must drop to <= 6 hours to fit 2h WRT inside 8h MTD)."
+      },
+      {
+        "text": "Revise the checkout platform's documented MTD upward to 16 hours to match current infrastructure limits.",
+        "isCorrect": false,
+        "tag": "Tail-Wags-Dog Trap — MTD reflects business survival determined by business owners in the BIA; IT cannot arbitrarily inflate MTD to hide technical gaps."
+      },
+      {
+        "text": "Shorten database backup RPO intervals to five minutes while leaving microservice restoration times unchanged.",
+        "isCorrect": false,
+        "tag": "RPO vs. RTO Trap — RPO limits acceptable data loss, not downtime duration; a 12-hour recovery still violates the 8-hour MTD."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Continuity architecture must enforce RTO + WRT <= MTD across the entire dependency chain. A critical business process is only as resilient as its slowest mandatory upstream service."
+  },
+  {
+    "id": "cat-d1-19",
+    "bank": "study",
+    "domainNum": 1,
+    "secondaryDomains": [
+      7
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Process Chronology",
+    "fluff": "Twelve hours into investigating a suspected database intrusion affecting European and U.S. state residents, the SOC lead uncovers preliminary indicators of unauthorized exfiltration across encrypted and unencrypted customer tables.",
+    "clue": "Believing transparency builds trust, the SOC lead proposes emailing preliminary technical findings directly to the state attorney general and affected customers within the hour",
+    "question": "Which governance protocol should the security manager enforce <span class='qual-highlight'>BEFORE</span> external breach disclosures occur?",
+    "legaleseStem": "<span class='fluff-zone'>Upon uncovering preliminary evidence of regulated personal data exfiltration across multiple statutory jurisdictions,</span> which external-communication step is <span class='qual-highlight'>FIRST</span> required?",
+    "archaicStem": "<span class='fluff-zone'>Ere unverified incident conjectures be broadcast to regulators or public stakeholders,</span> which governance coordination step must responders <span class='qual-highlight'>NOT</span> bypass?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "BYPASS"
+        ],
+        "result": "MUST EXECUTE FIRST"
+      }
+    ],
+    "options": [
+      {
+        "text": "Send preliminary notices from the SOC inbox immediately to start documenting good-faith regulatory transparency.",
+        "isCorrect": false,
+        "tag": "Authority & Liability Trap — Premature, unverified technical disclosures from the SOC risk inaccurate statements, waive privilege, and violate legal reporting protocols."
+      },
+      {
+        "text": "Engage Legal Counsel and executive leadership to validate scope, statutory clocks, and privileged messaging.",
+        "isCorrect": true,
+        "tag": "Correct — External notification is a legal and executive governance decision governed by jurisdictional clocks, encryption safe harbors, and attorney-client privilege."
+      },
+      {
+        "text": "Withhold internal escalation to Legal until forensic analysts finish a thirty-day malware reverse-engineering report.",
+        "isCorrect": false,
+        "tag": "Statutory-Clock Trap — Waiting thirty days blows past tight notification windows like GDPR's 72-hour requirement and deprives Counsel of early privilege."
+      },
+      {
+        "text": "Publish a brief status update on the corporate trust page while continuing technical containment.",
+        "isCorrect": false,
+        "tag": "Premature-Publicity Trap — Unapproved public statements before Legal and Communications align can trigger unnecessary panic and legal exposure."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "External breach notification requires immediate internal escalation to Legal Counsel and executive leadership so verified scope, encryption safe harbors, jurisdictional statutory clocks, and attorney-client privilege are governed accurately."
+  },
+  {
+    "id": "cat-d1-20",
+    "bank": "study",
+    "domainNum": 1,
+    "secondaryDomains": [
+      6
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "During an annual governance review, auditors uncover 47 open security policy exceptions granted over the past four years—many tied to retired applications or approved verbally by managers who have since left the firm.",
+    "clue": "Business unit leaders resist revoking legacy waivers because no central register tracks expiration dates, compensating controls, or current executive sign-off",
+    "question": "Which exception-management governance reform <span class='qual-highlight'>BEST</span> prevents temporary waivers from becoming permanent vulnerabilities?",
+    "legaleseStem": "<span class='fluff-zone'>When historical policy waivers accumulate indefinitely without active ownership or expiration tracking,</span> which governance lifecycle control is <span class='qual-highlight'>MOST</span> essential?",
+    "archaicStem": "<span class='fluff-zone'>Whereas unmonitored waivers petrify into permanent systemic exposures across departing leadership,</span> which governance safeguard is <span class='qual-highlight'>LEAST</span> expendable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "EXPENDABLE"
+        ],
+        "result": "MOST ESSENTIAL"
+      }
+    ],
+    "options": [
+      {
+        "text": "Prohibit all security policy exceptions enterprise-wide to eliminate unmonitored compliance drift permanently.",
+        "isCorrect": false,
+        "tag": "Rigidity Trap — Zero-exception policies ignore legitimate business and legacy constraints, driving teams to hide non-compliance instead of managing risk transparently."
+      },
+      {
+        "text": "Maintain a centralized exception register enforcing time-bound expirations, compensating controls, and periodic re-approval.",
+        "isCorrect": true,
+        "tag": "Correct — Formalizes risk exceptions with named Risk Owners, compensating safeguards, fixed expiration dates, and mandatory periodic review or retirement."
+      },
+      {
+        "text": "Delegate authority for renewing legacy policy waivers directly to application delivery project managers.",
+        "isCorrect": false,
+        "tag": "Authority Trap — Project managers optimize for delivery schedules and lack fiduciary risk-owner authority to accept enterprise policy exceptions."
+      },
+      {
+        "text": "Auto-renew existing exceptions annually unless an external penetration test exploits the waived control.",
+        "isCorrect": false,
+        "tag": "Reactive Trap — Auto-renewal turns temporary waivers into permanent blind spots until a breach or exploit occurs."
+      }
+    ],
+    "answerKey": "auto-graded",
+    "conceptMechanism": "Policy exceptions are a normal part of business-aligned risk governance, but must live inside a centralized register with documented compensating controls, accountable Risk Owner sign-off, strict expiration dates, and mandatory periodic re-evaluation."
+  }
+]

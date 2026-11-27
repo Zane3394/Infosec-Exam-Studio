@@ -1,0 +1,915 @@
+[
+  {
+    "id": "cat-d7-01",
+    "bank": "study",
+    "domainNum": 7,
+    "secondaryDomains": [
+      1
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Process Chronology",
+    "fluff": "During a live ransomware outbreak across a regional hospital network, incident responders confirm active lateral encryption spreading from a compromised administrative jump server.",
+    "clue": "The clinical IT director urges responders to wipe and rebuild the jump server immediately to restore maintenance access, while Legal anticipates regulatory and law-enforcement inquiries",
+    "question": "Which incident-response action <span class='qual-highlight'>BEST</span> balances rapid harm reduction with forensic preservation?",
+    "legaleseStem": "<span class='fluff-zone'>When managing active ransomware propagation alongside anticipated legal proceedings,</span> which response step must precede eradication and system rebuilding?",
+    "archaicStem": "<span class='fluff-zone'>Ere compromised hosts be wiped for restoration amid ongoing propagation and pending legal scrutiny,</span> which response action must leadership <span class='qual-highlight'>NOT</span> bypass?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "BYPASS"
+        ],
+        "result": "CONTAIN & PRESERVE FIRST"
+      }
+    ],
+    "options": [
+      {
+        "text": "Wipe and reimage the jump server immediately to halt encryption and resume clinical maintenance.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Isolate affected hosts from the network while capturing volatile memory and preserving forensic artifacts.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Leave the jump server connected temporarily to observe attacker tactics and gather threat attribution.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Notify external media and affected patients immediately before confirming containment or breach scope.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Incident response follows strict chronology: containment stops ongoing damage while preserving volatile memory and disk evidence before eradication and recovery. Premature wiping destroys root-cause and legal evidence, whereas delayed containment widens operational harm."
+  },
+  {
+    "id": "cat-d7-02",
+    "bank": "study",
+    "domainNum": 7,
+    "secondaryDomains": [
+      1,
+      6
+    ],
+    "difficulty": 4,
+    "lengthTier": "double",
+    "trapType": "Constraint Violation",
+    "fluff": "A financial institution schedules its annual disaster recovery exercise for a real-time payment settlement platform carrying a two-hour Recovery Time Objective.",
+    "clue": "Executive leadership strictly prohibits any unplanned outage or live transaction disruption during testing, yet wants stronger technical validation than a conference-room walkthrough",
+    "question": "Which disaster recovery test type <span class='qual-highlight'>BEST</span> satisfies both technical-validation and zero-disruption constraints?",
+    "legaleseStem": "<span class='fluff-zone'>When validating failover readiness for a critical transaction platform under strict zero-outage constraints,</span> which DR exercise type is <span class='qual-highlight'>MOST</span> appropriate?",
+    "archaicStem": "<span class='fluff-zone'>Whereas conference-room reviews leave failover untested and full cutover imperils live transactions,</span> which DR exercise is <span class='qual-highlight'>LEAST</span> contrary to both goals?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "CONTRARY TO"
+        ],
+        "result": "MOST ALIGNED"
+      }
+    ],
+    "options": [
+      {
+        "text": "Execute a full-interruption test shutting down primary production servers during peak settlement hours.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Conduct a parallel test running mirrored workloads at the alternate site alongside active production.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Perform a checklist review confirming backup tapes and contact rosters exist in binders.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Run a tabletop discussion walking department heads verbally through a simulated regional outage.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Disaster recovery tests progress from checklist and tabletop reviews through simulation, parallel, and full-interruption exercises. Parallel testing validates live alternate-site processing and output parity without disrupting primary production operations."
+  },
+  {
+    "id": "cat-d7-03",
+    "bank": "study",
+    "domainNum": 7,
+    "secondaryDomains": [
+      1,
+      8
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Process Chronology",
+    "fluff": "At 02:00 on a Saturday, a critical zero-day vulnerability with active public exploitation is disclosed affecting an internet-facing customer billing appliance.",
+    "clue": "Standard Change Advisory Board meetings convene on Wednesdays, and an on-call engineer proposes pushing an untested hotfix directly to production without logging a ticket",
+    "question": "Which change-management governance action <span class='qual-highlight'>BEST</span> addresses this urgent security exposure?",
+    "legaleseStem": "<span class='fluff-zone'>When remediating an actively exploited zero-day vulnerability outside regular maintenance windows,</span> which change-control workflow <span class='qual-highlight'>BEST</span> preserves speed and accountability?",
+    "archaicStem": "<span class='fluff-zone'>Notwithstanding urgent exploitation precluding standard weekly review cycles,</span> which change-governance discipline must operations <span class='qual-highlight'>NOT</span> abandon?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "ABANDON"
+        ],
+        "result": "MUST ENFORCE"
+      }
+    ],
+    "options": [
+      {
+        "text": "Wait until Wednesday's standard Change Advisory Board cycle to avoid introducing unauthorized configuration drift.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Invoke the Emergency CAB process with rapid staging validation, rollback plan, and post-change audit.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Push the patch directly to production undocumented and reconcile tickets during Monday morning review.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Disable external billing access indefinitely without executive approval until full regression testing finishes.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Emergency change management accelerates approval for urgent security patches without discarding governance. Rapid risk sign-off, minimal staging validation, documented rollback procedures, and retrospective auditing preserve both stability and compliance."
+  },
+  {
+    "id": "cat-d7-04",
+    "bank": "study",
+    "domainNum": 7,
+    "secondaryDomains": [
+      2,
+      3
+    ],
+    "difficulty": 4,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A logistics enterprise suffers a ransomware intrusion where attackers compromise Domain Administrator credentials and erase all online network-attached backup vaults before encrypting production hosts.",
+    "clue": "Executive leadership demands a backup architecture redesign that guarantees clean recovery copies even if enterprise Active Directory is completely compromised",
+    "question": "Which backup governance architecture <span class='qual-highlight'>MOST</span> reliably preserves recoverability against domain-admin takeover?",
+    "legaleseStem": "<span class='fluff-zone'>To safeguard enterprise recovery-point integrity when adversaries obtain full corporate administrative privileges,</span> which backup architecture is <span class='qual-highlight'>PRIMARY</span>?",
+    "archaicStem": "<span class='fluff-zone'>Whereas online domain-joined backup vaults fall swiftly to compromised enterprise administrators,</span> which recovery safeguard is <span class='qual-highlight'>LEAST</span> dispensable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DISPENSABLE"
+        ],
+        "result": "MOST ESSENTIAL"
+      }
+    ],
+    "options": [
+      {
+        "text": "Increase snapshot frequency on the existing Active Directory-joined SAN storage array to hourly intervals.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Maintain immutable, air-gapped backups using isolated non-domain credentials with periodic restore testing.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Replicate encrypted backups continuously across two corporate data centers sharing identical admin accounts.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Store uncompressed daily database exports on a hidden internal file share restricted to IT.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Ransomware-resilient backups require write-once immutability, physical or logical air-gapping, and separate authentication planes independent of corporate directories. Routine restoration testing confirms recoverability before a crisis occurs."
+  },
+  {
+    "id": "cat-d7-05",
+    "bank": "study",
+    "domainNum": 7,
+    "secondaryDomains": [
+      1,
+      6
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Process Chronology",
+    "fluff": "Following containment and full service restoration from a major credential-stuffing breach, executive leadership asks the incident commander to close the incident file so teams can resume product delivery.",
+    "clue": "Several cross-team escalation delays, missing firewall telemetry blind spots, and outdated playbook contacts surfaced during the response",
+    "question": "Which closing incident-response phase is <span class='qual-highlight'>MOST</span> critical before formally retiring the incident?",
+    "legaleseStem": "<span class='fluff-zone'>Once operational restoration is verified following a material security incident exposing response bottlenecks,</span> which closing lifecycle step must leadership <span class='qual-highlight'>NOT</span> omit?",
+    "archaicStem": "<span class='fluff-zone'>Ere an incident file be closed after service restoration despite observed escalation flaws,</span> which final governance discipline is <span class='qual-highlight'>LEAST</span> expendable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "EXPENDABLE"
+        ],
+        "result": "MOST ESSENTIAL"
+      }
+    ],
+    "options": [
+      {
+        "text": "Archive all collected forensic disk images immediately and delete temporary incident chat channels.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Conduct a blameless post-incident lessons-learned review to update playbooks, controls, and training gaps.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Issue formal disciplinary warnings to analysts who experienced escalation delays during initial triage.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Purchase additional perimeter monitoring appliances before reviewing why existing alerts were missed.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "The lessons-learned phase converts operational crisis findings into lasting maturity by updating playbooks, closing telemetry gaps, and refining escalation paths. Blameless reviews foster candid root-cause reporting rather than defensive concealment."
+  },
+  {
+    "id": "cat-d7-06",
+    "bank": "study",
+    "domainNum": 7,
+    "secondaryDomains": [
+      2
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Process Chronology",
+    "fluff": "Forensic responders arrive at a live, powered-on financial trading server suspected of hosting fileless in-memory malware and active outbound command-and-control sockets.",
+    "clue": "Legal Counsel expects criminal prosecution and requires strict adherence to forensic evidence-collection order so ephemeral runtime artifacts are not lost",
+    "question": "Which evidence artifact should responders acquire <span class='qual-highlight'>FIRST</span> according to the order of volatility?",
+    "legaleseStem": "<span class='fluff-zone'>When executing forensic acquisition on a live compromised host destined for evidentiary proceedings,</span> which data source must be captured <span class='qual-highlight'>FIRST</span>?",
+    "archaicStem": "<span class='fluff-zone'>Ere transient runtime artifacts vanish upon system state changes during live forensics,</span> which evidentiary layer shall responders capture <span class='qual-highlight'>FIRST</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "CAPTURE",
+          "FIRST"
+        ],
+        "result": "MOST VOLATILE FIRST"
+      }
+    ],
+    "options": [
+      {
+        "text": "Offline archival backup tapes stored inside the secondary regional vault facility.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "System memory (RAM), active network connections, and running process tables on the live host.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Physical hard-drive bit-stream images captured after powering down the server chassis.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Printed server-room visitor sign-in sheets and badge access logs from last month.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Forensic acquisition follows the order of volatility (RFC 3227), capturing the most ephemeral data first—CPU/cache, RAM, active network sockets, and running processes—before imaging persistent disks or reviewing archival backups."
+  },
+  {
+    "id": "cat-d7-07",
+    "bank": "study",
+    "domainNum": 7,
+    "secondaryDomains": [
+      2,
+      1
+    ],
+    "difficulty": 4,
+    "lengthTier": "double",
+    "trapType": "Constraint Violation",
+    "fluff": "An internal investigator seizes a departed employee's corporate laptop suspected of intellectual property theft and prepares to examine its solid-state storage for potential civil litigation.",
+    "clue": "Opposing counsel will challenge any digital evidence if original drive metadata was altered during examination or if custody transfers lack unbroken documentation",
+    "question": "Which forensic handling procedure <span class='qual-highlight'>BEST</span> preserves evidentiary integrity and admissibility?",
+    "legaleseStem": "<span class='fluff-zone'>To withstand judicial scrutiny regarding tampering or metadata modification during digital media examination,</span> which forensic workflow is <span class='qual-highlight'>PRIMARY</span>?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as booting or writing upon seized original media taints courtroom admissibility,</span> which forensic safeguard must investigators <span class='qual-highlight'>NOT</span> omit?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "OMIT"
+        ],
+        "result": "MANDATORY FORENSIC WORKFLOW"
+      }
+    ],
+    "options": [
+      {
+        "text": "Boot the seized laptop normally to copy suspect folders onto an investigator's USB drive.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Create a bit-stream image via hardware write-blocker, verify cryptographic hashes, and log custody.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Run an enterprise antivirus scan across the original drive to remove any hidden malware first.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Email compressed copies of suspicious files directly to Legal before securing the physical laptop.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Forensic integrity requires capturing a bit-stream image through a hardware write-blocker, validating cryptographic hashes (SHA-256) against the original media, performing all analysis on working copies, and maintaining an unbroken chain of custody."
+  },
+  {
+    "id": "cat-d7-08",
+    "bank": "study",
+    "domainNum": 7,
+    "secondaryDomains": [
+      1
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "A sudden severe earthquake damages a primary corporate headquarters building housing both 400 on-site staff and the main regional server room.",
+    "clue": "Automated monitoring shows critical revenue applications going offline while building smoke alarms and structural evacuation sirens activate simultaneously",
+    "question": "Which disaster-recovery action takes <span class='qual-highlight'>HIGHEST</span> immediate priority during the initial response?",
+    "legaleseStem": "<span class='fluff-zone'>Upon concurrent physical structural alarms and critical data-center service failure during a natural disaster,</span> which response objective takes <span class='qual-highlight'>PRIMARY</span> precedence?",
+    "archaicStem": "<span class='fluff-zone'>Notwithstanding rapid revenue attrition from failing core servers during a structural emergency,</span> which operational duty shall leadership <span class='qual-highlight'>LEAST</span> subordinate?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "SUBORDINATE"
+        ],
+        "result": "HIGHEST PRIORITY"
+      }
+    ],
+    "options": [
+      {
+        "text": "Enter the server room immediately to unmount and carry out unbacked-up storage drives.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Execute personnel evacuation, emergency life-safety protocols, and employee muster accountability first.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Initiate remote DNS failover to the alternate disaster-recovery site before accounting for staff.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Notify external cloud insurers and regulatory liaisons to document the initial outage timestamp.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Personnel safety and life preservation always take absolute precedence over hardware salvage, data recovery, or IT failover in disaster recovery operations. Technical continuity steps begin only after staff evacuation and accountability are assured."
+  },
+  {
+    "id": "cat-d7-09",
+    "bank": "study",
+    "domainNum": 7,
+    "secondaryDomains": [
+      3,
+      1
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Constraint Violation",
+    "fluff": "A mid-sized e-commerce company requires an alternate disaster recovery facility for its core order-processing platform, which has a Business Impact Analysis Recovery Time Objective (RTO) of 24 hours.",
+    "clue": "The CFO rejects a fully mirrored active-active hot site as cost-prohibitive, while operations confirms a bare cold site requires at least 10 days to procure and configure server hardware",
+    "question": "Which alternate recovery site model <span class='qual-highlight'>BEST</span> balances the 24-hour RTO with budget constraints?",
+    "legaleseStem": "<span class='fluff-zone'>When aligning alternate-site capital expenditure with a twenty-four-hour recovery time objective,</span> which facility tier <span class='qual-highlight'>BEST</span> meets both cost and recovery targets?",
+    "archaicStem": "<span class='fluff-zone'>Whereas cold facilities breach the twenty-four-hour threshold and hot sites exceed approved budgets,</span> which alternate-site option is <span class='qual-highlight'>LEAST</span> misaligned?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "MISALIGNED"
+        ],
+        "result": "BEST FIT"
+      }
+    ],
+    "options": [
+      {
+        "text": "Lease a bare cold site containing power and cooling without pre-staged servers or network gear.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Contract a warm site pre-equipped with power, network, and core hardware ready for backup restoration.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Build a continuously synchronized active-active hot site despite exceeding executive budget limits.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Rely solely on an informal reciprocal verbal arrangement with a competing local retailer.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Alternate site selection matches recovery speed against cost: cold sites are cheapest but slowest (days/weeks), hot sites offer near-zero RTO at peak expense, and warm sites provide pre-staged infrastructure ready for data restoration within hours to a day."
+  },
+  {
+    "id": "cat-d7-10",
+    "bank": "study",
+    "domainNum": 7,
+    "secondaryDomains": [
+      6
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A Security Operations Center receives 12,000 daily SIEM alerts, causing Tier-1 analysts to suffer severe alert fatigue and miss a legitimate credential-abuse attack buried in low-priority noise.",
+    "clue": "Review shows 80% of daily alerts are repetitive false positives from untuned scanners and routine administrative scripts lacking automated enrichment",
+    "question": "Which SOC operational improvement <span class='qual-highlight'>MOST</span> directly reduces alert fatigue and improves true-positive detection?",
+    "legaleseStem": "<span class='fluff-zone'>Where excessive false-positive SIEM noise degrades analyst triage accuracy and obscures genuine intrusions,</span> which SOC optimization measure is <span class='qual-highlight'>MOST</span> impactful?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as uncurated telemetry floods overwhelm human analysts and mask real adversary activity,</span> which SOC governance refinement is <span class='qual-highlight'>PRIMARY</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "SOC REFINEMENT"
+        ],
+        "result": "USE-CASE TUNING & SOAR AUTOMATION"
+      }
+    ],
+    "options": [
+      {
+        "text": "Ingest every verbose debug log from all corporate printers into the SIEM for complete visibility.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Tune high-fidelity detection use cases, suppress verified false positives, and automate enrichment via SOAR.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Disable SIEM alerting during overnight shifts so analysts can catch up on daytime ticket queues.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Require Tier-1 analysts to manually close five hundred alerts per shift regardless of investigation depth.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Effective SOC operations prioritize signal quality over raw log volume by iteratively tuning detection rules, baselining benign administrative noise, and using SOAR playbooks to automate triage enrichment and repetitive containment tasks."
+  },
+  {
+    "id": "cat-d7-11",
+    "bank": "study",
+    "domainNum": 7,
+    "secondaryDomains": [
+      1,
+      8
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A regional airline's SOC notices that its customer booking portal suffers brief authentication outages every second Tuesday—each time resolved quickly by restarting an identity-cache microservice.",
+    "clue": "Incident Management metrics look green because Mean Time to Restore stays under ten minutes, yet the recurring outage continues frustrating travelers and consuming on-call hours",
+    "question": "Which IT service-management discipline <span class='qual-highlight'>MOST</span> directly eliminates this recurring outage pattern?",
+    "legaleseStem": "<span class='fluff-zone'>When repeated operational incidents are rapidly mitigated via temporary restarts without eliminating the underlying defect,</span> which service-management process is <span class='qual-highlight'>PRIMARY</span>?",
+    "archaicStem": "<span class='fluff-zone'>Whereas tactical restarts restore availability momentarily without curing systemic faults,</span> which operational discipline is <span class='qual-highlight'>LEAST</span> dispensable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DISPENSABLE"
+        ],
+        "result": "MOST ESSENTIAL"
+      }
+    ],
+    "options": [
+      {
+        "text": "Automate a scheduled script restarting the identity-cache microservice every Tuesday morning proactively.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Escalate the trend into Problem Management to perform root-cause analysis and deploy a permanent fix.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Lower the incident severity classification so recurring Tuesday outages stop appearing on executive dashboards.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Hire additional Tier-1 help-desk staff to answer customer complaints faster during Tuesday restarts.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Incident Management focuses on restoring normal service as rapidly as possible, whereas Problem Management investigates recurring incidents to uncover underlying root causes and implement permanent architectural or code fixes."
+  },
+  {
+    "id": "cat-d7-12",
+    "bank": "study",
+    "domainNum": 7,
+    "secondaryDomains": [
+      3,
+      4
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Constraint Violation",
+    "fluff": "A critical remote-code-execution vulnerability is published for a legacy vendor medical-imaging server running an end-of-life operating system inside a hospital radiology department.",
+    "clue": "The vendor confirms no official security patch will ever be released, and replacing the $1.2 million imaging platform requires nine months of clinical procurement and certification",
+    "question": "Which operational risk-mitigation strategy <span class='qual-highlight'>BEST</span> protects the unpatchable server until replacement?",
+    "legaleseStem": "<span class='fluff-zone'>When a mission-critical legacy platform cannot receive vendor security patches during a fixed procurement window,</span> which operational mitigation strategy is <span class='qual-highlight'>MOST</span> effective?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as unpatchable clinical hardware cannot be retired overnight without halting patient diagnostics,</span> which compensating control set is <span class='qual-highlight'>PRIMARY</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "UNPATCHABLE SYSTEM"
+        ],
+        "result": "VIRTUAL PATCHING + ISOLATION + EXCEPTION"
+      }
+    ],
+    "options": [
+      {
+        "text": "Power off the radiology imaging server immediately until procurement finishes certifying a replacement system.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Isolate the server on a restricted VLAN, apply IPS/WAF virtual patching, heighten monitoring, and log exception.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Leave the server on the general hospital subnet while accepting the vulnerability informally within IT.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Install unofficial community-compiled kernel patches onto the certified medical device without vendor approval.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "When vendor patches are unavailable for critical legacy or certified systems, operations apply layered compensating controls—strict network segmentation, IPS/WAF virtual patching, heightened behavioral monitoring—and track a formal time-bound risk exception."
+  },
+  {
+    "id": "cat-d7-13",
+    "bank": "study",
+    "domainNum": 7,
+    "secondaryDomains": [
+      6
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "An enterprise SOC relies exclusively on signature-based SIEM alerts and antivirus detections, yet threat intelligence warns of advanced adversaries using legitimate PowerShell and built-in administrative tools ('living off the land').",
+    "clue": "Security leadership wants a proactive operational capability to uncover stealthy, already-present threats that evade static alert signatures",
+    "question": "Which security operations practice <span class='qual-highlight'>MOST</span> directly addresses stealthy threats evading automated alerts?",
+    "legaleseStem": "<span class='fluff-zone'>To uncover latent adversaries utilizing native administrative utilities that bypass signature-based alerting,</span> which proactive SOC capability is <span class='qual-highlight'>PRIMARY</span>?",
+    "archaicStem": "<span class='fluff-zone'>Whereas passive alert queues overlook disciplined intruders operating within benign tool signatures,</span> which proactive operations practice is <span class='qual-highlight'>LEAST</span> dispensable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DISPENSABLE"
+        ],
+        "result": "MOST ESSENTIAL"
+      }
+    ],
+    "options": [
+      {
+        "text": "Hypothesis-driven proactive threat hunting analyzing behavioral telemetry and threat intelligence for covert anomalies.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Annual external black-box port scanning across corporate perimeter internet IP addresses.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Waiting for antivirus vendors to publish updated file-hash signatures for known malware binaries.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Extending SIEM log retention from ninety days to five years without analyzing active telemetry.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Proactive threat hunting assumes breach and uses threat-intelligence-informed hypotheses to search endpoint, identity, and network telemetry for subtle behavioral anomalies and living-off-the-land tactics that bypass signature alerts."
+  },
+  {
+    "id": "cat-d7-14",
+    "bank": "study",
+    "domainNum": 7,
+    "secondaryDomains": [
+      3,
+      6
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A global financial enterprise deploys hardened CIS-benchmark server images across 800 cloud virtual machines, yet six months later auditors discover wide discrepancies in open ports, firewall rules, and local admin groups.",
+    "clue": "Operations engineers made undocumented manual troubleshooting edits directly on production servers without updating configuration baselines",
+    "question": "Which operational control <span class='qual-highlight'>BEST</span> prevents and remediates ongoing configuration drift?",
+    "legaleseStem": "<span class='fluff-zone'>When ad-hoc manual administrative edits steadily erode hardened production server baselines over time,</span> which operational discipline is <span class='qual-highlight'>MOST</span> effective?",
+    "archaicStem": "<span class='fluff-zone'>Whereas undocumented manual interventions steadily degrade initial hardening baselines,</span> which configuration-governance safeguard is <span class='qual-highlight'>PRIMARY</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "PREVENT DRIFT"
+        ],
+        "result": "AUTOMATED CONFIGURATION MANAGEMENT & FIM"
+      }
+    ],
+    "options": [
+      {
+        "text": "Automated configuration management (Infrastructure-as-Code) enforcing immutable baselines paired with continuous drift monitoring.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Annual manual spreadsheet audits asking system administrators to self-report server configuration edits.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Purchasing higher-capacity firewall appliances at the internet perimeter without touching server configurations.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Rebuilding all 800 production servers manually from scratch every twelve months during holiday weekends.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Preventing configuration drift requires declarative Infrastructure-as-Code and automated configuration management (enforcing immutable baselines) coupled with File Integrity Monitoring (FIM) and continuous compliance scanning to detect unauthorized changes immediately."
+  },
+  {
+    "id": "cat-d7-15",
+    "bank": "study",
+    "domainNum": 7,
+    "secondaryDomains": [
+      1,
+      2
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Double Negatives",
+    "fluff": "An organization contracts a 24/7 Managed Security Service Provider (MSSP) to monitor SIEM telemetry and triage endpoint alerts across global subsidiaries.",
+    "clue": "During a weekend ransomware test, the MSSP detected malicious encryption within six minutes but waited three hours for internal client approval before isolating affected hosts because escalation authority was never defined",
+    "question": "Which MSSP governance control is <span class='qual-highlight'>LEAST</span> expendable to prevent delayed containment during real incidents?",
+    "legaleseStem": "<span class='fluff-zone'>When outsourcing round-the-clock threat monitoring to an external Managed Security Service Provider,</span> which contractual governance element is <span class='qual-highlight'>LEAST</span> expendable for rapid containment?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as ambiguous escalation authority paralyzes outsourced responders during fast-moving attacks,</span> which MSSP governance covenant must management <span class='qual-highlight'>NOT</span> omit?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "OMIT"
+        ],
+        "result": "MANDATORY"
+      }
+    ],
+    "options": [
+      {
+        "text": "Pre-authorized containment playbooks, explicit escalation SLAs, clear decision authority, and regular joint drills.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Granting the MSSP unlimited unilateral authority to wipe production databases without predefined playbooks.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Restricting the MSSP to email-only monthly summary reports to avoid waking internal staff.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Requiring the MSSP to use identical workstation wallpaper across all outsourced analyst consoles.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Outsourcing SOC monitoring requires explicit contractual SLAs, pre-authorized containment criteria (defining exactly what the MSSP may isolate immediately vs. escalate), clear 24/7 escalation contacts, and joint tabletop drills to eliminate crisis hesitation."
+  },
+  {
+    "id": "cat-d7-16",
+    "bank": "study",
+    "domainNum": 7,
+    "secondaryDomains": [
+      1
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "During an internal HR investigation into suspected corporate embezzlement, an IT security analyst is asked by a department manager to quietly monitor a suspect employee's private email and personal phone messages.",
+    "clue": "Neither Legal Counsel nor Human Resources has formally authorized the surveillance request, and local privacy laws strictly govern workplace monitoring",
+    "question": "Which governance action should the security analyst take <span class='qual-highlight'>FIRST</span>?",
+    "legaleseStem": "<span class='fluff-zone'>Upon receiving an informal managerial request to conduct covert employee surveillance without documented authorization,</span> which governance step is <span class='qual-highlight'>FIRST</span> required?",
+    "archaicStem": "<span class='fluff-zone'>Ere covert personnel monitoring commence upon an informal departmental request,</span> which governance escalation step must security <span class='qual-highlight'>NOT</span> bypass?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "BYPASS"
+        ],
+        "result": "EXECUTE FIRST"
+      }
+    ],
+    "options": [
+      {
+        "text": "Begin covert monitoring immediately to preserve surprise before the suspect employee destroys evidence.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Decline informal execution and route the request through Legal Counsel, HR, and formal policy authorization.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Warn the suspect employee privately that their department manager suspects corporate embezzlement.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Monitor only the employee's corporate network traffic for forty-eight hours before informing HR.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Internal administrative investigations require formal written authorization coordinated with Legal Counsel and Human Resources aligned to Acceptable Use Policies and labor/privacy laws. Unauthorized covert surveillance creates severe legal liability and taints evidence."
+  },
+  {
+    "id": "cat-d7-17",
+    "bank": "study",
+    "domainNum": 7,
+    "secondaryDomains": [
+      3
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Constraint Violation",
+    "fluff": "A cloud SaaS provider guarantees 99.99% uptime for a global customer API and must survive both individual disk failures and a complete regional cloud availability-zone power outage without manual intervention.",
+    "clue": "Operations currently relies on single-zone RAID-5 storage arrays paired with nightly tape backups shipped to an off-site warehouse",
+    "question": "Which operational resilience architecture <span class='qual-highlight'>BEST</span> meets both local fault tolerance and regional-outage continuity?",
+    "legaleseStem": "<span class='fluff-zone'>To sustain uninterrupted high-availability API operations across both single-disk hardware failures and full data-center zone outages,</span> which architecture is <span class='qual-highlight'>MOST</span> resilient?",
+    "archaicStem": "<span class='fluff-zone'>Whereas local disk arrays cannot survive a whole-facility power failure,</span> which availability architecture is <span class='qual-highlight'>PRIMARY</span> for automated multi-zone resilience?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "MULTI-ZONE RESILIENCE"
+        ],
+        "result": "MULTI-REGION ACTIVE-ACTIVE & LOAD BALANCING"
+      }
+    ],
+    "options": [
+      {
+        "text": "Upgrade local RAID-5 arrays to RAID-10 inside the same single availability zone.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Deploy geographically distributed multi-zone active-active clusters behind automated global load balancing.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Increase off-site magnetic tape courier pickups from nightly to every six hours.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Add a second identical power supply unit to the single database server chassis.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Local fault tolerance (RAID, dual power supplies) protects against component failure inside one facility, whereas surviving an entire availability-zone or regional outage requires geographically dispersed multi-zone active-active clustering and automated failover."
+  },
+  {
+    "id": "cat-d7-18",
+    "bank": "study",
+    "domainNum": 7,
+    "secondaryDomains": [
+      3,
+      5
+    ],
+    "difficulty": 3,
+    "lengthTier": "double",
+    "trapType": "Governance vs. Technical",
+    "fluff": "A data center operations audit reveals that third-party HVAC technicians and equipment delivery couriers routinely enter restricted server aisles unescorted after signing a paper lobby clipboard.",
+    "clue": "Facilities policy requires strict physical visitor accountability and preventing unauthorized physical access to production server racks and removable media",
+    "question": "Which physical security operations control <span class='qual-highlight'>BEST</span> remedies unescorted vendor access in restricted zones?",
+    "legaleseStem": "<span class='fluff-zone'>To enforce continuous physical accountability over external contractors entering sensitive data-center server aisles,</span> which operational control is <span class='qual-highlight'>MOST</span> effective?",
+    "archaicStem": "<span class='fluff-zone'>Inasmuch as unverified paper sign-in sheets permit unescorted vendors to tamper with live racks,</span> which physical operations safeguard is <span class='qual-highlight'>PRIMARY</span>?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "PRIMARY",
+          "VISITOR ACCOUNTABILITY"
+        ],
+        "result": "ID VERIFICATION + TIME-BOUND BADGE + CONTINUOUS ESCORT"
+      }
+    ],
+    "options": [
+      {
+        "text": "Require government ID verification, visually distinct time-bound visitor badges, logged entry/exit, and continuous escort.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Replace the paper lobby clipboard with a self-service digital tablet while keeping aisles unescorted.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Issue permanent employee proximity badges to frequent HVAC contractors to streamline lobby check-ins.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Post warning signs inside server aisles instructing external visitors not to touch production racks.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Physical security operations govern third-party access through identity verification, visually distinct time-limited visitor badges, audited entry/exit logs, and continuous authorized escort inside restricted facilities."
+  },
+  {
+    "id": "cat-d7-19",
+    "bank": "study",
+    "domainNum": 7,
+    "secondaryDomains": [
+      1,
+      5
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Governance vs. Technical",
+    "fluff": "An operations review discovers that a single senior backup and storage engineer holds sole custody of both production SAN administration and off-site disaster-recovery vault credentials—and has declined vacation for four straight years.",
+    "clue": "Leadership worries about both single-point-of-failure key-person risk and undetected insider sabotage or fraud across enterprise backups",
+    "question": "Which operational administrative control pairing <span class='qual-highlight'>BEST</span> mitigates both key-person and insider-fraud risks?",
+    "legaleseStem": "<span class='fluff-zone'>Where one privileged operations engineer holds undivided custody over production storage and disaster-recovery vaults without relief,</span> which administrative safeguard pair is <span class='qual-highlight'>MOST</span> effective?",
+    "archaicStem": "<span class='fluff-zone'>Whereas uninterrupted solitary custody conceals operational sabotage and creates single-person fragility,</span> which administrative pairing is <span class='qual-highlight'>LEAST</span> dispensable?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "LEAST",
+          "DISPENSABLE"
+        ],
+        "result": "MOST ESSENTIAL"
+      }
+    ],
+    "options": [
+      {
+        "text": "Enforce job rotation, cross-trained separation of duties, and mandatory consecutive vacations with audited handovers.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Grant the engineer a retention bonus in exchange for signing an updated non-disclosure agreement.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Require the engineer to rotate SAN administrative passwords every thirty days without sharing documentation.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Archive the engineer's workstation browser history monthly while keeping solitary vault custody intact.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Job rotation and separation of duties eliminate single-person operational fragility and prevent unilateral sabotage, while mandatory consecutive vacations force another trained administrator to assume duties and uncover concealed anomalies."
+  },
+  {
+    "id": "cat-d7-20",
+    "bank": "study",
+    "domainNum": 7,
+    "secondaryDomains": [
+      6,
+      1
+    ],
+    "difficulty": 4,
+    "lengthTier": "triple",
+    "trapType": "Double Negatives",
+    "fluff": "A multinational enterprise maintains a comprehensive 200-page Disaster Recovery Plan written three years ago, yet never updated it after migrating 60% of production workloads to public cloud microservices.",
+    "clue": "During a surprise regional outage, recovery teams discover IP addresses, vendor escalation contacts, and runbooks in the binder no longer match live production infrastructure",
+    "question": "Which operational continuity governance practice must leadership <span class='qual-highlight'>NOT</span> neglect to keep recovery plans viable?",
+    "legaleseStem": "<span class='fluff-zone'>To prevent documented disaster recovery plans from growing obsolete amid rapid cloud migrations and staffing turnover,</span> which lifecycle governance control is <span class='qual-highlight'>LEAST</span> expendable?",
+    "archaicStem": "<span class='fluff-zone'>Whereas unmaintained recovery binders fail catastrophically during live crises following architectural shifts,</span> which continuity maintenance discipline must operations <span class='qual-highlight'>NOT</span> neglect?",
+    "logicCancellations": [
+      {
+        "tokens": [
+          "NOT",
+          "NEGLECT"
+        ],
+        "result": "MUST MAINTAIN"
+      }
+    ],
+    "options": [
+      {
+        "text": "Store printed copies of the original three-year-old binder inside fireproof safes at every branch.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Integrate DR plan updates into change management alongside scheduled periodic testing and exercise reviews.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Restrict DR plan read permissions exclusively to the CISO until an actual disaster is declared.",
+        "isCorrect": "<conceptual_placeholder>"
+      },
+      {
+        "text": "Rewrite the disaster recovery plan once every five years strictly prior to insurance renewal.",
+        "isCorrect": "<conceptual_placeholder>"
+      }
+    ],
+    "answerKey": "<conceptual_placeholder>",
+    "conceptMechanism": "Disaster recovery plans are living operational artifacts that rapidly decay unless tied directly to enterprise Change Management (updating runbooks whenever architecture or contacts change) and validated through scheduled periodic testing."
+  }
+]
